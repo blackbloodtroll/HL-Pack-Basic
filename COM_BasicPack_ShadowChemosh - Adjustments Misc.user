@@ -4,9 +4,7 @@
     <info_author><![CDATA[
       Author:  Tim Shadow
       Email: shadowchemosh@yahoo.com
-      File Name changed from PFRPG_Adjustments.user => COM_BasicPack_ShadowChemosh - Adjustments Misc.user
-      ]]>
-      </info_author>
+      File Name changed from PFRPG_Adjustments.user => COM_BasicPack_ShadowChemosh - Adjustments Misc.user]]></info_author>
     <info_history><![CDATA[
 v2.12 (Tim Shadow) Released 
 -Added "Mythic Ability, Add Trackable"
@@ -18,6 +16,7 @@ v2.12 (Tim Shadow) Released
 -Added "Deal Nonlethal Dmg (-4H)" combat action so that the -4H is easily taken into account and all weapons will show they do "nonlethal" damage.
 -Fixed all the "Weapon CMB" and "Weapon CMD" adjustments to better display weapon specific bonuses for Disarm, Sunder, and Trip attacks.
 -Changed "Hero, Ability score increase" adjustment to allow negative numbers.
+-Added "Combat: Flanking Bonus" allows you to increase/decrease the flanking bonus condition. This is a "Conferred Ability Adjustment" and is used to help those with Outflank feats or Menacing weapon property. 
 
 v2.11 (Tim Shadow) Released 11/25/2014
 -Misc Fixes to many adjustments.
@@ -535,19 +534,19 @@ Added new natural weapon adjustments:
       <autotag group="wMain" tag="1d6_5"/>
       </bootstrap>
     <eval phase="Render" priority="99999999"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-call S2SetNatDm]]></eval>
+      call S2SetNatDm]]></eval>
     </thing>
   <thing id="pS2wGrab" name="Natural Weapon: Grab" description="Select this adjustment to have a Grab racial ability added to your character.  Then from the drop down box you can select the natural attack this grab is associated to and the extra wording &quot;plus grab&quot; will be added to the natural attack selected.  You can also change the wording using the text box." compset="InPlay">
     <fieldval field="pDuration" value=" plus grab"/>
@@ -559,12 +558,12 @@ call S2SetNatDm]]></eval>
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
     <eval phase="Final" priority="20501"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-#extradamage[field[pChosen].chosen,field[pDuration].text,field[name].text]]]></eval>
+      #extradamage[field[pChosen].chosen,field[pDuration].text,field[name].text]]]></eval>
     </thing>
   <thing id="pS2wClaw" name="Natural Weapon: Claw" description="Select this adjustment to have a 2x Claw natural attacks added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Claw x2"/>
@@ -577,19 +576,19 @@ doneif (field[pChosen].ischosen = 0)
       <autotag group="wMain" tag="1d4_4"/>
       </bootstrap>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-call S2SetNatDm]]></eval>
+      call S2SetNatDm]]></eval>
     <eval phase="Render" priority="99999999"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2wGore" name="Natural Weapon: Gore" description="Select this adjustment to have a Gore natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Gore"/>
@@ -602,18 +601,19 @@ field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
       <autotag group="wMain" tag="1d6_5"/>
       </bootstrap>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-call S2SetNatDm]]></eval>
-    <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      call S2SetNatDm]]></eval>
+    <eval phase="Render" priority="99999999"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2wWing" name="Natural Weapon: Wing" description="Select this adjustment to have a Wing natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Wing"/>
@@ -626,18 +626,19 @@ field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
       <autotag group="wMain" tag="1d4_4"/>
       </bootstrap>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-call S2SetNatDm]]></eval>
-    <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      call S2SetNatDm]]></eval>
+    <eval phase="Render" priority="99999999"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2wTailSl" name="Natural Weapon: Tail Slap" description="Select this adjustment to have a Tail Slap natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Tail Slap"/>
@@ -650,18 +651,19 @@ field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
       <autotag group="wMain" tag="1d6_5"/>
       </bootstrap>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-call S2SetNatDm]]></eval>
-    <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      call S2SetNatDm]]></eval>
+    <eval phase="Render" priority="99999999"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2wSlam" name="Natural Weapon: Slam" description="Select this adjustment to have a Slam natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Slam"/>
@@ -674,18 +676,19 @@ field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
       <autotag group="wMain" tag="1d4_4"/>
       </bootstrap>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-call S2SetNatDm]]></eval>
-    <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      call S2SetNatDm]]></eval>
+    <eval phase="Render" priority="99999999"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2wSting" name="Natural Weapon: Sting" description="Select this adjustment to have a Sting natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Sting"/>
@@ -698,18 +701,19 @@ field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
       <autotag group="wMain" tag="1d4_4"/>
       </bootstrap>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-call S2SetNatDm]]></eval>
-    <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      call S2SetNatDm]]></eval>
+    <eval phase="Render" priority="99999999"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2wTalons" name="Natural Weapon: Talons" description="Select this adjustment to have a 2x Talon natural attacks added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Talons x2"/>
@@ -722,18 +726,19 @@ field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
       <autotag group="wMain" tag="1d4_4"/>
       </bootstrap>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-call S2SetNatDm]]></eval>
-    <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      call S2SetNatDm]]></eval>
+    <eval phase="Render" priority="99999999"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2wOthMel" name="Natural Weapon: Other Melee" description="Select this adjustment to have a Other Melee natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Other Melee"/>
@@ -745,18 +750,19 @@ field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
       <autotag group="wMain" tag="1d6_5"/>
       </bootstrap>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-call S2SetNatDm]]></eval>
-    <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      call S2SetNatDm]]></eval>
+    <eval phase="Render" priority="99999999"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2wOthRng" name="Natural Weapon: Other Ranged" description="Select this adjustment to have a Other Ranged natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Other Melee"/>
@@ -768,18 +774,19 @@ field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
       <autotag group="wMain" tag="1d6_5"/>
       </bootstrap>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-call S2SetNatDm]]></eval>
-    <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~if nothing's been chosen, get out now
-doneif (field[pChosen].ischosen = 0)
+      call S2SetNatDm]]></eval>
+    <eval phase="Render" priority="99999999"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
 
-field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2wPoiCON" name="Natural Weapon: Poison, CON" description="Select this adjustment to add a CON based poison attack on to a specific natural weapon.  Use the drop down box to select the natural weapon this is to apply to.  Then use the following fields to set the poison attributes:\n\nDrop down box selects the natural attack the wording (Plus Poison) is to be added to.\n\nThe counter is used to set the die size of the CON damage dice. So if set to 4 it will show 1d4 CON damage.\n\nThe duration, default value of 1 round, is used to set the number of rounds the poison lasts.\n\nThe (source) section is used to set the number of additional cures the poison takes to remove.  The default for poison is 1 round so if you change the (source) text to be 1 then it will take 2 cures to save from this poison." compset="InPlay">
     <fieldval field="pMinimum" value="1"/>
@@ -791,21 +798,23 @@ field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     <bootstrap thing="raPoiCON">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="3"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
+    <eval phase="PreLevel" priority="10000" index="3"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
 
-~ Set poison Die size (ie 1d4, 1d6)
-#value[raPoiCON] += field[pAdjust].value
-~ set number of cure saves to remove poison
-#value2[raPoiCON] += field[pSource].text
-~ Set Number of rounds the poison lasts
-hero.child[raPoiCON].field[abDuration].value += field[pDuration].text]]></eval>
-    <eval phase="Final" priority="50000"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~ If nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ Set poison Die size (ie 1d4, 1d6)
+      #value[raPoiCON] += field[pAdjust].value
+      ~ set number of cure saves to remove poison
+      #value2[raPoiCON] += field[pSource].text
+      ~ Set Number of rounds the poison lasts
+      hero.child[raPoiCON].field[abDuration].value += field[pDuration].text]]></eval>
+    <eval phase="Final" priority="50000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~ If nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-#extradamage[field[pChosen].chosen," plus Con poison",field[name].text]]]></eval>
+      #extradamage[field[pChosen].chosen," plus Con poison",field[name].text]]]></eval>
     </thing>
   <thing id="pS2wPoiCHA" name="Natural Weapon: Poison, CHA" description="Select this adjustment to add a CHA based poison attack on to a specific natural weapon.  Use the drop down box to select the natural weapon this is to apply to.  Then use the following fields to set the poison attributes:\n\nDrop down box selects the natural attack the wording (Plus Poison) is to be added to.\n\nThe counter is used to set the die size of the CHA damage dice. So if set to 4 it will show 1d4 CHA damage.\n\nThe duration, default value of 1 round, is used to set the number of rounds the poison lasts.\n\nThe (source) section is used to set the number of additional cures the poison takes to remove.  The default for poison is 1 round so if you change the (source) text to be 1 then it will take 2 cures to save from this poison." compset="InPlay">
     <fieldval field="pMinimum" value="1"/>
@@ -817,21 +826,23 @@ doneif (field[pChosen].ischosen <> 1)
     <bootstrap thing="raPoiCHA">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="3"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
+    <eval phase="PreLevel" priority="10000" index="3"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
 
-~ Set poison Die size (ie 1d4, 1d6)
-#value[raPoiCHA] += field[pAdjust].value
-~ set number of cure saves to remove poison
-#value2[raPoiCHA] += field[pSource].text
-~ Set Number of rounds the poison lasts
-hero.child[raPoiCHA].field[abDuration].value += field[pDuration].text]]></eval>
-    <eval phase="Final" priority="50000"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~ If nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
+      ~ Set poison Die size (ie 1d4, 1d6)
+      #value[raPoiCHA] += field[pAdjust].value
+      ~ set number of cure saves to remove poison
+      #value2[raPoiCHA] += field[pSource].text
+      ~ Set Number of rounds the poison lasts
+      hero.child[raPoiCHA].field[abDuration].value += field[pDuration].text]]></eval>
+    <eval phase="Final" priority="50000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~ If nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
 
-#extradamage[field[pChosen].chosen," plus Cha poison",field[name].text]]]></eval>
+      #extradamage[field[pChosen].chosen," plus Cha poison",field[name].text]]]></eval>
     </thing>
   <thing id="pS2wPoiDEX" name="Natural Weapon: Poison, DEX" description="Select this adjustment to add a DEX based poison attack on to a specific natural weapon.  Use the drop down box to select the natural weapon this is to apply to.  Then use the following fields to set the poison attributes:\n\nDrop down box selects the natural attack the wording (Plus Poison) is to be added to.\n\nThe counter is used to set the die size of the DEX damage dice. So if set to 4 it will show 1d4 DEX damage.\n\nThe duration, default value of 1 round, is used to set the number of rounds the poison lasts.\n\nThe (source) section is used to set the number of additional cures the poison takes to remove.  The default for poison is 1 round so if you change the (source) text to be 1 then it will take 2 cures to save from this poison." compset="InPlay">
     <fieldval field="pMinimum" value="1"/>
@@ -4414,7 +4425,7 @@ call S2SetName]]></eval>
   <thing id="pstS2NonL2" name="Deal Nonlethal Dmg (-4H)" description="Certain attacks deal nonlethal damage. Other effects, such as heat or being exhausted, also deal nonlethal damage. When you take nonlethal damage, keep a running total of how much you&apos;ve accumulated. Do not deduct the nonlethal damage number from your current hit points. It is not &quot;real&quot; damage. Instead, when your nonlethal damage equals your current hit points, you&apos;re staggered (see below), and when it exceeds your current hit points, you fall unconscious.\n\n{b}Nonlethal Damage with a Weapon that Deals Lethal Damage{/b}\nYou can use a melee weapon that deals lethal damage to deal nonlethal damage instead, but you take a –4 penalty on your attack roll.\n\n{b}Lethal Damage with a Weapon that Deals Nonlethal Damage{/b}\nYou can use a weapon that deals nonlethal damage, including an unarmed strike, to deal lethal damage instead, but you take a –4 penalty on your attack roll." compset="ComState">
     <fieldval field="abValue" value="-4"/>
     <usesource source="srcS2Adjus"/>
-    <tag group="ProductId" tag="Shadowd20"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="PreLevel" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4428,7 +4439,20 @@ call S2SetName]]></eval>
          perform eachpick.assign[wSpecial.Nonlethal]
       nexteach]]></eval>
     </thing>
-  <hidden id="pS2svAlLuc"/>
+  <thing id="pS2FlankBo" name="Combat: Flanking Bonus" description="Add this adjustment so that you can increase/decrease the amount of flanking bonus you get when flanking.  This is very useful if you have the Outflank feat or the Menacing weapon property. This adjustment does not actually change your attack bonus instead it changes the amount of bonus the &quot;Flanking&quot; combat action has on the &quot;Condition&quot; tab.  So if you set the counter to +2 then when you activate the flanking condition a +4 bonus will be applied to your attacks.\n\n{b}Note:{/b} You can type a note to yourself in the (source) text box that will appear on the Flanking condition." compset="InPlay">
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="AdjConfer"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <eval phase="First" priority="20000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+     
+      ~ Give a bonus/penalty to the Flanking Condition
+      #value2[pstFlankin] += field[pAdjust].value
+
+      ~ put custom note on Flanking
+      #appenddesc[pstFlankin,"{b}" & field[name].text & " " & signed(field[pAdjust].value) & ":{/b} " & field[pSource].text]]]></eval>
+    </thing>
   <hidden id="pS2svAlMor"/>
   <hidden id="pS2svAlPro"/>
   <hidden id="pS2svAlRes"/>
@@ -4482,4 +4506,5 @@ call S2SetName]]></eval>
   <hidden id="pS2svAlCir"/>
   <hidden id="pS2svAlEnh"/>
   <hidden id="pS2svAlIns"/>
+  <hidden id="pS2svAlLuc"/>
   </document>

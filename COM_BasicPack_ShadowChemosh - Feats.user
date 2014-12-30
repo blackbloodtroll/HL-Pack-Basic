@@ -5,8 +5,7 @@
     <info_author><![CDATA[
       Author:  Tim Shadow
       Email: shadowchemosh@yahoo.com
-      File Name changed from PFRPG_ShadowChemosh_VitalStrike.user => COM_BasicPack_ShadowChemosh - Feats.user
-      ]]></info_author>
+      File Name changed from PFRPG_ShadowChemosh_VitalStrike.user => COM_BasicPack_ShadowChemosh - Feats.user]]></info_author>
     <info_history><![CDATA[
       December 12, 2014 - Tim Shadow
       -Added new feat "Outflank" that can be activated to increase the "Flanking" condition to +4.
@@ -140,8 +139,7 @@
         perform eachpick.assign[Helper.SingleAtt]
         ~ Remove any "Extra High" tags as we need only a single attack
         perform eachpick.delete[Helper.ExtraHigh]
-      nexteach
-      ]]></eval>
+      nexteach]]></eval>
     <exprreq message="Base attack bonus +6 required." iserror="no"><![CDATA[#BAB[] >= 6]]></exprreq>
     </thing>
   <thing id="fImpWepFin" name="Improved Weapon Finesse" description="You&apos;ve become more reliant on agility rather than strength when it comes to damage.\n\n{b}Prerequisites{/b}: Weapon Finesse\n\n{b}Benefit{/b}: With a light weapon, elven curve blade, rapier, whip, or spiked chain made for a creature of your size category, you may use your Dexterity modifier instead of your Strength modifier on damage rolls.\n\n{b}Normal{/b}: When using a melee weapon, you apply your Strength modifier to damage rolls." compset="Feat" summary="Gain Dex on damage with Finesse weapons." uniqueness="useronce">
@@ -158,38 +156,5 @@
         perform eachpick.assign[DamageOpt.aDEX]
       nexteach]]></eval>
     <exprreq message="Weapon Finesse feat required"><![CDATA[#hasfeat[fWepFin] <> 0]]></exprreq>
-    </thing>
-  <thing id="fS2OutFlan" name="Outflank" description="You look for every edge when flanking an enemy.\n\n{b}Prerequisites{/b}: Base attack bonus +4.\n\n{b}Benefit{/b}: Whenever you and an ally who also has this feat are flanking the same creature, your flanking bonus on attack rolls increases to +4. In addition, whenever you score a critical hit against the flanked creature, it provokes an attack of opportunity from your ally.\n\n{b}Note:{/b} When this feat is activated it increases the Flanking Condition bonus. So you will still need to activate the &quot;Flanking&quot; condition to have the correct value apply to your character." compset="Feat" summary="Flanking bonus increases to +4 if the other flanker also has this feat, and ally gets an AoO if you score a critical hit against the target." uniqueness="useronce">
-    <fieldval field="abValue" value="2"/>
-    <usesource source="APG" parent="APGHeader" name="Advanced Player&apos;s Guide"/>
-    <usesource source="srcS2Feat"/>
-    <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
-    <tag group="fCategory" tag="Combat" name="Combat" abbrev="Combat"/>
-    <tag group="User" tag="Activation"/>
-    <tag group="fCategory" tag="Teamwork" name="Teamwork" abbrev="Teamwork"/>
-    <tag group="HasFeat" tag="fOutflank"/>
-    <eval phase="Render" priority="10000"><![CDATA[
-      ~ If we're disabled, do nothing
-      doneif (tagis[Helper.FtDisable] <> 0)
-
-      field[abSumm].text = "Increase flank bonus by " & signed(field[abValue].value) & " if flanking ally has same feat. If you crit, ally gets an AoO."
-
-      #situational[hero.child[Attack],signed(field[abValue].value) & " bonus when flanking foe with ally w/this feat",field[thingname].text]
-
-      var sText as string
-      sText = "{b}Addition from Outflank{/b}: Whenever you and an ally who also has this feat are flanking the same creature, your flanking bonus on attack rolls increases to +4. In addition, whenever you score a critical hit against the flanked creature, it provokes an attack of opportunity from your ally."
-      If (field[abilActive].value = 1) Then
-        sText &= " {b}ACTIVE{/b}"
-      endif
-      #appenddesc[pstFlankin,sText]]]></eval>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're disabled, do nothing
-      doneif (tagis[Helper.FtDisable] <> 0)
-      ~ If not activated get out now!
-      doneif (field[abilActive].value <> 1)
-      
-      ~ Increase Flanking bonus by +2
-      #value2[pstFlankin] += field[abValue].value]]></eval>
-    <exprreq message="Base attack bonus +4 required."><![CDATA[#BAB[] >= 4]]></exprreq>
     </thing>
   </document>
