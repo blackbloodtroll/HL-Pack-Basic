@@ -6,7 +6,7 @@
       Email: shadowchemosh@yahoo.com
       File Name changed from PFRPG_Adjustments.user => COM_BasicPack_ShadowChemosh - Adjustments Misc.user]]></info_author>
     <info_history><![CDATA[
-v2.12 (Tim Shadow) Released 
+January 1, 2015 - Tim Shadow
 -Added "Mythic Ability, Add Trackable"
 -Added "Mythic Ability, Remove Tracker"
 -Added "Improved Weapon Finesse" feat that requires the feat "Weapon Finesse" and gives "Dex" to damage with light and finesse weapons.
@@ -4431,10 +4431,10 @@ call S2SetName]]></eval>
       doneif (field[pIsOn].value = 0)
 
       ~ give a penalty to all weapons
-      hero.child[Attack].field[Penalty].value += field[abValue].value
+      hero.child[Attack].field[tAtkMelee].value += field[abValue].value
 
       ~ All weapons on the hero
-      foreach pick in hero from BaseWep where "!wSpecial.Nonlethal"
+      foreach pick in hero from BaseWep where "!wSpecial.Nonlethal & wCategory.Melee"
          ~ Now are non-lethal weapon
          perform eachpick.assign[wSpecial.Nonlethal]
       nexteach]]></eval>

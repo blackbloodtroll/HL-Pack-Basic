@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
   <fileinfo>
     <info_author><![CDATA[
       Author:  Tim Shadow
       Email: shadowchemosh@yahoo.com
-      File Name changed from PFRPG_ARG_CatClaws.user => COM_BasicPack_ShadowChemosh - Equipment.user      
-      ]]></info_author>
-    <info_history><![CDATA[
+      File Name changed from PFRPG_ARG_CatClaws.user => COM_BasicPack_ShadowChemosh - Equipment.user]]></info_author>
+    <info_history>
       December 29, 2014 - Tim Shadow
       -Merged together with the Spellbook and Armor Razors user files.
 
@@ -21,10 +20,9 @@
       -Enhanced to change the Claw Blades damage dice as the natural attack Claw damage increases. The scripts are not feat specific so will work with future or 3PP feats that increase damage dice of Natural Claws.
 
       September 21, 2013 - Tim Shadow
-      -Pulled out of my houserules files.
-      ]]></info_history>
+      -Pulled out of my houserules files.</info_history>
     </fileinfo>
-  <thing id="wS2ClaBlad" name="Claw Blades" description="These subtle blades can only be used by catfolk with the cat’s claws racial trait. Bought in a set of five, they fit over the wearer’s claws on one hand. The blades grant the wearer a +1 enhancement bonus on claw attack rolls with that hand and change the weapon type from a natural weapon to a light slashing weapon. Catfolk with the cat’s claws racial trait are proficient with this weapon. The claw blades can be enhanced like a masterwork weapon for the normal costs. The listed cost of the item is for one set of five claws for one hand." compset="Weapon">
+  <thing id="wS2ClaBlad" name="Claw Blades" description="These subtle blades can only be used by catfolk with the catâ€™s claws racial trait. Bought in a set of five, they fit over the wearerâ€™s claws on one hand. The blades grant the wearer a +1 enhancement bonus on claw attack rolls with that hand and change the weapon type from a natural weapon to a light slashing weapon. Catfolk with the catâ€™s claws racial trait are proficient with this weapon. The claw blades can be enhanced like a masterwork weapon for the normal costs. The listed cost of the item is for one set of five claws for one hand." compset="Weapon">
     <usesource source="ARG"/>
     <usesource source="srcS2Gear"/>
     <tag group="Helper" tag="Proficient"/>
@@ -46,7 +44,7 @@ If (container.ishero = 0) then
   container.child[gCustMagic].field[gMasterFor].value = 1
 Endif</eval>
     </thing>
-  <thing id="iS2ClaBlad" name="Claw Blades" description="These subtle blades can only be used by catfolk with the cat’s claws racial trait. Bought in a set of five, they fit over the wearer’s claws on one hand. The blades grant the wearer a +1 enhancement bonus on claw attack rolls with that hand and change the weapon type from a natural weapon to a light slashing weapon. Catfolk with the cat’s claws racial trait are proficient with this weapon. The claw blades can be enhanced like a masterwork weapon for the normal costs. The listed cost of the item is for one set of five claws for one hand." compset="MagicWep" buytemplate="BuyMoney" xactspecial="2">
+  <thing id="iS2ClaBlad" name="Claw Blades" description="These subtle blades can only be used by catfolk with the catâ€™s claws racial trait. Bought in a set of five, they fit over the wearerâ€™s claws on one hand. The blades grant the wearer a +1 enhancement bonus on claw attack rolls with that hand and change the weapon type from a natural weapon to a light slashing weapon. Catfolk with the catâ€™s claws racial trait are proficient with this weapon. The claw blades can be enhanced like a masterwork weapon for the normal costs. The listed cost of the item is for one set of five claws for one hand." compset="MagicWep" buytemplate="BuyMoney" xactspecial="2">
     <comment>Copying this item to make anything other than the weapon stats for a Claw Blade is not recommended. There are settings that cannot be changed in the editor, which will be carried along with your copy.</comment>
     <usesource source="ARG"/>
     <usesource source="srcS2Gear"/>
@@ -55,10 +53,7 @@ Endif</eval>
     <tag group="Helper" tag="CustomItem" name="CustomItem" abbrev="CustomItem"/>
     <tag group="Helper" tag="MatForceMs"/>
     <tag group="Helper" tag="Helper" name="Helper" abbrev="Helper"/>
-    <eval phase="Render" priority="99999999" index="2"><![CDATA[
-~ This fixes an issue with the name getting messed up because of the
-~ bootstrap and magical powers.
-field[livename].text &= " Claw Blades"]]></eval>
+    <tag group="Helper" tag="NoPathSoc"/>
     <eval phase="PostAttr" priority="10000" index="3">var bonus as number
 bonus += hero.childfound[wClaw].tagcount[Helper.DamageUp]
 ~ Increase Claw Blade damage based on Claw Damage increases
@@ -67,6 +62,10 @@ field[wRanDamage].value += bonus</eval>
     <eval phase="PreLevel" priority="5000">call iMagWeapon
 
 field[gCost].value += -300</eval>
+    <eval phase="Render" priority="99999999" index="2"><![CDATA[
+~ This fixes an issue with the name getting messed up because of the
+~ bootstrap and magical powers.
+field[livename].text &= " Claw Blades"]]></eval>
     <child entity="gMagWeapon">
       <tag group="Helper" tag="NoSelChild" name="NoSelChild" abbrev="NoSelChild"/>
       <bootstrap thing="wS2ClaBlad">
@@ -74,12 +73,11 @@ field[gCost].value += -300</eval>
         </bootstrap>
       </child>
     </thing>
-  <thing id="gS2ClaBlad" name="Claw Blades" description="These subtle blades can only be used by catfolk with the cat’s claws racial trait. Bought in a set of five, they fit over the wearer’s claws on one hand. The blades grant the wearer a +1 enhancement bonus on claw attack rolls with that hand and change the weapon type from a natural weapon to a light slashing weapon. Catfolk with the cat’s claws racial trait are proficient with this weapon. The claw blades can be enhanced like a masterwork weapon for the normal costs. The listed cost of the item is for one set of five claws for one hand.\n\n{B}Note:{/b} Once purchased a Custom weapon will appear on the {b}Gear{/b} tab that will allow you to enhance by clicking on the Wrench/Hammer icon." compset="Gear">
+  <thing id="gS2ClaBlad" name="Claw Blades" description="These subtle blades can only be used by catfolk with the catâ€™s claws racial trait. Bought in a set of five, they fit over the wearerâ€™s claws on one hand. The blades grant the wearer a +1 enhancement bonus on claw attack rolls with that hand and change the weapon type from a natural weapon to a light slashing weapon. Catfolk with the catâ€™s claws racial trait are proficient with this weapon. The claw blades can be enhanced like a masterwork weapon for the normal costs. The listed cost of the item is for one set of five claws for one hand.\n\n{B}Note:{/b} Once purchased a Custom weapon will appear on the {b}Gear{/b} tab that will allow you to enhance by clicking on the Wrench/Hammer icon." compset="Gear">
     <fieldval field="gCost" value="305"/>
     <fieldval field="gWeight" value="2"/>
     <usesource source="ARG"/>
     <usesource source="srcS2Gear"/>
-    <tag group="Helper" tag="NoPathSoc"/>
     <tag group="Hero" tag="EqpHand"/>
     <tag group="RaceEquip" tag="rCatfolk"/>
     <tag group="gType" tag="Clothing"/>
@@ -94,6 +92,7 @@ field[gCost].value += -300</eval>
     <tag group="Helper" tag="Helper" name="Helper" abbrev="Helper"/>
     <tag group="Helper" tag="NoSelect" name="NoSelect" abbrev="NoSelect"/>
     <tag group="Helper" tag="Shadow" name="Shadow" abbrev="Shadow"/>
+    <tag group="Helper" tag="NoPathSoc"/>
     <eval phase="PreLevel" priority="5000">call iMagWeapon</eval>
     <child entity="gMagWeapon">
       <tag group="Helper" tag="NoSelChild" name="NoSelChild" abbrev="NoSelChild"/>
@@ -115,6 +114,7 @@ field[gCost].value += -300</eval>
     <tag group="wProfReq" tag="Martial" name="Martial" abbrev="Martial"/>
     <tag group="wType" tag="S"/>
     <tag group="Helper" tag="NoHandWeap"/>
+    <tag group="Helper" tag="NoPathSoc"/>
     </thing>
   <thing id="ipS2ArmRaz" name="Armor Razors" description="Armor razors deal extra slashing damage (see &quot;spiked armor&quot; on Table: Weapons) on a successful grapple attack. The razors count as a martial weapon. If you are not proficient with them, you take a -4 penalty on grapple checks when you try to use them. You can also make a regular melee attack (or off-hand attack) with the razors, and they count as a light weapon in this case. (You can&apos;t also make an attack with armor razors if you have already made an attack with another off-hand weapon, and vice versa.) An enhancement bonus to a suit of armor does not improve the razors&apos; effectiveness, but the razors can be made into magic weapons in their own right.\n\n{B}Note:{/b} To customize your armor razors equip your armor and then go to the &quot;Weapon&quot; tab and edit your armor razors." compset="ItemPower" summary="Goto &quot;Weapon&quot; tab to customize after equipping your armor.">
     <fieldval field="iPriceCash" value="50"/>
@@ -149,6 +149,7 @@ field[gCost].value += -300</eval>
     <tag group="Helper" tag="ShowSpec"/>
     <tag group="gType" tag="Tools"/>
     <tag group="Value" tag="100"/>
+    <tag group="Helper" tag="NoPathSoc"/>
     <eval phase="PreLevel" priority="10500"><![CDATA[
       var Cost   as number
       var Pages  as number
@@ -171,6 +172,7 @@ field[gCost].value += -300</eval>
     <tag group="Helper" tag="ShowSpec"/>
     <tag group="Value" tag="50"/>
     <tag group="gType" tag="Tools"/>
+    <tag group="Helper" tag="NoPathSoc"/>
     <eval phase="PreLevel" priority="10500"><![CDATA[
       var Cost   as number
       var Pages  as number
@@ -194,6 +196,7 @@ field[gCost].value += -300</eval>
     <tag group="Helper" tag="ShowSpec"/>
     <tag group="Value" tag="70"/>
     <tag group="gType" tag="Tools"/>
+    <tag group="Helper" tag="NoPathSoc"/>
     <eval phase="PreLevel" priority="10500"><![CDATA[
       var Cost   as number
       var Pages  as number
@@ -207,7 +210,4 @@ field[gCost].value += -300</eval>
       ~ Set the desc with info
       #appenddesc[gS2BookCom,"{B}Cost:{/B} " & Cost & "gp" & "{br}" & "{B}Pages:{/B} " & Pages]]]></eval>
     </thing>
-
-
-
   </document>
