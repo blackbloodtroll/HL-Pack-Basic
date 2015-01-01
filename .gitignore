@@ -11,6 +11,7 @@
 *.stock
 *.db
 !*.user
+!COM_*.stock
 GREP Backup/
 Version Archives/
 importbackup/
