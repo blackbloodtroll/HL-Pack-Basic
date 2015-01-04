@@ -31,7 +31,6 @@
   <!-- ============================================================================================ -->
   <thing id="xPwrRes" name="Power Resistance" description="You have Power Resistance." compset="Ability" uniqueness="unique">
     <fieldval field="shortname" value="PR"/>
-    <usesource source="pPsiUn"/>
     <tag group="Helper"    tag="BaseAbil"/>
     <tag group="Helper"    tag="ShowSpec"/>
     <tag group="SpecType"  tag="Resist"/>
