@@ -15,6 +15,7 @@ File named changed from PFRPG_Adjustments_Editor.dat => COM_BasicPack_ShadowChem
 -->
 
 <document signature="Hero Lab Data">
+  <loadonce key="COM_BasicPack_ShadowChemosh - Editor"/>
 
   <!-- Polymorph Helper editthing -->
     <!-- parent="zCommunity" -->

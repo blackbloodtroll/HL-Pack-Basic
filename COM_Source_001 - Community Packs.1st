@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <document signature="Hero Lab Structure">
+  <loadonce key="COM_Source_001 - Community Packs.1st"/>
+
 <!--
   <loadonce key="COM_Source_01 - Community Packs.1st"/>
 

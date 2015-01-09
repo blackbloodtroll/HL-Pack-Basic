@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <document signature="Hero Lab Structure">
+  <loadonce key="COM_Source_110 - ShadowChemosh.1st"/>
 <!--
-  <loadonce key="PFRPG_Adjustments.1st"/>
 
 December 29, 2014 - Tim Shadow
 -Name change PFRPG_Adjustments.1st => COM_BasicPack_Source - ShadowChemosh.1st

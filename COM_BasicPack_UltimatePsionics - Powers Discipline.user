@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
+  <loadonce key="COM_BasicPack_UltimatePsionics - Powers Discipline"/>
   <fileinfo>
     <info_author>January 3, 2015 - Tim Shadow
 -Broke off the power disciplines to its own file.

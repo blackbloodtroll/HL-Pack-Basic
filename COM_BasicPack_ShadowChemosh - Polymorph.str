@@ -13,6 +13,7 @@ File named changed from PFRPG_Adjustments_Component.str => COM_BasicPack_ShadowC
 -->
 
 <document signature="Hero Lab Structure">
+  <loadonce key="COM_BasicPack_ShadowChemosh - Polymorph"/>
   
   <!-- ==================================================  -->
   <component
