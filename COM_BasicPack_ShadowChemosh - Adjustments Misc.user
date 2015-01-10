@@ -3634,14 +3634,13 @@ perform field[pChosen].chosen.delete[User.Activation]]]></eval>
     <fieldval field="pCandExpr" value="component.BaseArmor &amp; !(Helper.Natural|Helper.Static)"/>
     <usesource source="srcS2Adjus"/>
     <tag group="Adjustment" tag="S2Custom"/>
-    <eval phase="PreAttr" priority="10000"><![CDATA[
+    <eval phase="First" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing chosen, get out now
 doneif (field[pChosen].ischosen <> 1)
 
 ~ Increase the armor bonus
-~field[pChosen].chosen.field[arBonus].value += field[pAdjust].value
 #applybonus[BonEnhance,field[pChosen].chosen,field[pAdjust].value]]]></eval>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[
 ~ If we're not enabled, get out now
@@ -3662,15 +3661,13 @@ field[pChosen].chosen.field[livename].text = signed(field[pChosen].chosen.field[
     <fieldval field="pCandExpr" value="component.BaseWep"/>
     <usesource source="srcS2Adjus"/>
     <tag group="Adjustment" tag="S2Custom"/>
-    <eval phase="PostLevel" priority="10000"><![CDATA[
+    <eval phase="First" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing chosen, get out now
 doneif (field[pChosen].ischosen <> 1)
 
 ~ Increase the Enhancement bonus to attack/damage
-~field[pChosen].chosen.field[atmBonEnh].value += field[pAdjust].value
-~field[pChosen].chosen.field[dmmBonEnh].value += field[pAdjust].value
 #applybonus[BonEnhance,field[pChosen].chosen,field[pAdjust].value]]]></eval>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[
 ~ If we're not enabled, get out now
