@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <fileinfo>
+    <info_author><![CDATA[Tim Shadow
+January 24, 2015
+This file is designed to hold all those "Global" Equipment things like suits of armor, weapons, or gear that are needed for any gamer running in any game. I think for now these things will NOT be source linked to any source.]]></info_author>
+    </fileinfo>
+  <thing id="aruElvenCh" name="DEPRECATED" description="{b}Note{/b} If you see this version of Elven Chain on your character please remove it.  And re-add &quot;Elven Chain&quot; to your character." compset="Armor">
+    <comment>HIDDEN!</comment>
+    <fieldval field="gSizeCost" value="150"/>
+    <fieldval field="gCost" value="5000"/>
+    <fieldval field="gWeight" value="20"/>
+    <tag group="ArmorClass" tag="Light" name="Light Armor" abbrev="Light"/>
+    <tag group="ArmorMaxDx" tag="4" name="4" abbrev="4"/>
+    <tag group="EquipType" tag="Metal" name="Metal" abbrev="Metal"/>
+    <tag group="Helper" tag="AlwaysMast" name="AlwaysMast" abbrev="AlwaysMast"/>
+    <tag group="PieceArcFl" tag="10" name="10" abbrev="10"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="ArmorAC" tag="6" name="6" abbrev="6"/>
+    <tag group="ArmorArcFl" tag="20" name="20" abbrev="20"/>
+    <tag group="ArmorCateg" tag="Gauntlets" name="Includes Gauntlets" abbrev="Gauntlets"/>
+    <tag group="ArmorCheck" tag="2" name="2" abbrev="2"/>
+    <eval phase="PreLevel" priority="10000">~ We no longer Slow
+      var result as number
+      result = gizmo.delete[ArmorCateg.Slows]</eval>
+    <child entity="mSpecMagic">
+      <bootstrap thing="arChain"></bootstrap>
+      </child>
+    </thing>
+  <thing id="muElvenCha" name="Elven Chain" description="This extremely light chainmail is made of very fine mithral links. This armor is treated, in all ways, like light armor, including when determining proficiency. The armor has an arcane spell failure chance of 20%, a maximum Dexterity bonus of +4, and an armor check penalty of -2.\n\n{b}Community{/b}: This is not source marked but is added by the community &quot;Pathfinder Basic Pack&quot;." compset="Armor">
+    <comment>This version of elven chain is for adding armor bonus and abilities to the armor.</comment>
+    <fieldval field="gWeight" value="20"/>
+    <fieldval field="gSizeCost" value="150"/>
+    <fieldval field="gCost" value="5000"/>
+    <tag group="ArmorCheck" tag="2" name="2" abbrev="2"/>
+    <tag group="ArmorClass" tag="Light" name="Light Armor" abbrev="Light"/>
+    <tag group="ArmorMaxDx" tag="4" name="4" abbrev="4"/>
+    <tag group="EquipType" tag="Metal" name="Metal" abbrev="Metal"/>
+    <tag group="Helper" tag="AlwaysMast" name="AlwaysMast" abbrev="AlwaysMast"/>
+    <tag group="PieceArcFl" tag="10" name="10" abbrev="10"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="ArmorAC" tag="6" name="6" abbrev="6"/>
+    <tag group="ArmorArcFl" tag="20" name="20" abbrev="20"/>
+    <tag group="ArmorCateg" tag="Gauntlets" name="Includes Gauntlets" abbrev="Gauntlets"/>
+    <eval phase="PreLevel" priority="10000">~ We no longer Slow
+      var result as number
+      result = gizmo.delete[ArmorCateg.Slows]</eval>
+    <child entity="mSpecMagic">
+      <bootstrap thing="arChain"></bootstrap>
+      </child>
+    </thing>
+  <thing id="muDwPlate" name="Dwarven Plate" description="This full plate is made of adamantine, giving its wearer damage reduction of 3/-.\n\n{b}Community{/b}: This is not source marked but is added by the community &quot;Pathfinder Basic Pack&quot;." compset="Armor">
+    <fieldval field="gWeight" value="50"/>
+    <fieldval field="gSizeCost" value="16500"/>
+    <tag group="ArmorCateg" tag="Slows" name="Slows" abbrev="Slows"/>
+    <tag group="ArmorCheck" tag="5"/>
+    <tag group="ArmorClass" tag="Heavy" name="Heavy Armor" abbrev="Heavy"/>
+    <tag group="ArmorMaxDx" tag="1" name="1" abbrev="1"/>
+    <tag group="EquipType" tag="Metal" name="Metal" abbrev="Metal"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="ArmorAC" tag="9" name="9" abbrev="9"/>
+    <tag group="ArmorArcFl" tag="35" name="35" abbrev="35"/>
+    <tag group="ArmorCateg" tag="Gauntlets" name="Includes Gauntlets" abbrev="Gauntlets"/>
+    <tag group="RaceEquip" tag="rDwarf"/>
+    <tag group="SpecSource" tag="DwarfPlate"/>
+    <tag group="Helper" tag="AlwaysMast"/>
+    <tag group="HasAbility" tag="eAdamant"/>
+    <tag group="Ability" tag="eAdamant"/>
+    <eval phase="PreLevel" priority="10000"><![CDATA[
+      ~ If equipped, add our damage reduction
+      if (field[gIsEquip].value <> 0) then
+         #applydr[xDamRd, 3]
+      endif]]></eval>
+    <prereq message="This armor is already made out of a special material and can&apos;t add another.">
+      <validate><![CDATA[
+        ~ If not a pick then we are valid
+        validif (@ispick <> 1)
+        ~ If we are a not a custom armor we are valid
+        validif (tagis[portal.mMagChoose] <> 1)
+        ~ We can't have any other special material
+        validif (tagcount[Ability.e?] - tagcount[Ability.eNormal] = 1)]]></validate>
+      </prereq>
+    </thing>
+  <thing id="muDrPlate" name="Dragonhide Plate" description="This suit of full plate is made of dragonhide, rather than metal, so druids can wear it. It is otherwise identical to masterwork full plate.\n\n{b}Community{/b}: This is not source marked but is added by the community &quot;Pathfinder Basic Pack&quot;." compset="Armor">
+    <fieldval field="gWeight" value="50"/>
+    <fieldval field="gSizeCost" value="3300"/>
+    <tag group="ArmorCateg" tag="Slows" name="Slows" abbrev="Slows"/>
+    <tag group="ArmorCheck" tag="5"/>
+    <tag group="ArmorClass" tag="Heavy" name="Heavy Armor" abbrev="Heavy"/>
+    <tag group="ArmorMaxDx" tag="1" name="1" abbrev="1"/>
+    <tag group="EquipType" tag="Hide" name="Hide" abbrev="Hide"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="ArmorAC" tag="9" name="9" abbrev="9"/>
+    <tag group="ArmorArcFl" tag="35" name="35" abbrev="35"/>
+    <tag group="ArmorCateg" tag="Gauntlets" name="Includes Gauntlets" abbrev="Gauntlets"/>
+    <tag group="SpecSource" tag="DwarfPlate"/>
+    <tag group="Helper" tag="AlwaysMast"/>
+    <tag group="HasAbility" tag="eDragon"/>
+    <tag group="Ability" tag="eDragon"/>
+    <prereq message="This armor is already made out of a special material and can&apos;t add another.">
+      <validate><![CDATA[
+        ~ If not a pick then we are valid
+        validif (@ispick <> 1)
+        ~ If we are a not a custom armor we are valid
+        validif (tagis[portal.mMagChoose] <> 1)
+        ~ We can't have any other special material
+        validif (tagcount[Ability.e?] - tagcount[Ability.eNormal] = 1)]]></validate>
+      </prereq>
+    </thing>
+  <thing id="muMithShi" name="Mithral Shirt" description="This extremely light chain shirt is made of very fine mithral links.\n\nThe armor has an arcane spell failure chance of 10%, a maximum Dexterity bonus of +6, and no armor check penalty. It is considered light armor.\n\n{b}Community{/b}: This is not source marked but is added by the community &quot;Pathfinder Basic Pack&quot;." compset="Armor">
+    <fieldval field="gWeight" value="10"/>
+    <fieldval field="gSizeCost" value="1100"/>
+    <tag group="ArmorClass" tag="Light" name="Light Armor" abbrev="Light"/>
+    <tag group="ArmorMaxDx" tag="6"/>
+    <tag group="EquipType" tag="Metal" name="Metal" abbrev="Metal"/>
+    <tag group="PieceArcFl" tag="0"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="ArmorAC" tag="4" name="4" abbrev="4"/>
+    <tag group="ArmorArcFl" tag="10"/>
+    <tag group="Helper" tag="AlwaysMast"/>
+    <tag group="ArmorCheck" tag="0"/>
+    <tag group="Ability" tag="eMithral"/>
+    <tag group="HasAbility" tag="eMithral"/>
+    <prereq message="This armor is already made out of a special material and can&apos;t add another.">
+      <validate><![CDATA[
+        ~ If not a pick then we are valid
+        validif (@ispick <> 1)
+        ~ If we are a not a custom armor we are valid
+        validif (tagis[portal.mMagChoose] <> 1)
+        ~ We can't have any other special material
+        validif (tagcount[Ability.e?] - tagcount[Ability.eNormal] = 1)]]></validate>
+      </prereq>
+    </thing>
+  <thing id="ioCBGoodbe" name="Goodberry" description="Thus transmuted berry provides nourishment as if it were a normal meal for a Medium creature. The berry also cures 1 point of damage when eaten, subject to a maximum of 8 points of such curing in any 24-hour period.\n\n{b}Community{/b}: This is not source marked but is added by the community &quot;Pathfinder Basic Pack&quot;." compset="Wondrous">
+    <tag group="gType" tag="Wonder"/>
+    <tag group="Helper" tag="AlwaysAvl"/>
+    <tag group="Helper" tag="UsesQty"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    </thing>
+  <hidden id="aruElvenCh"/>
+  </document>

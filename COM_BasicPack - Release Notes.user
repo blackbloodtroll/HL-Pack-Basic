@@ -8,6 +8,29 @@
       ]]>
       </info_author>
     <info_history><![CDATA[
+<strong>v3.4  January 30, 2015</strong>
+
+<strong>Bug Fixes</strong>
+<ul>
+<li></li>
+</ul>
+
+<strong>New Features</strong>
+<ul>
+<li>The "Community Player Pack" has been full deprecated and its features have been merged into the Basic Pack.</li>
+</ul>
+
+<strong>Data File Authoring</strong>
+<ul>
+<li>New loadonce XML element added to all files. This requires at least HL 6.1e or the latest iPad app to load now. This also means the files in the community packs SHOULD not be copied to start a new file. If you do you will have issues with loading.</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+
 <strong>v3.3  January 11, 2015</strong>
 
 <strong>Bug Fixes</strong>

@@ -15,17 +15,33 @@
 
 
   <!-- ============================================================================================ -->
-  <!-- New Ultimate Psionics Mechanic                                                               -->
+  <!-- Basic Pack Mechanic                                                               -->
   <!-- ============================================================================================ -->
   <thing id="mechBasic" name="Basic Pack Mechanic" compset="Mechanics">
+    <!-- Community Product ID tag -->   
+    <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community"/>
+
     <!-- Psionic Helper Objects -->
     <bootstrap thing="xPwrRes"></bootstrap>
+    <!-- Hide Community Deities -->
+    <bootstrap thing="CBHideDeit"></bootstrap>
 
     </thing>
 
+  <!-- TODO Deprecate -->
+  <thing id="mechCB" name="Community Bestiary Mechanic" compset="Mechanics">
+    <tag group="DeityCat" tag="CB" name="Community Bestiary" abbrev="CB"/>
+    </thing>
+  <thing id="mechFMG" name="Fire Mountain Games Mechanic" compset="Mechanics">
+    <usesource source="pFireMoun"/>
+    </thing>
+
+
   <!-- ============================================================================================ -->
-  <!-- New Base Class Headers                                                               -->
+  <!-- New Base Class Headers                                                                       -->
   <!-- ============================================================================================ -->
+
+
 
   <!-- ============================================================================================ -->
   <!-- Helper Objects                                                                               -->
@@ -43,7 +59,17 @@
       field[livename].text = field[name].text & " (" & field[abValue].value & ")"
 
       ~ specify a shortname for consistency with other resistances
-      field[shortname].text &= " " & field[abValue].value]]></eval>
+      field[shortname].text &= " " & field[abValue].value
+      ]]></eval>
     </thing>
+
+  <thing id="CBHideDeit" name="Hide CB Deities" description="The script here is made to hide all deities associated with the Community Bestiary or Player Pack." compset="Simple">
+    <usesource source="srcHideDei"/>
+    <eval phase="First" priority="10000"><![CDATA[
+      ~ Hide all Community Bestiary deities
+      perform hero.assign[HideDeiCat.CB]
+      ]]></eval>
+    </thing>
+
 
   </document>
