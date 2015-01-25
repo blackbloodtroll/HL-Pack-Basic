@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
   <loadonce key="COM_BasicPack_APFMG1 - Way Of The Wicked"/>
   <fileinfo>
@@ -868,7 +868,6 @@ bodrinbarlow@gmail.com
     </thing>
   <thing id="lWoWIraen" name="Iraen" description="Language of the people of Iraen." compset="Language" uniqueness="useronce">
     <usesource source="pWotW"/>
-    <tag group="Helper" tag="NoPathSoc"/>
     <tag group="ProductId" tag="HLCommunit"/>
     </thing>
   <thing id="ioWoWPolyD" name="Polydorus&apos; Primer of Prognostication (Level 10 Diviner)" description="{i}This heavy tome is plain enough on the outside - a rugged leather volume bearing its title in the common tongue. Inside, the book is simply crammed with spells and notes, with every page (and even margins) laden with text. Still, if one cares to actually delve into the voluminous text this primer reveals itself to a broad and reaching text with amazing insights regarding the nature of magic in general and divination in particular.\n\n{/i}{b}Value{/b} 2850 gp {b}Blank Pages{/b} 0 \n\n{b}SPELLS{/b}\n\n5th - Abjuration: {i}dismissal;{/i} Divination: {i}prying eyes, telepathic bond;{/i} Evocation: {i}cold of cold, lightning arc{/i} \n4th - Abjuration: {i}stoneskin;{/i} Divination: {i}locate creature, scrying;{/i} Evocation: {i}ball lightning, wall of ice{/i} \n3rd - Abjuration: {i}dispel magic;{/i} Divination: {i}arcane sight, clairaudience/ clairvoyance, tongues;{/i} Evocation: {i}fireball, lightning bolt{/i}\n2nd - Divination: {i}see invisibility, locate object;{/i} Evocation: {i}scorching ray;{/i} Illusion: {i}mirror image{/i} \n1st - Abjuration: {i}alarm, endure elements, protection from evil, shield;{/i} Conjuration: {i}mage armor, mount;{/i} Divination: {i}comprehend languages, identify;{/i} Evocation: {i}magic missile;{/i} Transmutation: {i}expeditious retreat{/i} \n0th - all cantrips in the Pathfinder Roleplaying Game Core Rulebook save for those of the conjuration and necromancy schools." compset="Wondrous">
@@ -939,8 +938,7 @@ bodrinbarlow@gmail.com
 13/04/2013
 13th April 2013</comment>
     <usesource source="pWotW"/>
-    <eval phase="PostLevel" priority="10000">
-~ Add a +1 trait bonus to Knowledge (nobility)
+    <eval phase="PostLevel" priority="10000">~ Add a +1 trait bonus to Knowledge (nobility)
 #applybonus[BonTrait,hero.childfound[skKnowNobl],1]</eval>
     </thing>
   <thing id="cWoWUnHCom" name="Unholy Command" description="At 1st level, whenever a hand of tyranny makes an unarmed strike, he can decide to add an unholy command to the attack.\n\nIf the attack hits, the target must make Will save, with a DC equal to 10 + 1/2 the hand of tyranny&apos;s character level + the hand of tyranny&apos;s Wisdom modifier. If the saving throw fails, the target must obey the order, as if a {i}command{/i} spell was cast upon the target.\n\nThe hand of tyranny can use this ability a number of times per day equal to his level. Using this ability is a free action. \n\nAt 8th level, this order instead works like the spell {i}suggestion{/i}.\n\nThis ability replaces stunning fist." compset="ClSpecial" summary="Add an unholy command to unarmed attacks.">
@@ -1060,13 +1058,12 @@ bodrinbarlow@gmail.com
 
 #situational[hero.child[skIntim],"+4 morale bonus on Intimidate checks made against living creatures within 10 feet. Beat DC by 10 or more and issue a {i}command{/i} as the spell",field[thingname].text]]]></eval>
     </thing>
-  <thing id="cWoWApCCom" name="Cruelty (Commanded)" description="\nCommanded{/i}: The target must obey one order from the lord of darkness, as per the {i}command{/i} spell." compset="CustomSpec" summary="Command target as per the {i}command{/i} spell." uniqueness="unique">
+  <thing id="cWoWApCCom" name="Cruelty (Commanded)" description="The target must obey one order from the lord of darkness, as per the {i}command{/i} spell." compset="CustomSpec" summary="Command target as per the {i}command{/i} spell." uniqueness="unique">
     <comment>Data Input by Bodrin
 bodrinbarlow@gmail.com
 
 08/07/2013
 8th July 2013</comment>
-    <fieldval field="shortname" value="Cruelty (Commanded)"/>
     <usesource source="pWotW"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="SpInfo" tag="spCommand1"/>
@@ -1077,13 +1074,12 @@ bodrinbarlow@gmail.com
     <tag group="StandardDC" tag="aCHA"/>
     <exprreq message="Antipaladin level 3 required."><![CDATA[#levelcount[Antipal] >= 3]]></exprreq>
     </thing>
-  <thing id="cWoWApCCha" name="Cruelty (Charmed)" description="\n{i}Charmed{/i}: The target is charmed by the lord of darkness, as per the {i}charm monster{/i} spell.\n\nThis effect lasts 1 round per three levels of the lord of darkness. \n\nThe lord of darkness must have the commanded cruelty before selecting this cruelty." compset="CustomSpec" summary="Charm target as per the {i}charm monster{/i} spell." uniqueness="unique">
+  <thing id="cWoWApCCha" name="Cruelty (Charmed)" description="The target is charmed by the lord of darkness, as per the {i}charm monster{/i} spell. This effect lasts 1 round per three levels of the lord of darkness. The lord of darkness must have the commanded cruelty before selecting this cruelty." compset="CustomSpec" summary="Charm target as per the {i}charm monster{/i} spell." uniqueness="unique">
     <comment>Data Input by Bodrin
 bodrinbarlow@gmail.com
 
 08/07/2013
 8th July 2013</comment>
-    <fieldval field="shortname" value="Cruelty (Charmed)"/>
     <usesource source="pWotW"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="HasAbility" tag="drCruelty"/>
@@ -1709,7 +1705,7 @@ bodrinbarlow@gmail.com
     <tag group="sCastTime" tag="Action1" name="1 action" abbrev="1 action"/>
     <tag group="sDuration" tag="PerLevel"/>
     </thing>
-  <thing id="pWoWHearBe" name="Heartbeat" description="You briefly disguise yourself as one of the living. Your flesh becomes warm and you even gain a heart beat. You lose your undead aura (thus defeating {i}detect undead{/i}). You gain a +10 to Disguise checks to appear as one of the living.\n\nThe bonus to disguise from {i}disguise self{/i} and this spell do not stack, though they could be applicable for different things. This spell will convince townsfolk that you are not a vampire. {i}Disguise self{/i} will convince them you are not a specific individual." compset="InPlay">
+  <thing id="pWoWHearBe" name="Way of the Wicked: Heartbeat" description="You briefly disguise yourself as one of the living. Your flesh becomes warm and you even gain a heart beat. You lose your undead aura (thus defeating {i}detect undead{/i}). You gain a +10 to Disguise checks to appear as one of the living.\n\nThe bonus to disguise from {i}disguise self{/i} and this spell do not stack, though they could be applicable for different things. This spell will convince townsfolk that you are not a vampire. {i}Disguise self{/i} will convince them you are not a specific individual." compset="InPlay">
     <comment>Data Input by Bodrin
 bodrinbarlow@gmail.com
 
@@ -1719,8 +1715,8 @@ bodrinbarlow@gmail.com
     <fieldval field="pMaximum" value="10"/>
     <fieldval field="pDuration" value="10 min/lvl (D)"/>
     <usesource source="pWotW"/>
-    <tag group="Helper" tag="AdjSpell" name="Spell Adjustment" abbrev="Spell Adjustment"/>
     <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="AdjConfer"/>
     <eval phase="PreLevel" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -1913,8 +1909,7 @@ bodrinbarlow@gmail.com
       doneif (tagis[Helper.FtDisable] <> 0)
 
       ~ Lower our Constituion score by 2
-      hero.child[aCON].field[aNormMod].value += -2
-      ]]></eval>
+      hero.child[aCON].field[aNormMod].value += -2]]></eval>
     </thing>
   <thing id="fWoWDying" name="The Dying" description="You are dying. You can feel it in very core of your being.\n\nYour mortal blood is failing and the vampiric curse is overtaking you. Soon, you will die and rise again as a vampire.\n\n{b}Prerequisites{/b}: The Bitten, 3rd level \n\n{b}Benefits:{/b} Your natural armor improves +2, your darkvision improves to 60 ft., you gain a +2 racial bonus to Perception and you gain the toughness feat.\n\nHowever your Constitution score is again lowered by two permanently, you now cast no shadow and have no reflection in a mirror. Further, in full daylight you are sickened." compset="Feat" summary="You are dying. You can feel it in very core of your being." uniqueness="useronce">
     <comment>Data Input by Bodrin
@@ -1940,8 +1935,7 @@ bodrinbarlow@gmail.com
       #racialbonus[skPercep] += 2
 
       ~ Lower our Constituion score by 2
-      hero.child[aCON].field[aNormMod].value += -2      
-      ]]></eval>
+      hero.child[aCON].field[aNormMod].value += -2]]></eval>
     <exprreq message="The Bitten required"><![CDATA[#hasfeat[fWoWBitten] <> 0]]></exprreq>
     <exprreq message="3rd level required"><![CDATA[#totallevelcount[] >= 3]]></exprreq>
     </thing>
@@ -1971,8 +1965,7 @@ bodrinbarlow@gmail.com
       doneif (tagis[Helper.FtDisable] <> 0)   
 
       ~ Increase our Dexterity score by 2
-      hero.child[aDEX].field[aNormMod].value += 2
-    ]]></eval>
+      hero.child[aDEX].field[aNormMod].value += 2]]></eval>
     <exprreq message="The Bitten required"><![CDATA[#hasfeat[fWoWBitten] <> 0]]></exprreq>
     <exprreq message="The Dying required"><![CDATA[#hasfeat[fWoWDying] <> 0]]></exprreq>
     <exprreq message="5th level required"><![CDATA[#totallevelcount[] >= 5]]></exprreq>
@@ -2001,8 +1994,7 @@ bodrinbarlow@gmail.com
       ~ Then add another +2 racial bonus to our Perception skill
       ~ it should be +4 but it replaces the bonus from the Dying feat
       ~ which is a pre-requisite for this feat anyway
-      #racialbonus[skPercep] += 2
-      ]]></eval>
+      #racialbonus[skPercep] += 2]]></eval>
     <exprreq message="The Risen required"><![CDATA[#hasfeat[fWoWRisen] <> 0]]></exprreq>
     <exprreq message="The Bitten required"><![CDATA[#hasfeat[fWoWBitten] <> 0]]></exprreq>
     <exprreq message="The Dying required"><![CDATA[#hasfeat[fWoWDying] <> 0]]></exprreq>
@@ -2063,8 +2055,7 @@ bodrinbarlow@gmail.com
       hero.child[aCHA].field[aNormMod].value += 4
 
       ~ Add a +4 Natural armor Bonus to our armor class
-      hero.child[ArmorClass].field[tACNatural].value += 4
-      ]]></eval>
+      hero.child[ArmorClass].field[tACNatural].value += 4]]></eval>
     <exprreq message="The Bitten required"><![CDATA[#hasfeat[fWoWBitten] <> 0]]></exprreq>
     <exprreq message="The Dying required"><![CDATA[#hasfeat[fWoWDying] <> 0]]></exprreq>
     <exprreq message="The Risen required"><![CDATA[#hasfeat[fWoWRisen] <> 0]]></exprreq>
@@ -2099,23 +2090,24 @@ hero.tagis[Template.tmVampire]</comment>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="fCategory" tag="Undead"/>
     <prereq message="Must be a Vampire (The Risen or Later)">
-      <validate><![CDATA[~ Check whether we are a vampire
-@valid = 0
-if (#hasfeat[fWoWTrVamp] <> 0) then
- @valid = 1
-   else
-   if (#hasfeat[fWoWRisen] <> 0) then
-    @valid = 1
-     else
-     if (#hasfeat[fWoWInitia] <>0) then
-      @valid = 1
-        else
-        if (hero.tagis[Template.tmVampire] <> 0) then
+      <validate><![CDATA[
+        ~ Check whether we are a vampire
+        @valid = 0
+        if (#hasfeat[fWoWTrVamp] <> 0) then
          @valid = 1
-endif
- endif
-  endif
-   endif]]></validate>
+        else
+          if (#hasfeat[fWoWRisen] <> 0) then
+            @valid = 1
+          else
+             if (#hasfeat[fWoWInitia] <>0) then
+               @valid = 1
+             else
+               if (hero.tagis[Template.tmVampire] <> 0) then
+                 @valid = 1
+               endif
+            endif
+          endif
+        endif]]></validate>
       </prereq>
     </thing>
   <thing id="fWoWCrODar" name="Creature of Darkness" description="You are particularly well attuned to conditions of utter darkness. Even the greatest of magical darkness does not hamper your ability to hunt.\n\n{b}Prerequisites{/b}: Darkvision 60 ft., Undead\n\n{b}Benefits:{/b} Your darkvision increases to 120 ft. You can also see perfectly in any darkness even that created by {i}deeper darkness{/i}." compset="Feat" uniqueness="useronce">
@@ -2141,18 +2133,10 @@ bodrinbarlow@gmail.com
     <bootstrap thing="tmLich"></bootstrap>
     <exprreq message="Evil alignment required."><![CDATA[hero.tagis[Alignment.Evil] <> 0]]></exprreq>
     <prereq message="Ability to cast 5th level Arcane or Divine spells.">
-      <validate><![CDATA[~ Check whether we can cast 5th level Arcane or Divine spells
-
-@valid = 0
-
-if (tagcount[Hero.Arcane] >= 1 + 5) then
- @valid = 1
-  else
-   if (tagcount[Hero.Divine] >= 1 + 5) then
-    @valid = 1
-
-endif
- endif]]></validate>
+      <validate><![CDATA[
+        ~ Check whether we can cast 5th level Arcane or Divine spells
+        validif (tagcount[Hero.Arcane] >= 6)
+        validif (tagcount[Hero.Divine] >= 6)]]></validate>
       </prereq>
     </thing>
   <thing id="fWoWDarFli" name="Dark Flight" description=" You are able to fly without first transforming into a dire bat.\n\n{b}Prerequisites{/b}: True Vampirism \n\n{b}Benefits:{/b} You gain a fly speed 40 ft. (good)." compset="Feat" uniqueness="useronce">
@@ -2251,30 +2235,19 @@ bodrinbarlow@gmail.com
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="ShowSpec"/>
     <tag group="fCategory" tag="Undead"/>
-    <eval phase="Level" priority="5000"><![CDATA[~ Add +10 bonus to Disguise skill checks to appear mortal
+    <eval phase="Level" priority="5000"><![CDATA[   
+      ~ Add +10 bonus to Disguise skill checks to appear mortal
+      #situational[hero.child[skDisguise],"+10 bonus to Disguise skill checks to appear mortal.",field[thingname].text]
 
- #situational[hero.child[skDisguise],"+10 bonus to Disguise skill checks to appear mortal.",field[thingname].text]
-
-~Make Bluff and Disguise class skills
- #makeclassskill[skDisguise]
-  #makeclassskill[skBluff]]]></eval>
+      ~Make Bluff and Disguise class skills
+      #makeclassskill[skDisguise]
+      #makeclassskill[skBluff]]]></eval>
     <prereq message="Must be a Lich.">
-      <validate><![CDATA[~Check if we are a Lich
-
-@valid = 0
-
-if (#hasfeat[fWoWLich] <> 0) then
- @valid = 1
-  else
-  if (hero.tagis[Template.tmLich] <> 0) then
-   @valid = 1
-    else
-    if (hero.tagis[Template.tmForsLich] <> 0) then
-     @valid = 1
-
-endif
- endif
-  endif]]></validate>
+      <validate><![CDATA[
+        ~Check if we are a Lich
+        validif (#hasfeat[fWoWLich] <> 0)
+        validif (hero.tagis[Template.tmLich] <> 0)
+        validif (hero.tagis[Template.tmForsLich] <> 0)]]></validate>
       </prereq>
     </thing>
   <thing id="fWoWRedFe" name="Red Feast" description="Blood is the life for all vampires, but you find it particularly invigorating and devour it greedily when given the chance.\n\n{b}Prerequisites{/b}: True Vampirism\n\n{b}Normal:{/b} A vampire does 1d4 Constitution damage and gains 5 hit points or 5 temporary hit points from their blood drain special attack.\n\n{b}Benefits:{/b} You do 1d6 Constitution damage and gain 10 hit points or 10 temporary hit points from your blood drain special attack." compset="Feat" summary="Suck blood for 1d6 CON dam and gain 10 Hp when pin foe" uniqueness="useronce">
@@ -2297,11 +2270,11 @@ Render 10,000
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="ShowSpec"/>
     <tag group="fCategory" tag="Undead"/>
-    <eval phase="Render" priority="10000" index="2"><![CDATA[~ Change our Blood Drain summary to the Red feast benefit.
-
-hero.childfound[xVamBlood].field[abSumm].text = "Suck Blood for 1d6 Con dam and gain 10 Hp when pin foe"]]></eval>
-    <eval phase="First" priority="1000"><![CDATA[~ change the Vampire Blood Drain text to the Red feast Feat benefit
-
+    <eval phase="Render" priority="10000" index="2"><![CDATA[
+    ~ Change our Blood Drain summary to the Red feast benefit.
+    hero.childfound[xVamBlood].field[abSumm].text = "Suck Blood for 1d6 Con dam and gain 10 Hp when pin foe"]]></eval>
+    <eval phase="First" priority="1000"><![CDATA[
+~ change the Vampire Blood Drain text to the Red feast Feat benefit
 perform state.thing[xVamBlood].amendthing[description, replace(state.thing[xVamBlood].field[descript].text,"A vampire can suck blood from a grappled opponent; if the vampire establishes or maintains a pin, it drains blood, dealing 1d4 points of Constitution damage. The vampire heals 5 hit points or gains 5 temporary hit points for 1 hour (up to a maximum number of temporary hit points equal to its full normal hit points) each round it drains blood.","A vampire can suck blood from a grappled opponent; if the vampire establishes or maintains a pin, it drains blood, dealing 1d6 Constitution damage The vampire heals 10 hit points or gains 10 temporary hit points for 1 hour (up to a maximum number of temporary hit points equal to its full normal hit points) each round it drains blood.",0)]]]></eval>
     <exprreq message="True Vampirism required."><![CDATA[#hasfeat[fWoWTrVamp] <> 0]]></exprreq>
     </thing>
@@ -2322,23 +2295,12 @@ hero.tagis[Template.tmVampire]</comment>
     <tag group="Usage" tag="rounds"/>
     <tag group="fCategory" tag="Undead"/>
     <prereq message="Must be a Vampire (The Risen or Later)">
-      <validate><![CDATA[~ Check whether we are a vampire
-@valid = 0
-if (#hasfeat[fWoWTrVamp] <> 0) then
- @valid = 1
-   else
-   if (#hasfeat[fWoWRisen] <> 0) then
-    @valid = 1
-     else
-     if (#hasfeat[fWoWInitia] <>0) then
-      @valid = 1
-        else
-        if (hero.tagis[Template.tmVampire] <> 0) then
-         @valid = 1
-endif
- endif
-  endif
-   endif]]></validate>
+      <validate><![CDATA[
+        ~ Check whether we are a vampire
+        validif (#hasfeat[fWoWTrVamp] <> 0)
+        validif (#hasfeat[fWoWRisen] <> 0)
+        validif (#hasfeat[fWoWInitia] <>0)
+        validif (hero.tagis[Template.tmVampire] <> 0)]]></validate>
       </prereq>
     </thing>
   <thing id="fWoWUndOve" name="Undead Overlord" description="Your arisen spirit is particularly potent. Other undead find you impressive and awe inspiring. Mortals rightly tremble before you. You have always had this potential within you but at last, you mastered your state of undeath enough to exploit its power.\n\n{b}Prerequisites{/b}: Lich, 15th level\n\n{b}Benefits:{/b} You gain a +2 bonus to all Diplomacy checks when dealing with the undead. Your channel resistance increases to +6 and your Fear Aura DC is increased by +2." compset="Feat" uniqueness="useronce">
@@ -2506,16 +2468,12 @@ endif
       </prereq>
     </thing>
   <thing id="abWoWFoOSw" name="Form of the Swarm" description="As a standard action, a vampire with this ability can change into a bat swarm, centipede swarm, rat swarm, or spider swarm. The swarm has a number of hit points equal to the vampire, and any damage done to the swarm affects the vampire&apos;s hit point total. While in swarm form, a vampire cannot use any of its natural or special attacks, although it gains the movement, natural weapons, and extraordinary special abilities of the swarm into which it has transformed.\n\nThe vampire also retains all of its usual special qualities.\n\nWhile in swarm form the vampire is still considered to be an undead creature. A vampire can remain in swarm form until it assumes another form or retakes it original form (a standard action), or until the next sunrise." compset="Ability">
-    <comment>Data Input by Bodrin
-bodrinbarlow@gmail.com
-
-27/06/2013
-27th June 2013</comment>
+    <comment>Setup for the Become the Swarm feat that turns a PC into a vampire.</comment>
     <fieldval field="shortname" value="Form of the Swarm"/>
     <usesource source="pWotW"/>
-    <tag group="ProductId" tag="HLCommunit"/>
     <tag group="AbilType" tag="Super"/>
     <tag group="Helper" tag="ShowSpec"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     </thing>
   <thing id="raWoWVaDWe" name="Daylight Weakness" description="Exposing any vampire to direct sunlight staggers it on the first round of exposure and destroys it utterly on the second consecutive round of exposure if it does not escape." compset="RaceSpec" uniqueness="useronce">
     <comment>Data Input by Bodrin
@@ -2523,9 +2481,9 @@ bodrinbarlow@gmail.com
 
 24/06/2013
 24th June 2013</comment>
-    <fieldval field="shortname" value="Daylight Weakness"/>
     <tag group="SpecType" tag="Weakness"/>
     <tag group="Helper" tag="ShowSpec"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     </thing>
   <thing id="ioWoWShDay" name="Shroud of the Daywalker" description="This funeral shroud (or hooded cloak which completely covers the arms, body, and legs) at first glance appears to be made of the finest silk, no doubt in some dark color such as black, burgundy, or the deepest blue. However upon closer inspection, it reeks of death and corruption.\n\nWhen worn by the living, this shroud makes the wearer seem to be undead. Nonintelligent undead cannot detect the wearer as if cloaked by {i} hide from undead.(/i} Even intelligent undead may fail to notice you unless they succeeed at a DC 11 Will save.\n\nWhen worn by a vampire, however, this shroud has a very different effect. The darkness woven into the cloak shrouds the vampire and allow them to move about during the day. Instead of taking damage from sunlight, they are only dazzled in areas of bright sunlight or within the radius of a {i}daylight{/i} spell. This magic item does not free a vampire from its need to sleep however. A vampire who spends hours awake during the day must make up those hours by sleeping in their coffin at night.\n\nRegardless whether living or dead, once per day, as a standard action, the wearer may call forth the darkness within the shroud to make them invisible for up to nine minutes." compset="Wondrous" summary="Shroud of the Daywalker" uniqueness="unique">
     <fieldval field="gCost" value="18000"/>
@@ -3237,49 +3195,47 @@ bodrinbarlow@gmail.com
       <bootstrap thing="iResFire"></bootstrap>
       </child>
     </thing>
-  <thing id="pWoWGifAsm" name="Gift of Asmodeus" description="Gain +2 Natural Armor and Damage Reduction 10/Good" compset="InPlay" summary="Gain +2 Natural Armor and Damage Reduction 10/Good">
+  <thing id="pWoWGifAsm" name="Way of the Wicked: Gift of Asmodeus" description="Gain +2 Natural Armor and Damage Reduction 10/Good" compset="InPlay" summary="Gain +2 Natural Armor and Damage Reduction 10/Good">
     <comment>Data Input by Bodrin
 bodrinbarlow@gmail.com
 18/08/2013
 18th August 2013</comment>
     <fieldval field="pDuration" value="1/round per level"/>
+    <fieldval field="pMinimum" value="2"/>
+    <fieldval field="pMaximum" value="2"/>
+    <fieldval field="abValue2" value="10"/>
     <usesource source="pWotW"/>
-    <tag group="Helper" tag="AdjSpell"/>
-    <tag group="Helper" tag="NoIncr"/>
-    <tag group="Helper" tag="AdjNoPlus"/>
-    <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="AdjInfo"/>
-    <bootstrap thing="xDamRdGood">
-      <autotag group="Value" tag="10"/>
-      </bootstrap>
-    <eval phase="PreLevel" priority="10000"><![CDATA[   ~ If we're not enabled, get out now
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="AdjConfer"/>
+    <eval phase="PreLevel" priority="10000"><![CDATA[      
+      ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
 
-~ Add 2 to our natural armor class
-     #enhancementbonus[hero.child[mNatural], 2]]]></eval>
+     ~ Add 2 to our natural armor class and DR 10/good
+     hero.child[mNatural].field[Bonus].value += field[pAdjust].value
+     #applydr[xDamRdGood,field[abValue2].value]]]></eval>
     </thing>
-  <thing id="pWoWDarBle" name="Dark Blessing" description="You and Allies gain a +1 morale bonus on weapon damage rolls and on saving throws against compulsion effects." compset="InPlay" summary="You and Allies gain a +1 morale bonus on weapon damage rolls and on saving throws against compulsion effects.">
+  <thing id="pWoWDarBle" name="Way of the Wicked: Dark Blessing" description="You and Allies gain a +1 morale bonus on weapon damage rolls and on saving throws against compulsion effects." compset="InPlay" summary="You and Allies gain a +1 morale bonus on weapon damage rolls and on saving throws against compulsion effects.">
     <comment>Data Input by Bodrin
 bodrinbarlow@gmail.com
 18/08/2013
 18th August 2013</comment>
     <fieldval field="pDuration" value="1/Min Level"/>
+    <fieldval field="pMinimum" value="1"/>
+    <fieldval field="pMaximum" value="1"/>
     <usesource source="pWotW"/>
-    <tag group="Helper" tag="NoIncr"/>
-    <tag group="Helper" tag="AdjInfo"/>
-    <tag group="Helper" tag="AdjSpell"/>
     <tag group="ProductId" tag="HLCommunit"/>
-    <tag group="Helper" tag="AdjNoPlus"/>
-    <eval phase="PostLevel" priority="10000"><![CDATA[  ~ If we're not enabled, get out now
+    <tag group="Helper" tag="AdjInfo"/>
+    <tag group="Helper" tag="AdjConfer"/>
+    <eval phase="PostLevel" priority="10000"><![CDATA[
+    ~ If we're not enabled, get out now
     doneif (field[pIsOn].value = 0)
 
-  ~ Add a +1 morale bonus on weapon damage.
-    #situational[hero.child[Damage],"+1 morale bonus on weapon damage rolls.",field[thingname].text]
+    ~ Add a +1 morale bonus on weapon damage.
+    #applybonus[BonMorale,hero.child[Damage],field[pAdjust].value]
 
-  ~ Add a +1 morale bonus to saving throws.
+    ~ Add a +1 morale bonus to saving throws.
     #situational[hero.child[svAll],"+1 morale bonus on saving throws against compulsion effects.",field[thingname].text]]]></eval>
     </thing>
-
-
-
   </document>
