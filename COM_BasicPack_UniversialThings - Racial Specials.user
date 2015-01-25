@@ -3068,4 +3068,10 @@ call ChosenProf]]></eval>
     <tag group="AbilType" tag="Extra"/>
     <tag group="ProductId" tag="HLCommunit"/>
     </thing>
+  <thing id="raCBFragil" name="Fragile" description="When badly damaged this robot function poorly. A robot reduced to fewer than half its maximum hit points is staggered and moves at half speed. Further damage may cause the robot to explode." compset="RaceSpec">
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="AbilType" tag="Extra"/>
+    <tag group="SpecType" tag="Weakness"/>
+    </thing>
   </document>
