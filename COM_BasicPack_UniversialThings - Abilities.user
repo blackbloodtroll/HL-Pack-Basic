@@ -250,4 +250,10 @@ This is mainly for constructs and golems.</comment>
       field[livename].text = "Damage Reduction (" & field[abValue].value & "/cold iron or magic)"
       field[shortname].text = field[abValue].value & "/cold iron or magic"]]></eval>
     </thing>
+  <thing id="xCBTrueSee" name="True Seeing" description="Creature has constant {i}true seeing{/i} effect." compset="RaceSpec" uniqueness="useronce">
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="SpecType" tag="Sense"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="AbilType" tag="SpellLike"/>
+    </thing>
   </document>

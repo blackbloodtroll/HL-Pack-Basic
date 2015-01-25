@@ -3056,4 +3056,16 @@ call ChosenProf]]></eval>
     <tag group="SpecType" tag="Defense"/>
     <tag group="abAction" tag="None"/>
     </thing>
+  <thing id="rauMCHvFor" name="Heavy Fortification" description="When a critical hit or sneak attack is scored on this creature there is a 75% chance that the critical hit or sneak attack is negated and damage is instead rolled normally." compset="RaceSpec">
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="SpecType" tag="Defense"/>
+    <tag group="AbilType" tag="Extra"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    </thing>
+  <thing id="rauMCLtFor" name="Light Fortification" description="When a critical hit or sneak attack is scored on this creature there is a 25% chance that the critical hit or sneak attack is negated and damage is instead rolled normally." compset="RaceSpec">
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="SpecType" tag="Defense"/>
+    <tag group="AbilType" tag="Extra"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    </thing>
   </document>

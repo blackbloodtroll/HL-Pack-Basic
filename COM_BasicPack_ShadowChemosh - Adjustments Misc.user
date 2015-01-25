@@ -4451,6 +4451,32 @@ call S2SetName]]></eval>
       ~ put custom note on Flanking
       #appenddesc[pstFlankin,"{b}" & field[name].text & " " & signed(field[pAdjust].value) & ":{/b} " & field[pSource].text]]]></eval>
     </thing>
+  <thing id="p1wTouch2" name="Weapon: Touch, Ranged" description="Use this adjustment to select your &quot;Ranged Touch Attack&quot; weapon and whatever you type into the (source) section will get displayed instead of &quot;As Spell&quot; for damage. This allows you to setup a Ranged Touch Attack that matches to a domain power or other class ability." compset="InPlay">
+    <fieldval field="pCandExpr" value="thingid.wRangedTou"/>
+    <usesource source="srcS2Adjus"/>
+    <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="Helper" tag="NoIncr"/>
+    <eval phase="Final" priority="1000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value <> 1)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      field[pChosen].chosen.field[wFixRanDam].text = field[pSource].text]]></eval>
+    </thing>
+  <thing id="p1wTouch1" name="Weapon: Touch" description="Use this adjustment to select your &quot;Touch Attack&quot; weapon and whatever you type into the (source) section will get displayed instead of &quot;As Spell&quot; for damage. This allows you to setup a Touch Attack that matches to a domain power or other class ability." compset="InPlay">
+    <fieldval field="pCandExpr" value="thingid.wTouchAtta"/>
+    <usesource source="srcS2Adjus"/>
+    <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="Helper" tag="NoIncr"/>
+    <eval phase="Final" priority="1000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value <> 1)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      field[pChosen].chosen.field[wFixDamage].text = field[pSource].text]]></eval>
+    </thing>
   <hidden id="pS2svAlMor"/>
   <hidden id="pS2svAlPro"/>
   <hidden id="pS2svAlRes"/>

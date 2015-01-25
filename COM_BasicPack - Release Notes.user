@@ -12,12 +12,22 @@
 
 <strong>Bug Fixes</strong>
 <ul>
-<li></li>
+<li>Misc script changes/fixes to the Way of the Wicked player items.</li>
 </ul>
 
 <strong>New Features</strong>
 <ul>
 <li>The "Community Player Pack" has been full deprecated and its features have been merged into the Basic Pack.</li>
+<li>New ShadowChemosh Equipment:</li>
+<li>Goodberry magic item for tracking of casting of the spell.</li>
+<li>Touch Attack weapon you can add to help you track attack bonus easier.</li>
+<li>Ranged Touch Attack weapon you can add to help you track attack bonus easier.</li>
+<li>Dragonhide Plate as non-specific armor which allows you to make magic versions of the armor.</li>
+<li>Dwarven Plate as non-specific armor which allows you to make magic versions of the armor.</li>
+<li>Elven Chain as non-specific armor which allows you to make magic versions of the armor.</li>
+<li>Mithral Shirt as non-specific armor which allows you to make magic versions of the armor.</li>
+<li>Please note if you have one of the older versions of the armor you will get a notice that they have been deprecated and you will need to re-add the armor to your character.</li>
+
 </ul>
 
 <strong>Data File Authoring</strong>
