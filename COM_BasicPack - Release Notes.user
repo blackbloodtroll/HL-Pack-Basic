@@ -13,6 +13,7 @@
 <strong>Bug Fixes</strong>
 <ul>
 <li>Misc script changes/fixes to the Way of the Wicked player items.</li>
+<li>Lots of misc changes to support the merge in of the old "Community Player Pack".</li>
 </ul>
 
 <strong>New Features</strong>
@@ -26,18 +27,13 @@
 <li>Dwarven Plate as non-specific armor which allows you to make magic versions of the armor.</li>
 <li>Elven Chain as non-specific armor which allows you to make magic versions of the armor.</li>
 <li>Mithral Shirt as non-specific armor which allows you to make magic versions of the armor.</li>
-<li>Please note if you have one of the older versions of the armor you will get a notice that they have been deprecated and you will need to re-add the armor to your character.</li>
-
+<li>Please note if you have one of the older versions of the above armors you will get a notice that it has been deprecated and you will need to re-add the armor to your character. Sorry!</li>
+<li>Unique player items added for AP85 - Fires of Creation.</li>
 </ul>
 
 <strong>Data File Authoring</strong>
 <ul>
 <li>New loadonce XML element added to all files. This requires at least HL 6.1e or the latest iPad app to load now. This also means the files in the community packs SHOULD not be copied to start a new file. If you do you will have issues with loading.</li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
 </ul>
 
 
