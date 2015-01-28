@@ -146,21 +146,110 @@
     sortorder="0"
     description="J2: Guardians of Dragonfall, Paizo Publishing, LLC., 12/2007">
     </source>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <source
+    id="srcHangN"
+    name="Hangman's Noose"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="U2: Hangman's Noose, Paizo Publishing, LLC., 01/2008">
+    </source>
+  <source
+    id="srcHollLHp"
+    name="Hollow's Last Hope"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="D0: Hollow's Last Hope, Paizo Publishing, LLC., 06/2007">
+    </source>
+  <source
+    id="srcHngDead"
+    name="Hungry are the Dead"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="D4: Hungry are the Dead, Paizo Publishing, LLC., 10/2008">
+    </source>
+  <source
+    id="srcMskLvG"
+    name="Masks of the Living God"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="Masks of the Living God, Paizo Publishing, LLC., 12/2009">
+    </source>
+  <source
+    id="srcMurdMrk"
+    name="Murder's Mark"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="Murder's Mark, Paizo Publishing, LLC., 10/2012">
+    </source>
+  <source
+    id="srcPctStn"
+    name="The Pact Stone Pyramid"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="J4: The Pact Stone Pyramid, Paizo Publishing, LLC., 12/2008">
+    </source>
+  <source
+    id="srcRlmFelQ"
+    name="Realm of the Fellnight Queen"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="Realm of the Fellnight Queen, Paizo Publishing, LLC., 02/2010">
+    </source>
+  <source
+    id="srcRvgKbld"
+    name="Revenge of the Kobold King"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="D1.5: Revenge of the Kobold King, Paizo Publishing, LLC., 06/2008">
+    </source>
+  <source
+    id="srcRvrDrkn"
+    name="River into Darkness"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="W2: River into Darkness, Paizo Publishing, LLC., 04/2008">
+    </source>
+  <source
+    id="srcRubyPhx"
+    name="Ruby Phoenix Tournament"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="Ruby Phoenix Tournament, Paizo Publishing, LLC., 01/2012">
+    </source>
+  <source
+    id="srcSvnSin"
+    name="Seven Swords of Sin"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="D2: Seven Swords of Sin, Paizo Publishing, LLC., 08/2007">
+    </source>
+  <source
+    id="srcDemWth"
+    name="The Demon Within"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="D3: The Demon Within, Paizo Publishing, LLC., 04/2008">
+    </source>
+  <source
+    id="srcDrgDem"
+    name="The Dragon's Demand"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="The Dragon's Demand, Paizo Publishing, LLC., 07/2013">
+    </source>
   <source
     id="srcEmerSpi"
     name="The Emerald Spire Superdungeon"
@@ -168,6 +257,54 @@
     parent="pModules"
     sortorder="10"
     description="The Emerald Spire Superdungeon, Paizo Publishing, LLC., 07/2014">
+    </source>
+  <source
+    id="srcHarrow"
+    name="The Harrowing"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="The Harrowing, Paizo Publishing, LLC., 07/2011">
+    </source>
+  <source
+    id="srcMidMirr"
+    name="The Midnight Mirror"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="The Midnight Mirror, Paizo Publishing, LLC., 04/2012">
+    </source>
+  <source
+    id="srcWitchL"
+    name="The WItchwar Legacy"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="The Witchwar Legacy, Paizo Publishing, LLC., 09/2010">
+    </source>
+  <source
+    id="srcTombIrM"
+    name="Tomb of the Iron Medusa"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="Tomb of the Iron Medusa, Paizo Publishing, LLC., 04/2011">
+    </source>
+  <source
+    id="srcTwLstBr"
+    name="Tower of the Last Barron"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="LB1: Tower of the Last Barron, Paizo Publishing, LLC., 06/2008">
+    </source>
+  <source
+    id="srcTrsChim"
+    name="Treasure of Chimera Cove"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="LB2: Treasure of Chimera Cove, Paizo Publishing, LLC., 10/2008">
     </source>
   <source
     id="srcWardFrg"
