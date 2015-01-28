@@ -6,6 +6,9 @@
       Tim Shadow (ShadowChemosh)
     </info_author>
     <info_history><![CDATA[
+    January 28, 2015 - Tim Shadow
+    -Added logic for hidding community Deities.
+
     January 3, 2015 - Tim Shadow
     -Created New.
     -Make a new mechanic to hold global helper things. Also move Power Resistance helper to here from UP.
@@ -20,9 +23,13 @@
   <thing id="mechBasic" name="Basic Pack Mechanic" compset="Mechanics">
     <!-- Community Product ID tag -->   
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community"/>
+    <!-- Community Deity Tag -->   
+    <tag group="DeityCat" tag="CB" name="Community Deity"/>
 
     <!-- Psionic Helper Objects -->
     <bootstrap thing="xPwrRes"></bootstrap>
+    <!-- Simple Hide Community Deity Helper -->
+    <bootstrap thing="CBHideDeit"></bootstrap>
 
     </thing>
 
@@ -51,5 +58,14 @@
       field[shortname].text &= " " & field[abValue].value
       ]]></eval>
     </thing>
+
+  <thing id="CBHideDeit" name="Hide Community Deities" description="Helper Thing to hide all deities associated with the Community." compset="Simple">
+    <usesource source="srcHideDei"/>
+    <eval phase="First" priority="10000"><![CDATA[
+      ~ Hide all Community Bestiary deities
+      perform hero.assign[HideDeiCat.CB]
+      ]]></eval>
+    </thing>
+
 
   </document>

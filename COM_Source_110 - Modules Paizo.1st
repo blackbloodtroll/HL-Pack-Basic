@@ -20,10 +20,9 @@
     name="Paizo Modules"
     selectable="no"
     parent="pBasicPack"
-    sortorder="20"
+    sortorder="19"
     description="Pathfinder modules.">
     </source>
-<!-- Removed until we have some Player SRD Modules to include
   <source
     id="pModuSRD"
     name="Paizo SRD Modules"
@@ -32,16 +31,142 @@
     sortorder="20"
     description="Pathfinder SRD modules.">
     </source>
--->
   <!-- ============================================= -->
   <!-- Child Modules Sources that have player Things -->
   <!-- ============================================= -->
+  <source
+    id="srcCarnTea"
+    name="Carnival of Tears"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="10"
+    description="E1: Carnival of Tears, Paizo Publishing, LLC., 11/2007">
+    </source>
+  <source
+    id="srcCityDea"
+    name="City of Golden Death"
+    selectable="yes"
+    parent="pModules"
+    sortorder="10"
+    description="The City of Golden Death, Paizo Publishing, LLC., 04/2010">
+    </source>
+  <source
+    id="srcClshKS"
+    name="Clash of the Kingslayers"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="10"
+    description="S1: Clash of the Kingslayers, Paizo Publishing, LLC., 01/2009">
+    </source>
+  <source
+    id="srcCqtBsVl"
+    name="Conquest of Bloodsworn Vale"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="10"
+    description="W1: Conquest of Bloodsworn Vale, Paizo Publishing, LLC., 07/2007">
+    </source>
+  <source
+    id="srcCrKobK"
+    name="Crown of the Kobold King"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="10"
+    description="D1: Crown of the Kobold King, Paizo Publishing, LLC., 01/2007">
+    </source>
+  <source
+    id="srcCrucChs"
+    name="Crucible of Chaos"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="10"
+    description="J3: Crucible of Chaos, Paizo Publishing, LLC., 02/2008">
+    </source>
+  <source
+    id="srcCultEbD"
+    name="Cult of the Ebon Destroyer"
+    selectable="yes"
+    parent="pModules"
+    sortorder="10"
+    description="Cult of the Ebon Destroyer, Paizo Publishing, LLC., 02/2011">
+    </source>
+  <source
+    id="srcCseRvSk"
+    name="Curse of the Riven Sky"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="Curse of the Riven Sky, Paizo Publishing, LLC., 07/2010">
+    </source>
+  <source
+    id="srcDoom"
+    name="Doom Comes to Dustpawn"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="Doom Comes to Dustpawn, Paizo Publishing, LLC., 05/2013">
+    </source>
+  <source
+    id="srcEntPhar"
+    name="Entombed with the Pharaohs"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="J1: Entombed with the Pharaohs, Paizo Publishing, LLC., 10/2007">
+    </source>
+  <source
+    id="srcFltRdRv"
+    name="Flight of the Red Raven"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="W3: Flight of the Red Raven, Paizo Publishing, LLC., 05/2008">
+    </source>
+  <source
+    id="srcFrmShS"
+    name="From Shore to Sea"
+    selectable="yes"
+    parent="pModules"
+    sortorder="0"
+    description="From Shore to Sea, Paizo Publishing, LLC., 06/2010">
+    </source>
+  <source
+    id="srcGalEvil"
+    name="Gallery of Evil"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="U1: Gallery of Evil, Paizo Publishing, LLC., 09/2007">
+    </source>
+  <source
+    id="srcGrdDrg"
+    name="Guardians of Dragonfall"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="0"
+    description="J2: Guardians of Dragonfall, Paizo Publishing, LLC., 12/2007">
+    </source>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <source
     id="srcEmerSpi"
     name="The Emerald Spire Superdungeon"
     selectable="yes"
     parent="pModules"
-    sortorder="0"
+    sortorder="10"
     description="The Emerald Spire Superdungeon, Paizo Publishing, LLC., 07/2014">
     </source>
   <source
@@ -49,7 +174,7 @@
     name="Wardens of the Reborn Forge"
     selectable="yes"
     parent="pModules"
-    sortorder="0"
+    sortorder="10"
     description="Wardens of the Reborn Forge, Paizo Publishing, LLC., 12/2013">
     </source>
 

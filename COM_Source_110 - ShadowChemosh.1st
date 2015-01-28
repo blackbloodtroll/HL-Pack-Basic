@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <document signature="Hero Lab Structure">
   <loadonce key="COM_Source_110 - ShadowChemosh.1st"/>
-<!--
 
-December 29, 2014 - Tim Shadow
--Name change PFRPG_Adjustments.1st => COM_BasicPack_Source - ShadowChemosh.1st
+  <!--
+  January 28, 2015 - Tim Shadow
+  -Added in the "Hide Deity" source.
 
-November 24, 2014 - Tim Shadow
--Changed name as this package no includes "Helper" things.
+  December 29, 2014 - Tim Shadow
+  -Name change PFRPG_Adjustments.1st => COM_BasicPack_Source - ShadowChemosh.1st
 
-April 24, 2014 - Tim Shadow
--Moved "tag" groups to its own file.
+  November 24, 2014 - Tim Shadow
+  -Changed name as this package no includes "Helper" things.
 
-v2.2 2/27/2013
--Added AdjustBon, AdjustAC groups and tags.
+  April 24, 2014 - Tim Shadow
+  -Moved "tag" groups to its own file.
 
-v2.1 11/27/2012
--Created new to make things easier and allow for more advanced features later.
+  v2.2 2/27/2013
+  -Added AdjustBon, AdjustAC groups and tags.
 
--->
+  v2.1 11/27/2012
+  -Created new to make things easier and allow for more advanced features later.
 
-<!-- ============================================== -->
-<!-- SOURCES                                        -->
-<!-- ============================================== -->
+  -->
+
+  <!-- ============================================== -->
+  <!-- SHADOWCHEMOS GAMING ADDON SOURCES              -->
+  <!-- ============================================== -->
+
   <!-- Parent Sources -->
   <source
     id="pShadowChe"
@@ -34,6 +38,14 @@ v2.1 11/27/2012
     </source>
     
   <!-- Child Sources -->
+  <source
+    id="srcHideDei"
+    name="Hide Community Deities"
+    selectable="yes"
+    parent="pShadowChe"
+    sortorder="5"
+    description="Check marking this will cause all deities in the Community Deities to be hidden.">
+    </source>
   <source
     id="srcS2Adjus"
     name="ShadowChemosh&apos;s Adjustments"
@@ -66,4 +78,5 @@ v2.1 11/27/2012
     sortorder="10"
     description="ShadowChemosh community addon for Pathfinder. Copy Righted 2011 Tim Shadow. Use is allowed for gaming groups only.">
     </source>
+
 </document>
