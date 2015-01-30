@@ -147,72 +147,66 @@ January 7, 2011 - Tim Shadow
     <tag group="ProductId" tag="HLCommunit"/>
     </thing>
   <thing id="rauCold" name="Cold" description="The creature generates intense cold that its mere touch deals additional cold damage. The creature&apos;s metallic melee weapons also conduct this cold." compset="RaceSpec">
-    <comment>This version of cold allows user to select the amount of cold damage.  Defualts to 1d6.
-
-Type number of dice damage in the abValue field
-Type type of dice in the abValue2 field</comment>
+    <comment>This version of cold allows user to select the amount of cold damage.  Defualts to 1d6. Type number of dice damage in the abValue field. Type type of dice in the abValue2 field</comment>
     <tag group="SpecType" tag="Attack"/>
     <tag group="AbilType" tag="Extra"/>
     <tag group="Helper" tag="ShowSpec"/>
-    <eval phase="Final" priority="10000"><![CDATA[var noDice as number
-var typDice as number
-var damStr as string
+    <eval phase="Final" priority="10000"><![CDATA[
+      var noDice as number
+      var typDice as number
+      var damStr as string
 
-noDice = field[abValue].value
-typDice = field[abValue2].value
+      noDice = field[abValue].value
+      typDice = field[abValue2].value
 
-~ defaults to 1d6
-if (noDice = 0) then 
-   noDice = 1
-endif
-if (typDice = 0) then
-   typDice = 6
-endif
+      ~ defaults to 1d6
+      if (noDice = 0) then 
+         noDice = 1
+      endif
+      if (typDice = 0) then
+         typDice = 6
+      endif
 
-damStr = noDice &"d"& typDice
+      damStr = noDice &"d"& typDice
 
-
-~find all our melee weapons that are unarmed attacks, natural attacks, or
+      ~find all our melee weapons that are unarmed attacks, natural attacks, or
       ~metal weapons - each gets fire damage
       foreach pick in hero from BaseWep where "wCategory.Melee & (wCategory.Unarmed | component.BaseNatWep | EquipType.Metal)"
         #extradamage[eachpick,"+" & damStr & " cold",field[name].text]
-        nexteach
+      nexteach
 
-field[livename].text = "Cold (" & damStr & ")"]]></eval>
+      field[livename].text = "Cold (" & damStr & ")"]]></eval>
     </thing>
   <thing id="rauHeat" name="Heat" description="The creature generates so much heat that its mere touch deals additional fire damage. The creature&apos;s metallic melee weapons also conduct this heat." compset="RaceSpec">
-    <comment>This version of heat allows user to select the amount of fire damage.  Defaults to 1d6.
-
-Type number of dice damage in the abValue field
-Type type of dice in the abValue2 field</comment>
+    <comment>This version of heat allows user to select the amount of fire damage.  Defaults to 1d6. Type number of dice damage in the abValue field. Type type of dice in the abValue2 field</comment>
     <tag group="SpecType" tag="Attack"/>
     <tag group="AbilType" tag="Extra"/>
     <tag group="Helper" tag="ShowSpec"/>
-    <eval phase="Final" priority="10000"><![CDATA[var noDice as number
-var typDice as number
-var damStr as string
+    <eval phase="Final" priority="10000"><![CDATA[
+      var noDice as number
+      var typDice as number
+      var damStr as string
 
-noDice = field[abValue].value
-typDice = field[abValue2].value
+      noDice = field[abValue].value
+      typDice = field[abValue2].value
 
-~ defaults to 1d6
-if (noDice = 0) then 
-   noDice = 1
-endif
-if (typDice = 0) then
-   typDice = 6
-endif
+      ~ defaults to 1d6
+      if (noDice = 0) then 
+         noDice = 1
+      endif
+      if (typDice = 0) then
+         typDice = 6
+      endif
 
-damStr = noDice &"d"& typDice
+      damStr = noDice &"d"& typDice
 
-
-~find all our melee weapons that are unarmed attacks, natural attacks, or
+      ~find all our melee weapons that are unarmed attacks, natural attacks, or
       ~metal weapons - each gets fire damage
       foreach pick in hero from BaseWep where "wCategory.Melee & (wCategory.Unarmed | component.BaseNatWep | EquipType.Metal)"
         #extradamage[eachpick,"+" & damStr & " fire",field[name].text]
-        nexteach
+      nexteach
 
-field[livename].text = "Heat (" & damStr & ")"]]></eval>
+      field[livename].text = "Heat (" & damStr & ")"]]></eval>
     </thing>
   <thing id="rauPlantse" name="Plantsense" description="Creature can automatically pinpoint the location of anything within 120 feet that is in contact with vegetation." compset="RaceSpec" summary="Sense things and creatures in contact with vegetation." uniqueness="unique">
     <tag group="AbilType" tag="Extra" name="Extraordinary Ability" abbrev=" (Ex)"/>
@@ -243,27 +237,25 @@ field[livename].text = "Heat (" & damStr & ")"]]></eval>
       </bootstrap>
     </thing>
   <thing id="xBonusAcro" name="Skill Bonus: Acrobatics" description="Bonus to Acrobatics checks." compset="RaceSpec">
-    <comment><![CDATA[abValue: signed bonus/penalty
-livename: bonus text
-abText: bonus type "Racial" is default]]></comment>
+    <comment><![CDATA[abValue: signed bonus/penalty, livename: bonus text, abText: bonus type "Racial" is default]]></comment>
     <fieldval field="abText" value="Racial"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="ShowSpec"/>
     <tag group="SpecType" tag="Skill"/>
-    <eval phase="PreLevel" priority="4000"><![CDATA[var curSkill as string
-curSkill = "Acrobatics"
+    <eval phase="PreLevel" priority="4000"><![CDATA[
+      var curSkill as string
+      curSkill = "Acrobatics"
 
-call TotalValue
+      call TotalValue
 
-~ Use our value field as the bonus
-   if (compare(field[livename].text,field[name].text) <> 0) then
-      #skillbonus[skAcrobat] += signed(field[abValue].value)
-      field[livename].text = signed(field[abValue].value) & " " & curSkill
-   else
-      #situational[hero.child[skAcrobat],signed(field[abValue].value) & " " & field[livename].text,field[abText].text]
-      field[livename].text = signed(field[abValue].value) & " " & curSkill & " " & field[livename].text
-      
-endif]]></eval>
+      ~ Use our value field as the bonus
+      if (compare(field[livename].text,field[name].text) <> 0) then
+        #skillbonus[skAcrobat] += signed(field[abValue].value)
+        field[livename].text = signed(field[abValue].value) & " " & curSkill
+      else
+        #situational[hero.child[skAcrobat],signed(field[abValue].value) & " " & field[livename].text,field[abText].text]
+        field[livename].text = signed(field[abValue].value) & " " & curSkill & " " & field[livename].text
+      endif]]></eval>
     </thing>
   <thing id="xBonusAppr" name="Skill Bonus: Appriase" description="Bonus to Appraise checks." compset="RaceSpec">
     <comment><![CDATA[abValue: signed bonus/penalty
@@ -1785,10 +1777,9 @@ call multTarget]]></eval>
     </thing>
   <thing id="xCBBreathW" name="Breath Weapon" description="Some creatures can exhale a cone, line, or cloud of energy or other magical effects. A breath weapon attack usually deals damage and is often based on some type of energy. Breath weapons allow a Reflex save for half damage (DC 10 + 1/2 breathing creature&apos;s racial HD + breathing creature&apos;s Con modifier; the exact DC is given in the creature&apos;s descriptive text). A creature is immune to its own breath weapon unless otherwise noted. Some breath weapons allow a Fortitude save or a Will save instead of a Reflex save. Each breath weapon also includes notes on how often it can be used, even if this number is limited in times per day." compset="RaceSpec" uniqueness="useronce">
     <comment>Set the tag BloodEner.? for the appropiate energy type
-
 field[abValue] is the # of dice
 field[abValue2] is the type of dice
- field[abRange] is the range
+field[abRange] is the range
 
 we use the tags BreathShp.Line or BreathShp.Cone for breath shape
 
@@ -1865,22 +1856,22 @@ field[sbName].text = "breath weapon (" & field[abSumm].text & ")"]]></eval>
     <tag group="multTarg" tag="IncDam"/>
     <tag group="StandardDC" tag="aCON" name="Constitution" abbrev="Constitution"/>
     <bootstrap thing="aaBurn"></bootstrap>
-    <eval phase="Final" priority="1000" index="2"><![CDATA[~ add "plus burn" to targeted attacks
+    <eval phase="Final" priority="1000" index="2"><![CDATA[
+      ~ add "plus burn" to targeted attacks
+      var v_damage as string
+      v_damage = field[abValue].value & "d" & field[abValue2].value & " fire"
 
-var v_damage as string
-v_damage = field[abValue].value & "d" & field[abValue2].value & " fire"
+      call multTarget]]></eval>
+    <eval phase="Render" priority="90000"><![CDATA[
+      doneif (field[abValue].value = 0)
+      var dam as string
+      dam = field[abValue].value & "d" & field[abValue2].value & " fire"
 
-call multTarget]]></eval>
-    <eval phase="Render" priority="90000"><![CDATA[doneif (field[abValue].value = 0)
+      field[livename].text = "Burn (" & dam & ", DC " & field[abDC].value & ")"
 
-var dam as string
-dam = field[abValue].value & "d" & field[abValue2].value & " fire"
+      field[sbName].text = "burn (" & dam & ", DC " & field[abDC].value & ")"
 
-field[livename].text = "Burn (" & dam & ", DC " & field[abDC].value & ")"
-
-field[sbName].text = "burn (" & dam & ", DC " & field[abDC].value & ")"
-
-call abilLabel]]></eval>
+      call abilLabel]]></eval>
     </thing>
   <thing id="xCBAirMast" name="Air Mastery" compset="RaceSpec">
     <comment>Use Value tag to assign penalty.
