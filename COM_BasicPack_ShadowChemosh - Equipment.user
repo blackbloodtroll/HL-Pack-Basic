@@ -6,8 +6,7 @@
       Author:  Tim Shadow
       Email: shadowchemosh@yahoo.com
       File Name changed from PFRPG_ARG_CatClaws.user => COM_BasicPack_ShadowChemosh - Equipment.user]]></info_author>
-    <info_history>
-      December 29, 2014 - Tim Shadow
+    <info_history>December 29, 2014 - Tim Shadow
       -Merged together with the Spellbook and Armor Razors user files.
 
       November 25, 2014 - Tim Shadow
@@ -54,7 +53,6 @@ Endif</eval>
     <tag group="Helper" tag="CustomItem" name="CustomItem" abbrev="CustomItem"/>
     <tag group="Helper" tag="MatForceMs"/>
     <tag group="Helper" tag="Helper" name="Helper" abbrev="Helper"/>
-    <tag group="Helper" tag="NoPathSoc"/>
     <eval phase="PostAttr" priority="10000" index="3">var bonus as number
 bonus += hero.childfound[wClaw].tagcount[Helper.DamageUp]
 ~ Increase Claw Blade damage based on Claw Damage increases
@@ -119,9 +117,11 @@ field[livename].text &= " Claw Blades"]]></eval>
     </thing>
   <thing id="ipS2ArmRaz" name="Armor Razors" description="Armor razors deal extra slashing damage (see &quot;spiked armor&quot; on Table: Weapons) on a successful grapple attack. The razors count as a martial weapon. If you are not proficient with them, you take a -4 penalty on grapple checks when you try to use them. You can also make a regular melee attack (or off-hand attack) with the razors, and they count as a light weapon in this case. (You can&apos;t also make an attack with armor razors if you have already made an attack with another off-hand weapon, and vice versa.) An enhancement bonus to a suit of armor does not improve the razors&apos; effectiveness, but the razors can be made into magic weapons in their own right.\n\n{B}Note:{/b} To customize your armor razors equip your armor and then go to the &quot;Weapon&quot; tab and edit your armor razors." compset="ItemPower" summary="Goto &quot;Weapon&quot; tab to customize after equipping your armor.">
     <fieldval field="iPriceCash" value="50"/>
-    <tag group="PowerReq" tag="Armor"/>
+    <usesource source="srcS2Gear"/>
     <tag group="Helper" tag="NotMagicPw"/>
     <tag group="PowerType" tag="Armor"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="PowerReq" tag="Armor"/>
     <bootstrap thing="iS2ArmRazo">
       <autotag group="Helper" tag="Shadow"/>
       </bootstrap>
@@ -131,6 +131,7 @@ field[livename].text &= " Claw Blades"]]></eval>
     <tag group="fShowWhat" tag="Classes"/>
     <tag group="Helper" tag="GearNoSize"/>
     <tag group="gType" tag="Tools"/>
+    <tag group="Helper" tag="CoreCampOK"/>
     <eval phase="Final" priority="10000"><![CDATA[
       var Cost   as number
       var Pages  as number
