@@ -297,6 +297,7 @@ Added new natural weapon adjustments:
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="20500"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -311,6 +312,7 @@ Added new natural weapon adjustments:
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="20500"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -325,6 +327,7 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="20500"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -340,6 +343,7 @@ Added new natural weapon adjustments:
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="20500"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -354,6 +358,7 @@ Added new natural weapon adjustments:
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="50000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -379,6 +384,7 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="20500"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -393,6 +399,7 @@ Added new natural weapon adjustments:
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="50000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -414,6 +421,7 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -430,6 +438,7 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -446,6 +455,7 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -462,6 +472,7 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -478,6 +489,7 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -494,6 +506,7 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -510,6 +523,7 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -526,6 +540,7 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -545,18 +560,12 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wBite">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       <autotag group="Value" tag="1"/>
       <autotag group="wMain" tag="1d6_5"/>
       </bootstrap>
-    <eval phase="Render" priority="99999999"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen = 0)
-
-      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -564,6 +573,13 @@ Added new natural weapon adjustments:
       doneif (field[pChosen].ischosen <> 1)
 
       call S2SetNatDm]]></eval>
+    <eval phase="Render" priority="99999999"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
+
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2wGrab" name="Natural Weapon: Grab" description="Select this adjustment to have a Grab racial ability added to your character.  Then from the drop down box you can select the natural attack this grab is associated to and the extra wording &quot;plus grab&quot; will be added to the natural attack selected.  You can also change the wording using the text box." compset="InPlay">
     <fieldval field="pDuration" value=" plus grab"/>
@@ -572,6 +588,7 @@ Added new natural weapon adjustments:
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="raGrab">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
@@ -589,18 +606,12 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wClaw">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       <autotag group="Value" tag="2"/>
       <autotag group="wMain" tag="1d4_4"/>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      call S2SetNatDm]]></eval>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -608,6 +619,13 @@ Added new natural weapon adjustments:
       doneif (field[pChosen].ischosen = 0)
 
       field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      call S2SetNatDm]]></eval>
     </thing>
   <thing id="pS2wGore" name="Natural Weapon: Gore" description="Select this adjustment to have a Gore natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Gore"/>
@@ -615,18 +633,12 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wGore">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       <autotag group="Value" tag="1"/>
       <autotag group="wMain" tag="1d6_5"/>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      call S2SetNatDm]]></eval>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -634,6 +646,13 @@ Added new natural weapon adjustments:
       doneif (field[pChosen].ischosen = 0)
 
       field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      call S2SetNatDm]]></eval>
     </thing>
   <thing id="pS2wWing" name="Natural Weapon: Wing" description="Select this adjustment to have a Wing natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Wing"/>
@@ -641,18 +660,12 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wWing">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       <autotag group="Value" tag="1"/>
       <autotag group="wMain" tag="1d4_4"/>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      call S2SetNatDm]]></eval>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -660,6 +673,13 @@ Added new natural weapon adjustments:
       doneif (field[pChosen].ischosen = 0)
 
       field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      call S2SetNatDm]]></eval>
     </thing>
   <thing id="pS2wTailSl" name="Natural Weapon: Tail Slap" description="Select this adjustment to have a Tail Slap natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Tail Slap"/>
@@ -667,18 +687,12 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wTailSlap">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       <autotag group="Value" tag="1"/>
       <autotag group="wMain" tag="1d6_5"/>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      call S2SetNatDm]]></eval>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -686,6 +700,13 @@ Added new natural weapon adjustments:
       doneif (field[pChosen].ischosen = 0)
 
       field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      call S2SetNatDm]]></eval>
     </thing>
   <thing id="pS2wSlam" name="Natural Weapon: Slam" description="Select this adjustment to have a Slam natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Slam"/>
@@ -693,18 +714,12 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wSlam">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       <autotag group="Value" tag="1"/>
       <autotag group="wMain" tag="1d4_4"/>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      call S2SetNatDm]]></eval>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -712,6 +727,13 @@ Added new natural weapon adjustments:
       doneif (field[pChosen].ischosen = 0)
 
       field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      call S2SetNatDm]]></eval>
     </thing>
   <thing id="pS2wSting" name="Natural Weapon: Sting" description="Select this adjustment to have a Sting natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Sting"/>
@@ -719,18 +741,12 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wSting">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       <autotag group="Value" tag="1"/>
       <autotag group="wMain" tag="1d4_4"/>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      call S2SetNatDm]]></eval>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -738,6 +754,13 @@ Added new natural weapon adjustments:
       doneif (field[pChosen].ischosen = 0)
 
       field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      call S2SetNatDm]]></eval>
     </thing>
   <thing id="pS2wTalons" name="Natural Weapon: Talons" description="Select this adjustment to have a 2x Talon natural attacks added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Talons x2"/>
@@ -745,18 +768,12 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wTalon">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       <autotag group="Value" tag="2"/>
       <autotag group="wMain" tag="1d4_4"/>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      call S2SetNatDm]]></eval>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -764,6 +781,13 @@ Added new natural weapon adjustments:
       doneif (field[pChosen].ischosen = 0)
 
       field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      call S2SetNatDm]]></eval>
     </thing>
   <thing id="pS2wOthMel" name="Natural Weapon: Other Melee" description="Select this adjustment to have a Other Melee natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Other Melee"/>
@@ -771,17 +795,11 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wOtherMel">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       <autotag group="wMain" tag="1d6_5"/>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      call S2SetNatDm]]></eval>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -789,6 +807,13 @@ Added new natural weapon adjustments:
       doneif (field[pChosen].ischosen = 0)
 
       field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      call S2SetNatDm]]></eval>
     </thing>
   <thing id="pS2wOthRng" name="Natural Weapon: Other Ranged" description="Select this adjustment to have a Other Ranged natural attack added to your character.  Then from the drop down box you can select the natural attack to change the following:\n\n{B}Duration:{/b} Used to set the name of the natural attack by typing into the duration text box area.\n{b}Counter:{/b} Used to Up/Down the damage of the natural attack based on the Bestiary &quot;Table: Natural Attacks by Size&quot;.\n{b}Source:{/b} Can be used to set the exact Weapon Damage tag.  In example typing &quot;1d12_404&quot; would force the damage die to be 1d12. This means the counter value will get ignored." compset="InPlay">
     <fieldval field="pDuration" value="Other Melee"/>
@@ -796,17 +821,11 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wOtherRng">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       <autotag group="wMain" tag="1d6_5"/>
       </bootstrap>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      call S2SetNatDm]]></eval>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -814,6 +833,13 @@ Added new natural weapon adjustments:
       doneif (field[pChosen].ischosen = 0)
 
       field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
+    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      call S2SetNatDm]]></eval>
     </thing>
   <thing id="pS2wPoiCON" name="Natural Weapon: Poison, CON" description="Select this adjustment to add a CON based poison attack on to a specific natural weapon.  Use the drop down box to select the natural weapon this is to apply to.  Then use the following fields to set the poison attributes:\n\nDrop down box selects the natural attack the wording (Plus Poison) is to be added to.\n\nThe counter is used to set the die size of the CON damage dice. So if set to 4 it will show 1d4 CON damage.\n\nThe duration, default value of 1 round, is used to set the number of rounds the poison lasts.\n\nThe (source) section is used to set the number of additional cures the poison takes to remove.  The default for poison is 1 round so if you change the (source) text to be 1 then it will take 2 cures to save from this poison." compset="InPlay">
     <fieldval field="pMinimum" value="1"/>
@@ -823,9 +849,17 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Helper" tag="AdjNoPlus"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="raPoiCON">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
+    <eval phase="Final" priority="50000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~ If nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      #extradamage[field[pChosen].chosen," plus Con poison",field[name].text]]]></eval>
     <eval phase="PreLevel" priority="10000" index="3"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -836,13 +870,6 @@ Added new natural weapon adjustments:
       #value2[raPoiCON] += field[pSource].text
       ~ Set Number of rounds the poison lasts
       hero.child[raPoiCON].field[abDuration].value += field[pDuration].text]]></eval>
-    <eval phase="Final" priority="50000"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~ If nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      #extradamage[field[pChosen].chosen," plus Con poison",field[name].text]]]></eval>
     </thing>
   <thing id="pS2wPoiCHA" name="Natural Weapon: Poison, CHA" description="Select this adjustment to add a CHA based poison attack on to a specific natural weapon.  Use the drop down box to select the natural weapon this is to apply to.  Then use the following fields to set the poison attributes:\n\nDrop down box selects the natural attack the wording (Plus Poison) is to be added to.\n\nThe counter is used to set the die size of the CHA damage dice. So if set to 4 it will show 1d4 CHA damage.\n\nThe duration, default value of 1 round, is used to set the number of rounds the poison lasts.\n\nThe (source) section is used to set the number of additional cures the poison takes to remove.  The default for poison is 1 round so if you change the (source) text to be 1 then it will take 2 cures to save from this poison." compset="InPlay">
     <fieldval field="pMinimum" value="1"/>
@@ -852,9 +879,17 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Helper" tag="AdjNoPlus"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="raPoiCHA">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
+    <eval phase="Final" priority="50000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~ If nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      #extradamage[field[pChosen].chosen," plus Cha poison",field[name].text]]]></eval>
     <eval phase="PreLevel" priority="10000" index="3"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -865,13 +900,6 @@ Added new natural weapon adjustments:
       #value2[raPoiCHA] += field[pSource].text
       ~ Set Number of rounds the poison lasts
       hero.child[raPoiCHA].field[abDuration].value += field[pDuration].text]]></eval>
-    <eval phase="Final" priority="50000"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~ If nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen <> 1)
-
-      #extradamage[field[pChosen].chosen," plus Cha poison",field[name].text]]]></eval>
     </thing>
   <thing id="pS2wPoiDEX" name="Natural Weapon: Poison, DEX" description="Select this adjustment to add a DEX based poison attack on to a specific natural weapon.  Use the drop down box to select the natural weapon this is to apply to.  Then use the following fields to set the poison attributes:\n\nDrop down box selects the natural attack the wording (Plus Poison) is to be added to.\n\nThe counter is used to set the die size of the DEX damage dice. So if set to 4 it will show 1d4 DEX damage.\n\nThe duration, default value of 1 round, is used to set the number of rounds the poison lasts.\n\nThe (source) section is used to set the number of additional cures the poison takes to remove.  The default for poison is 1 round so if you change the (source) text to be 1 then it will take 2 cures to save from this poison." compset="InPlay">
     <fieldval field="pMinimum" value="1"/>
@@ -881,9 +909,16 @@ Added new natural weapon adjustments:
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Helper" tag="AdjNoPlus"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="raPoiDEX">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
+    <eval phase="Final" priority="50000"><![CDATA[~ If we're not enabled, get out now
+doneif (field[pIsOn].value = 0)
+~ If nothing's been chosen, get out now
+doneif (field[pChosen].ischosen <> 1)
+
+#extradamage[field[pChosen].chosen," plus Dex poison",field[name].text]]]></eval>
     <eval phase="PreLevel" priority="10000" index="3"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 
@@ -893,12 +928,6 @@ doneif (field[pIsOn].value = 0)
 #value2[raPoiDEX] += field[pSource].text
 ~ Set Number of rounds the poison lasts
 hero.child[raPoiDEX].field[abDuration].value += field[pDuration].text]]></eval>
-    <eval phase="Final" priority="50000"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~ If nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
-
-#extradamage[field[pChosen].chosen," plus Dex poison",field[name].text]]]></eval>
     </thing>
   <thing id="pS2wPoiSTR" name="Natural Weapon: Poison, STR" description="Select this adjustment to add a STR based poison attack on to a specific natural weapon.  Use the drop down box to select the natural weapon this is to apply to.  Then use the following fields to set the poison attributes:\n\nDrop down box selects the natural attack the wording (Plus Poison) is to be added to.\n\nThe counter is used to set the die size of the STR damage dice. So if set to 4 it will show 1d4 STR damage.\n\nThe duration, default value of 1 round, is used to set the number of rounds the poison lasts.\n\nThe (source) section is used to set the number of additional cures the poison takes to remove.  The default for poison is 1 round so if you change the (source) text to be 1 then it will take 2 cures to save from this poison." compset="InPlay">
     <fieldval field="pMinimum" value="1"/>
@@ -908,9 +937,16 @@ doneif (field[pChosen].ischosen <> 1)
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Helper" tag="AdjNoPlus"/>
     <tag group="Adjustment" tag="YourWep"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="raPoiSTR">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
+    <eval phase="Final" priority="50000"><![CDATA[~ If we're not enabled, get out now
+doneif (field[pIsOn].value = 0)
+~ If nothing's been chosen, get out now
+doneif (field[pChosen].ischosen <> 1)
+
+#extradamage[field[pChosen].chosen," plus Str poison",field[name].text]]]></eval>
     <eval phase="PreLevel" priority="10000" index="3"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 
@@ -920,12 +956,6 @@ doneif (field[pIsOn].value = 0)
 #value2[raPoiSTR] += field[pSource].text
 ~ Set Number of rounds the poison lasts
 hero.child[raPoiSTR].field[abDuration].value += field[pDuration].text]]></eval>
-    <eval phase="Final" priority="50000"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~ If nothing's been chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
-
-#extradamage[field[pChosen].chosen," plus Str poison",field[name].text]]]></eval>
     </thing>
   <thing id="pS2wCustom" name="Custom Text: Weapon" description="Append text to the name of your weapon using the (Source) or (Duration) field. Use this to add any other related info you would like to see with when you print a character or use on the iPad. Use this to add info about Rapid Shot, Vital Strike or any other combat related info you would like to see with your weapon." compset="InPlay">
     <usesource source="srcS2Adjus"/>
@@ -934,6 +964,7 @@ doneif (field[pChosen].ischosen <> 1)
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="AdjShadow" tag="Text"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -952,6 +983,7 @@ call S2SetName]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -967,6 +999,7 @@ field[pChosen].chosen.field[Bonus].value += 2
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep" name="Current Weapons" abbrev="Current Weapons"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="First" priority="20000"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 
@@ -977,6 +1010,7 @@ field[pChosen].chosen.field[Bonus].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="Final" priority="50000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -994,7 +1028,7 @@ nexteach]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
-    <tag group="Helper" tag="AdjConfer"/>
+    <tag group="OthAdjCat" tag="FeatTrait"/>
     <eval phase="PostLevel" priority="50000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -1006,6 +1040,7 @@ hero.child[raLayHnd].field[abValue3].value = herofield[tCompLevel].value]]></eva
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Final" priority="20002"><![CDATA[
       ~ If a "melee" weapon is held then CMB is adjusted for TRIP, DISARM, SUNDER
       ~ (weapons do not need these properties to take advantages of the implicit bonuses).
@@ -1156,7 +1191,7 @@ hero.child[raLayHnd].field[abValue3].value = herofield[tCompLevel].value]]></eva
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
-    <tag group="Helper" tag="AdjConfer"/>
+    <tag group="OthAdjCat" tag="FeatTrait"/>
     <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing's been chosen, get out now
@@ -1221,6 +1256,7 @@ field[pChosen].chosen.field[livename].text = field[pChosen].chosen.field[name].t
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep" name="Current Weapons" abbrev="Current Weapons"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="First" priority="20000"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 
@@ -1231,6 +1267,7 @@ field[pChosen].chosen.field[wRanFlurry].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep" name="Current Weapons" abbrev="Current Weapons"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="First" priority="20000"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 
@@ -1242,6 +1279,7 @@ field[pChosen].chosen.field[wMelFlurry].value += field[pAdjust].value]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="PostAttr" priority="10000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -1256,6 +1294,7 @@ field[pChosen].chosen.field[wDamage].value += field[pAdjust].value]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep" name="Current Weapons" abbrev="Current Weapons"/>
     <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 
@@ -1280,10 +1319,7 @@ Endif]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom"/>
-    <eval phase="PreLevel" priority="11000"><![CDATA[~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for CORE spell school
-field[pCandExpr].text = "component.RaceAbil & !thingid.raS2Disabl"]]></eval>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="First" priority="20000" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing chosen, get out now
@@ -1293,6 +1329,10 @@ doneif (field[pChosen].ischosen <> 1)
 perform field[pChosen].chosen.assign[Helper.SpcDisable]
 ~ Remove the Show Special if found
 perform field[pChosen].chosen.delete[Helper.ShowSpec]]]></eval>
+    <eval phase="PreLevel" priority="11000"><![CDATA[~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for CORE spell school
+field[pCandExpr].text = "component.RaceAbil & !thingid.raS2Disabl"]]></eval>
     </thing>
   <thing id="raS2Disabl" name="~Racial Ability, Disable" description="This was added by the {b}Racial Ability, Disable{/b} adjustment and allows for selecting a racial ability to disable." compset="RaceSpec">
     <fieldval field="usrCandid1" value="component.RaceAbil &amp; !thingid.raS2Disabl"/>
@@ -1313,6 +1353,7 @@ perform field[usrChosen1].chosen.delete[Helper.ShowSpec]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep" name="Current Weapons" abbrev="Current Weapons"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="First" priority="20000"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If we're not chosen, get out now
@@ -1330,6 +1371,7 @@ Endif]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="20500"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -1344,6 +1386,7 @@ doneif (field[pChosen].ischosen = 0)
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Save" name="Saving Throws" abbrev="Saving Throws"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
     <eval phase="Final" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -1356,6 +1399,7 @@ doneif (field[pIsOn].value = 0)
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Skill" name="Skills" abbrev="Skills"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="SkillProf"/>
     <eval phase="Final" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -1367,6 +1411,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="wUnarmed">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
@@ -1376,6 +1421,7 @@ doneif (field[pIsOn].value = 0)
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Attribute" name="Attributes" abbrev="Attributes"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
     <eval phase="PreLevel" priority="1000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -1388,6 +1434,7 @@ perform field[pChosen].chosen.delete[Helper.NoScore]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep" name="Current Weapons" abbrev="Current Weapons"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="First" priority="20000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -1403,7 +1450,7 @@ perform field[pChosen].chosen.assign[Hide.Weapon]]]></eval>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
-    <tag group="Helper" tag="AdjConfer"/>
+    <tag group="OthAdjCat" tag="FeatTrait"/>
     <eval phase="Render" priority="99999999"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -1445,6 +1492,7 @@ field[pChosen].chosen.field[livename].text &= sText]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="DamReduce"/>
     <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="SpecAbil"/>
     <bootstrap thing="xDamRd"></bootstrap>
     <eval phase="Final" priority="9000"><![CDATA[
 ~ If we're not enabled, get out now
@@ -1462,10 +1510,7 @@ field[pChosen].chosen.field[abValue].value = field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for CORE spell school
-field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustAC.Selector) & !AdjustBon.Resist"]]></eval>
+    <tag group="OthAdjCat" tag="AC"/>
     <eval phase="PostAttr" priority="50000"><![CDATA[
       ~ If nothing chosen, get out now
       doneif (field[pChosen].ischosen <> 1)
@@ -1521,11 +1566,20 @@ field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustAC.Sel
       ElseIf (field[pChosen].chosen.tagis[AdjustAC.Dodge] <> 0) Then
          hero.child[ArmorClass].field[tACDodge].value += field[pAdjust].value
       Endif]]></eval>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for CORE spell school
+field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustAC.Selector) & !AdjustBon.Resist"]]></eval>
     </thing>
   <thing id="pS2svRefTy" name="Saving Throw (Reflex), Type" description="Select this adjustment to give a specific bonus/penalty type to your Reflex saves. This adjustment follows the normal Pathfinder stacking rules regarding typed bonuses. So Bonus and Circumstance types will stack with themselves but all others will only apply the greatest value." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for CORE spell school
+field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustBon.Resist|AdjustBon.Bonus)"]]></eval>
     <eval phase="PreAttr" priority="10000"><![CDATA[
 ~ If nothing chosen, get out now
 doneif (field[pChosen].ischosen <> 1)
@@ -1566,15 +1620,16 @@ ElseIf (field[pChosen].chosen.tagis[AdjustBon.Resist] <> 0) Then
 ElseIf (field[pChosen].chosen.tagis[AdjustBon.Bonus] <> 0) Then
    hero.child[svRef].field[Bonus].value += field[pAdjust].value
 Endif]]></eval>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for CORE spell school
-field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustBon.Resist|AdjustBon.Bonus)"]]></eval>
     </thing>
   <thing id="pS2svForTy" name="Saving Throw (Fort), Type" description="Select this adjustment to give a specific bonus/penalty type to your Fortitude saves. This adjustment follows the normal Pathfinder stacking rules regarding typed bonuses. So Bonus and Circumstance types will stack with themselves but all others will only apply the greatest value." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for CORE spell school
+field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustBon.Resist|AdjustBon.Bonus)"]]></eval>
     <eval phase="PreAttr" priority="10000"><![CDATA[
 ~ If nothing chosen, get out now
 doneif (field[pChosen].ischosen <> 1)
@@ -1615,15 +1670,16 @@ ElseIf (field[pChosen].chosen.tagis[AdjustBon.Resist] <> 0) Then
 ElseIf (field[pChosen].chosen.tagis[AdjustBon.Bonus] <> 0) Then
    hero.child[svFort].field[Bonus].value += field[pAdjust].value
 Endif]]></eval>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for CORE spell school
-field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustBon.Resist|AdjustBon.Bonus)"]]></eval>
     </thing>
   <thing id="pS2svWilTy" name="Saving Throw (Will), Type" description="Select this adjustment to give a specific bonus/penalty type to your Will saves. This adjustment follows the normal Pathfinder stacking rules regarding typed bonuses. So Bonus and Circumstance types will stack with themselves but all others will only apply the greatest value." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for CORE spell school
+field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustBon.Resist|AdjustBon.Bonus)"]]></eval>
     <eval phase="PreAttr" priority="10000"><![CDATA[
 ~ If nothing chosen, get out now
 doneif (field[pChosen].ischosen <> 1)
@@ -1664,15 +1720,16 @@ ElseIf (field[pChosen].chosen.tagis[AdjustBon.Resist] <> 0) Then
 ElseIf (field[pChosen].chosen.tagis[AdjustBon.Bonus] <> 0) Then
    hero.child[svWill].field[Bonus].value += field[pAdjust].value
 Endif]]></eval>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for CORE spell school
-field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustBon.Resist|AdjustBon.Bonus)"]]></eval>
     </thing>
   <thing id="pS2svAllTy" name="Saving Throw (All), Type" description="Select this adjustment to give a specific bonus/penalty type to All your saves. This adjustment follows the normal Pathfinder stacking rules regarding typed bonuses. So Bonus and Circumstance types will stack with themselves but all others will only apply the greatest value." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for CORE spell school
+field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustBon.Resist|AdjustBon.Bonus)"]]></eval>
     <eval phase="PreAttr" priority="10000"><![CDATA[
 ~ If nothing chosen, get out now
 doneif (field[pChosen].ischosen <> 1)
@@ -1713,10 +1770,6 @@ ElseIf (field[pChosen].chosen.tagis[AdjustBon.Resist] <> 0) Then
 ElseIf (field[pChosen].chosen.tagis[AdjustBon.Bonus] <> 0) Then
    hero.child[svAll].field[Bonus].value += field[pAdjust].value
 Endif]]></eval>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for CORE spell school
-field[pCandExpr].text = "component.SelectHelp & (AdjustBon.Selector|AdjustBon.Resist|AdjustBon.Bonus)"]]></eval>
     </thing>
   <thing id="pS2ClsAbV1" name="Deprecated" description="{B}{I}This adjustment has been deprecated for a new better version. Please remove this adjustment and add &quot;Class Ability: Values&quot;.{/I}{/b}\n\nSelect this adjustment to be able to adjust the value one, which can represent many things (ie dice, damage bonus, etc...) of any of your class abilities.\n\n{b}Example:{/b} This adjustment could be used to select a rogues Sneak Attack and increase/decrease the number of d6 dice the ability gives." compset="InPlay">
     <usesource source="srcS2Adjus"/>
@@ -1813,6 +1866,7 @@ field[pCandExpr].text = "component.Ability & SpecSource.cHelp? & !component.Base
     <tag group="Adjustment" tag="Skill"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="SkillProf"/>
     <eval phase="PostLevel"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value <> 0)
@@ -1828,6 +1882,7 @@ perform field[pChosen].chosen.delete[Helper.ClassSkill]]]></eval>
     <tag group="Adjustment" tag="YourGear"/>
     <tag group="Helper" tag="AdjInfo" name="AdjInfo" abbrev="AdjInfo"/>
     <tag group="AdjShadow" tag="Name"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -1847,6 +1902,7 @@ call S2SetName]]></eval>
     <tag group="Adjustment" tag="YourArmor"/>
     <tag group="Helper" tag="AdjInfo" name="AdjInfo" abbrev="AdjInfo"/>
     <tag group="AdjShadow" tag="Name"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -1865,6 +1921,7 @@ call S2SetName]]></eval>
     <tag group="Adjustment" tag="YourArmor"/>
     <tag group="Helper" tag="AdjInfo" name="AdjInfo" abbrev="AdjInfo"/>
     <tag group="AdjShadow" tag="Text"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -1883,6 +1940,7 @@ call S2SetName]]></eval>
     <tag group="Adjustment" tag="YourGear"/>
     <tag group="Helper" tag="AdjInfo" name="AdjInfo" abbrev="AdjInfo"/>
     <tag group="AdjShadow" tag="Text"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -1898,6 +1956,7 @@ call S2SetName]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Class"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="First" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -1910,6 +1969,7 @@ field[pChosen].chosen.field[cHDSides].value += field[pAdjust].value]]></eval>
   <thing id="pS2SpeedBa" name="Speed, Base" description="Select this adjustment to change the base speed of your character." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="PreLevel" priority="1000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -1920,11 +1980,7 @@ hero.child[Speed].field[tSpeed].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
-~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for All Skill Modifiers
-field[pCandExpr].text = "component.Modifiers & thingid.All? & !thingid.AllSkills"]]></eval>
+    <tag group="OthAdjCat" tag="SkillProf"/>
     <eval phase="PreLevel" priority="50000"><![CDATA[
 ~ If nothing chosen, get out now
 doneif (field[pChosen].ischosen <> 1)
@@ -1936,6 +1992,11 @@ If (field[pAdjust].value > 0) Then
 ElseIf (field[pAdjust].value < 0) Then
   field[pChosen].chosen.field[Penalty].value += field[pAdjust].value
 Endif]]></eval>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
+~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for All Skill Modifiers
+field[pCandExpr].text = "component.Modifiers & thingid.All? & !thingid.AllSkills"]]></eval>
     </thing>
   <thing id="pS2DRadama" name="Deprecated" description="{B}{I}This adjustment has been deprecated as it was officially added to Hero Lab. Please remove this and add &quot;Damage Reduction&quot; or &quot;Damage Reduction, Set&quot;.  The Set version allows you to exactly set the value of DR where the non-set version lets you adjust the value up/down{/I}{/b}\n\nSelect this adjustment to set the amount of DR/Adamantine on a character. Note this will override what ever value is also already set for this DR on a character." compset="InPlay" isprivate="yes">
     <fieldval field="pMinimum" value="0"/>
@@ -2478,6 +2539,7 @@ hero.child[AllSkills].field[Bonus].value += field[pAdjust].value]]></eval>
   <thing id="pS2Hero000" name="Hero, Ability Score Increase" description="Use this adjustment to give a add or remove the number of Ability Score Increases your character has. In example lets say you want to get two ability score increases at level 4 instead of one. In such a case at level 4 you would select +1 then you will be able to add two &quot;Ability Score Increases&quot; instead of just one." compset="InPlay" isprivate="yes">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="Level"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2689,6 +2751,7 @@ field[pCandExpr].text = "component.SplSchool & !sDescript.? & !sWordCat.? & !sSu
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Helper" tag="AdjInfo"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="10000" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -2702,6 +2765,7 @@ field[pChosen].chosen.field[Bonus].value += 2
   <thing id="pS2BAB" name="Attack Bonus, BAB" description="Select this adjustment to change your Base Attack Bonus (BAB) up or down." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="AttDam"/>
     <eval phase="First" priority="1000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2715,6 +2779,7 @@ hero.child[Attack].field[tAtkBase].value += field[pAdjust].value]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="wType" tag="S"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2747,6 +2812,7 @@ perform field[pChosen].chosen.pushtags[wType.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="wType" tag="P"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2764,6 +2830,7 @@ perform field[pChosen].chosen.pushtags[wType.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="wType" tag="B"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2781,6 +2848,7 @@ perform field[pChosen].chosen.pushtags[wType.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="DamageOver" tag="aDEX"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2796,6 +2864,7 @@ perform field[pChosen].chosen.pushtags[DamageOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="DamageOver" tag="aCON"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2811,6 +2880,7 @@ perform field[pChosen].chosen.pushtags[DamageOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="wType" tag="B"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25050"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2826,6 +2896,7 @@ perform field[pChosen].chosen.pushtags[wType.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="wType" tag="S"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25050"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2841,6 +2912,7 @@ perform field[pChosen].chosen.pushtags[wType.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="wType" tag="P"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25050"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2856,6 +2928,7 @@ perform field[pChosen].chosen.pushtags[wType.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="DamageOver" tag="aINT"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2871,6 +2944,7 @@ perform field[pChosen].chosen.pushtags[DamageOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="DamageOver" tag="aWIS"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2886,6 +2960,7 @@ perform field[pChosen].chosen.pushtags[DamageOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="DamageOver" tag="aCHA"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2900,6 +2975,7 @@ perform field[pChosen].chosen.pushtags[DamageOver.?]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PostLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2915,11 +2991,7 @@ perform field[pChosen].chosen.delete[Helper.PowTwoHand]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="ClassAbil" name="Class Abilities" abbrev="Class Abilities"/>
     <tag group="Helper" tag="NoIncr" name="NoIncr" abbrev="NoIncr"/>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
-~NOTE: This custom menu is needed as the built in "Class Abilities"
-~ option does not allow for selecting race abilities.
-~ Set search expression for Ability Picks
-field[pCandExpr].text = "component.Ability & Helper.SpcDisable & (component.BaseClSpec | component.BaseCustSp | component.RaceAbil)"]]></eval>
+    <tag group="OthAdjCat" tag="Attributes"/>
     <eval phase="PreLevel" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2930,27 +3002,34 @@ doneif (field[pChosen].ischosen <> 1)
 perform field[pChosen].chosen.delete[Hide.Special]
 perform field[pChosen].chosen.delete[Helper.SpcDisable]
 perform field[pChosen].chosen.delete[Helper.SpcReplace]]]></eval>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
+~NOTE: This custom menu is needed as the built in "Class Abilities"
+~ option does not allow for selecting race abilities.
+~ Set search expression for Ability Picks
+field[pCandExpr].text = "component.Ability & Helper.SpcDisable & (component.BaseClSpec | component.BaseCustSp | component.RaceAbil)"]]></eval>
     </thing>
   <thing id="pS2SpellDC" name="Spell DC, Specific Spell" description="Select this adjustment to add a bonus/penalty to the selected spell DC." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom" name="Custom Menu" abbrev="Custom Menu"/>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
-~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for all spells
-field[pCandExpr].text = "component.BaseSpell & !portal.ClsBook & CasterType.?"]]></eval>
+    <tag group="OthAdjCat" tag="Spell"/>
     <eval phase="PostLevel" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
       
 ~ Adjust the DC of the chosen spell
 field[pChosen].chosen.field[sDC].value += field[pAdjust].value]]></eval>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
+~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for all spells
+field[pCandExpr].text = "component.BaseSpell & !portal.ClsBook & CasterType.?"]]></eval>
     </thing>
   <thing id="pS2AttaSit" name="Attack Bonus, Situational" description="Select this adjustment to add a situational bonus to your attacks.  This is like a Dwarves &quot;Hatred&quot; ability.\n\n{b}(Source){/b} field is where you type in what is giving you this modifier. In example for dwarves it would be &quot;Hatred&quot;.\n{B}(Duration){/b} field is where you type in the modifier.  In example &quot;+2 vs Goblins&quot;.\n\n{B}Note:{/b} This adjustment will NOT work correctly from the &quot;{b}Personal{/b}&quot; tab as you have to be able to type into the duration field to set the custom text." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="AttDam"/>
     <eval phase="Final" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2962,6 +3041,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="AC"/>
     <eval phase="Final" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2973,6 +3053,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="PostAttr" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2987,6 +3068,7 @@ perform hero.delete[Hero.ClsErLev?]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="PostLevel" priority="25000"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -2999,6 +3081,7 @@ perform field[pChosen].chosen.assign[Helper.NatPrimary]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="PostLevel" priority="25000"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -3012,6 +3095,7 @@ perform field[pChosen].chosen.delete[Helper.NatPrimary]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="PostLevel" priority="25000"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -3025,6 +3109,7 @@ perform field[pChosen].chosen.assign[Helper.NatTwoHand]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="MelAttOver" tag="aCHA"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3040,6 +3125,7 @@ perform field[pChosen].chosen.pushtags[MelAttOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="MelAttOver" tag="aDEX"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3055,6 +3141,7 @@ perform field[pChosen].chosen.pushtags[MelAttOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="MelAttOver" tag="aCON"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3070,6 +3157,7 @@ perform field[pChosen].chosen.pushtags[MelAttOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="MelAttOver" tag="aINT"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3085,6 +3173,7 @@ perform field[pChosen].chosen.pushtags[MelAttOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="MelAttOver" tag="aWIS"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3100,6 +3189,7 @@ perform field[pChosen].chosen.pushtags[MelAttOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="RanAttOver" tag="aSTR"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3115,6 +3205,7 @@ perform field[pChosen].chosen.pushtags[RanAttOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="RanAttOver" tag="aCON"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3130,6 +3221,7 @@ perform field[pChosen].chosen.pushtags[RanAttOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="RanAttOver" tag="aINT"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3145,6 +3237,7 @@ perform field[pChosen].chosen.pushtags[RanAttOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="RanAttOver" tag="aWIS"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3160,6 +3253,7 @@ perform field[pChosen].chosen.pushtags[RanAttOver.?]]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="RanAttOver" tag="aCHA"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3174,6 +3268,7 @@ perform field[pChosen].chosen.pushtags[RanAttOver.?]]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="AdjNoPlus" name="AdjNoPlus" abbrev="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="raDarkVis">
       <containerreq phase="First" priority="500"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
@@ -3187,6 +3282,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="raLowLight">
       <containerreq phase="First" priority="500"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
@@ -3195,6 +3291,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="xScent">
       <containerreq phase="First" priority="500"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
@@ -3204,6 +3301,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Final" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3216,6 +3314,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Final" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3227,6 +3326,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="Final" priority="25000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3282,6 +3382,7 @@ doneif (field[pIsOn].value = 0)
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="AdjShadow" tag="Name"/>
+    <tag group="OthAdjCat" tag="Spell"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -3301,6 +3402,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="AdjShadow" tag="Text"/>
+    <tag group="OthAdjCat" tag="Spell"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -3315,6 +3417,7 @@ call S2SetName]]></eval>
   <thing id="pS2CarrCap" name="Encumbrance, Carrying Capacity" description="Use this adjustment to change your your Strength score to be treated as higher/lower value than normal when calculating your carrying capacity.  In example if you have a 10 Str and set this counter to +1 you will be treated as if you had a 11 Strength for purposes of carrying capacity." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreAttr" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3329,6 +3432,7 @@ herofield[tEncumSTR].value += field[pAdjust].value]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="AdjShadow" tag="Name"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -3346,6 +3450,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="First" priority="2000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3365,6 +3470,7 @@ perform field[pChosen].chosen.assignstr[sValue]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourArmor"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PreLevel" priority="10000"><![CDATA[
 ~ Set short name
 field[livename].text = "Armor No Slows"
@@ -3382,14 +3488,7 @@ perform field[pChosen].chosen.delete[ArmorCateg.SlowsEx]]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="ClassAbil"/>
-    <eval phase="Final" priority="20000" index="2"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~ If nothing chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
-
-~ Adjust the DC field up or down
-field[pChosen].chosen.field[abDC].value += field[pAdjust].value]]></eval>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="PreLevel" priority="11000" index="3"><![CDATA[~NOTE: This custom menu is needed as the built in "Class Abilities"
 ~      option does not allow for selecting class abilities like 
 ~      Channel Energy (thingid.xChannel). The below does allow this 
@@ -3399,12 +3498,25 @@ field[pChosen].chosen.field[abDC].value += field[pAdjust].value]]></eval>
 field[pUsePicks].value = 1
 ~ Set search expression for Ability Picks
 field[pCandExpr].text = "component.Ability & SpecSource.cHelp? & !component.BaseFeat & Helper.ShowSpec"]]></eval>
+    <eval phase="Final" priority="20000" index="2"><![CDATA[
+~ If we're not enabled, get out now
+doneif (field[pIsOn].value = 0)
+~ If nothing chosen, get out now
+doneif (field[pChosen].ischosen <> 1)
+
+~ Adjust the DC field up or down
+field[pChosen].chosen.field[abDC].value += field[pAdjust].value]]></eval>
     </thing>
   <thing id="pS2EqInPla" name="Equipment, Remove Tracker" description="Select this adjustment to have one of your pieces of equipment no longer display on the &quot;{b}In-Play{/b}&quot; tab. This can be useful for higher level when you don&apos;t want/need Trail Rations, Sunrods, or Daggers cluttering up the display." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for Equipment
+field[pCandExpr].text = "component.MyGear & !(Helper.Static|thingid.mNatural)"]]></eval>
     <eval phase="Final"><![CDATA[
 ~ Set shorter live name
 field[livename].text = "Equipment, Remove Track"
@@ -3418,47 +3530,46 @@ doneif (field[pIsOn].value = 0)
 perform field[pChosen].chosen.delete[Helper.UsesQty]
 ~ Remove Weapon Tracker tag
 perform field[pChosen].chosen.delete[User.Tracker]]]></eval>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for Equipment
-field[pCandExpr].text = "component.MyGear & !(Helper.Static|thingid.mNatural)"]]></eval>
     </thing>
   <thing id="pS2CLschoo" name="Caster Level, School" description="Select this adjustment to add a bonus/penalty to all your spells caster levels of a specific school of magic." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom" name="Custom Menu" abbrev="Custom Menu"/>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
-~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for CORE spell school
-field[pCandExpr].text = "component.SplSchool & !sDescript.? & !sWordCat.? & !sSubschool.?"]]></eval>
+    <tag group="OthAdjCat" tag="Spell"/>
     <eval phase="PostLevel" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
       
 ~ Adjust the CL to choosen school of magic
 field[pChosen].chosen.field[schCastLev].value += field[pAdjust].value]]></eval>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
+~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for CORE spell school
+field[pCandExpr].text = "component.SplSchool & !sDescript.? & !sWordCat.? & !sSubschool.?"]]></eval>
     </thing>
   <thing id="pS2CLspell" name="Caster Level, Spell" description="Select this adjustment to add a bonus/penalty to the selected spells caster level." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom" name="Custom Menu" abbrev="Custom Menu"/>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
-~ Picks on Hero
-field[pUsePicks].value = 1
-~ Set search expression for all spells
-field[pCandExpr].text = "component.BaseSpell & !portal.ClsBook & CasterType.?"]]></eval>
+    <tag group="OthAdjCat" tag="Spell"/>
     <eval phase="PostLevel" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
       
 ~ Adjust the CL of the chosen spell
 field[pChosen].chosen.field[sCL].value += field[pAdjust].value]]></eval>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
+~ Picks on Hero
+field[pUsePicks].value = 1
+~ Set search expression for all spells
+field[pCandExpr].text = "component.BaseSpell & !portal.ClsBook & CasterType.?"]]></eval>
     </thing>
   <thing id="pS2ClsCst1" name="Class Ability Custom: Primary" description="Select this adjustment to be able to adjust the number of custom abilities you get. A custom ability are things like barbarian rage powers, cleric domains or rogue talents as the Hero Lab software considers those to be Custom Abilities.  If you are not sure which adjustment to use then simply do a little trial and error to figure out which one you need." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Class"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="First" priority="20000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3472,6 +3583,7 @@ field[pChosen].chosen.field[cGiveSpec].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Class"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="First" priority="20000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3485,6 +3597,7 @@ field[pChosen].chosen.field[cGiveSp2nd].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Class"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="First" priority="20000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3498,6 +3611,7 @@ field[pChosen].chosen.field[cGiveSp3rd].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Class"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="First" priority="20000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3511,6 +3625,7 @@ field[pChosen].chosen.field[cGiveSp4th].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Class"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="First" priority="20000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3524,6 +3639,7 @@ field[pChosen].chosen.field[cGiveSp5th].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Class"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="First" priority="10000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3537,6 +3653,7 @@ field[pChosen].chosen.field[cBonFtMax].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Class"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="First" priority="10000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3549,6 +3666,7 @@ field[pChosen].chosen.field[cSBonFtMax].value += field[pAdjust].value]]></eval>
   <thing id="pS2MyPoint" name="Mythic Power Points" description="Use this adjustment to increase/decrease the number of mythic points you have." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="PreLevel" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3563,6 +3681,7 @@ doneif (field[pIsOn].value = 0)
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final"><![CDATA[
       ~ Set shorter live name
       field[livename].text = "Equipment, Trackable"
@@ -3585,6 +3704,7 @@ doneif (field[pIsOn].value = 0)
     <fieldval field="pMaximum" value="3"/>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="Final" priority="10000" index="2"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -3609,6 +3729,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <usesource source="OptAction"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="Final" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -3620,11 +3741,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
-    <eval phase="PreLevel" priority="11000"><![CDATA[
-      ~ Picks on Hero
-      field[pUsePicks].value = 1
-      ~ Set search expression for Mythic Resources
-      field[pCandExpr].text = "component.Resource & thingid.resMy?"]]></eval>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="PostLevel" priority="10000" index="2"><![CDATA[~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
       ~ If nothing chosen, get out now
@@ -3632,38 +3749,45 @@ doneif (field[pIsOn].value = 0)
 
       ~ Increase/Decrease resource amount
       field[pChosen].chosen.field[resMax].value += field[pAdjust].value]]></eval>
+    <eval phase="PreLevel" priority="11000"><![CDATA[
+      ~ Picks on Hero
+      field[pUsePicks].value = 1
+      ~ Set search expression for Mythic Resources
+      field[pCandExpr].text = "component.Resource & thingid.resMy?"]]></eval>
     </thing>
   <thing id="pS2CLSubSc" name="Caster Level, Subschool" description="Select this adjustment to add a bonus/penalty to all your spells caster levels of a specific subschool of magic." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom" name="Custom Menu" abbrev="Custom Menu"/>
-    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
-      ~ Picks on Hero
-      field[pUsePicks].value = 1
-      ~ Set search expression for CORE spell school
-      field[pCandExpr].text = "component.SplSchool & sDescript.? & !sWordCat.? & sSubschool.?"]]></eval>
+    <tag group="OthAdjCat" tag="Spell"/>
     <eval phase="PostLevel" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
 
       ~ Adjust the CL to choosen school of magic
       field[pChosen].chosen.field[schCastLev].value += field[pAdjust].value]]></eval>
-    </thing>
-  <thing id="pS2SubscDC" name="Spell DC, Specific Subschool" description="Select this adjustment to add a bonus/penalty to all your spell DCs of a specific subschool of magic." compset="InPlay">
-    <usesource source="srcS2Adjus"/>
-    <tag group="Helper" tag="CoreCampOK"/>
-    <tag group="Adjustment" tag="S2Custom" name="Custom Menu" abbrev="Custom Menu"/>
     <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
       ~ Picks on Hero
       field[pUsePicks].value = 1
       ~ Set search expression for CORE spell school
       field[pCandExpr].text = "component.SplSchool & sDescript.? & !sWordCat.? & sSubschool.?"]]></eval>
+    </thing>
+  <thing id="pS2SubscDC" name="Spell DC, Specific Subschool" description="Select this adjustment to add a bonus/penalty to all your spell DCs of a specific subschool of magic." compset="InPlay">
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="Adjustment" tag="S2Custom" name="Custom Menu" abbrev="Custom Menu"/>
+    <tag group="OthAdjCat" tag="Spell"/>
     <eval phase="PostLevel" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
 
       ~ Adjust the DC to choosen school of magic
       field[pChosen].chosen.field[schDC].value += field[pAdjust].value]]></eval>
+    <eval phase="PreLevel" priority="11000" index="2"><![CDATA[
+      ~ Picks on Hero
+      field[pUsePicks].value = 1
+      ~ Set search expression for CORE spell school
+      field[pCandExpr].text = "component.SplSchool & sDescript.? & !sWordCat.? & sSubschool.?"]]></eval>
     </thing>
   <thing id="pS2SpelWep" name="- Custom Spell Weapon -" description="This adjustment allows you to add a customizable Spell Weapon to your character. This allows you to set the spell name and spell dice to roll so that if you are using the iPad you can have it roll the damage for you.\n\n{B}Note:{/b} Add this spell adjustment and then select the &quot;Spell Weapon&quot; from the drop down box that you want to change the values for.  Set the spells damage dice, defualts to 1d4+1, and then change &quot;Spell Weapon&quot; to be the name of the spell (ie Fireball)." compset="InPlay">
     <fieldval field="pSource" value="1d4+1"/>
@@ -3707,6 +3831,7 @@ field[pCandExpr].text = "component.BaseWep & AdjShadow.SpWeapon"]]></eval>
   <thing id="pS2RceHDSz" name="Race, Die Size" description="Select this adjustment to be able to adjust the die size of the race up or down.  In example you change a Bear&apos;s default d8 to be d10 or d6 instead." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="First" priority="10000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3722,6 +3847,25 @@ focus.field[rHDSides].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
+doneif (field[pIsOn].value = 0)
+~ If nothing chosen, get out now
+doneif (field[pChosen].ischosen <> 1)
+
+~ If the default "Source" id is changed then attempt to use it.
+If (compare(field[pSource].text,"(source)") <> 0) Then
+   ~ Make sure that we are not blank either.
+   If (compare(field[pSource].text,"") <> 0) Then
+      field[pChosen].chosen.field[livename].text &= field[pSource].text
+
+      ~ If we're in output mode change to a standard format for these
+      ~ PFS adjustments.
+      If (state.isoutput <> 0) Then
+        field[livename].text = "PFS Boon" & field[pSource].text
+      Endif
+   Endif
+Endif]]></eval>
     <eval phase="First" priority="1"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3741,6 +3885,14 @@ If (focus.tagis[RaceType.Extra] <> 0) Then
   perform hero.delete[RaceType.?]
   perform hero.assign[RaceType.Normal]
 Endif]]></eval>
+    </thing>
+  <thing id="pS2PFSgear" name="PFS, Equipment Boon" description="Adding this adjustment will allow you to select a single piece of equipment (gear, magic items, weapons or armor) and make it legal for Pathfinder Society Characters.\n\n{b}Note:{/b} If you enter text into the &quot;Source&quot; below then it will be appended to the equipment name. This allows you to easily note which boon is making this equipment as valid." compset="InPlay">
+    <fieldval field="pCandExpr" value="component.MyGear &amp; !(thingid.wUnarmed|thingid.mNatural|thingid.mArmor|thingid.mShield|thingid.wTouch|thingid.wRay|thingid.gClothes|thingid.gGround)"/>
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing chosen, get out now
@@ -3759,13 +3911,6 @@ If (compare(field[pSource].text,"(source)") <> 0) Then
       Endif
    Endif
 Endif]]></eval>
-    </thing>
-  <thing id="pS2PFSgear" name="PFS, Equipment Boon" description="Adding this adjustment will allow you to select a single piece of equipment (gear, magic items, weapons or armor) and make it legal for Pathfinder Society Characters.\n\n{b}Note:{/b} If you enter text into the &quot;Source&quot; below then it will be appended to the equipment name. This allows you to easily note which boon is making this equipment as valid." compset="InPlay">
-    <fieldval field="pCandExpr" value="component.MyGear &amp; !(thingid.wUnarmed|thingid.mNatural|thingid.mArmor|thingid.mShield|thingid.wTouch|thingid.wRay|thingid.gClothes|thingid.gGround)"/>
-    <usesource source="srcS2Adjus"/>
-    <tag group="Helper" tag="CoreCampOK"/>
-    <tag group="Adjustment" tag="S2Custom"/>
-    <tag group="Helper" tag="NoIncr"/>
     <eval phase="First" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3774,24 +3919,6 @@ doneif (field[pChosen].ischosen <> 1)
 
 ~ Remove the not valid for PFS tag
 perform field[pChosen].chosen.delete[Helper.NoPathSoc]]]></eval>
-    <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~ If nothing chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
-
-~ If the default "Source" id is changed then attempt to use it.
-If (compare(field[pSource].text,"(source)") <> 0) Then
-   ~ Make sure that we are not blank either.
-   If (compare(field[pSource].text,"") <> 0) Then
-      field[pChosen].chosen.field[livename].text &= field[pSource].text
-
-      ~ If we're in output mode change to a standard format for these
-      ~ PFS adjustments.
-      If (state.isoutput <> 0) Then
-        field[livename].text = "PFS Boon" & field[pSource].text
-      Endif
-   Endif
-Endif]]></eval>
     </thing>
   <thing id="pS2EqInPl3" name="Equipment, Remove Activation" description="Select this adjustment to have one of your pieces of equipment no longer display on the &quot;{b}In-Play{/b}&quot; activation tab. This can be useful for higher level when you don&apos;t want/need Trail Rations, Sunrods, or Daggers cluttering up the display." compset="InPlay">
     <fieldval field="pCandExpr" value="component.MyGear &amp; !(Helper.Static|thingid.mNatural)"/>
@@ -3799,6 +3926,7 @@ Endif]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final"><![CDATA[
 ~ If nothing chosen, get out now
 doneif (field[pChosen].ischosen <> 1)
@@ -3814,6 +3942,7 @@ perform field[pChosen].chosen.delete[User.Activation]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final"><![CDATA[
 ~ If nothing chosen, get out now
 doneif (field[pChosen].ischosen <> 1)
@@ -3829,14 +3958,7 @@ perform field[pChosen].chosen.delete[User.Activation]]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
-    <eval phase="First" priority="10000"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~ If nothing chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
-
-~ Increase the armor bonus
-#applybonus[BonEnhance,field[pChosen].chosen,field[pAdjust].value]]]></eval>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3850,6 +3972,14 @@ doneif (field[pChosen].chosen.tagis[component.BaseMagicI] - field[pChosen].chose
 ~ Set the live name
 ~field[pChosen].chosen.field[livename].text = signed(field[pChosen].chosen.field[arBonus].value) & " " & field[pChosen].chosen.field[name].text
 field[pChosen].chosen.field[livename].text = signed(field[pChosen].chosen.field[BonEnhance].value) & " " & field[pChosen].chosen.field[name].text]]></eval>
+    <eval phase="First" priority="10000"><![CDATA[
+~ If we're not enabled, get out now
+doneif (field[pIsOn].value = 0)
+~ If nothing chosen, get out now
+doneif (field[pChosen].ischosen <> 1)
+
+~ Increase the armor bonus
+#applybonus[BonEnhance,field[pChosen].chosen,field[pAdjust].value]]]></eval>
     </thing>
   <thing id="pS2EqWepEn" name="Equipment, Weapon Enhancement" description="Use this adjustment to increase/decrease the magical enhancement bonus of specific magical weapon.  As this is an enhancment bonus being applied only the highest bonus will apply.  So if you have a Adamatine Battleaxe that already has a +1 Enhancement bonus to attack and set the counter here to +1 then you will only get a bonus to damage." compset="InPlay">
     <fieldval field="pUsePicks" value="1"/>
@@ -3857,14 +3987,7 @@ field[pChosen].chosen.field[livename].text = signed(field[pChosen].chosen.field[
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
-    <eval phase="First" priority="10000"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~ If nothing chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
-
-~ Increase the Enhancement bonus to attack/damage
-#applybonus[BonEnhance,field[pChosen].chosen,field[pAdjust].value]]]></eval>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3878,6 +4001,14 @@ doneif (field[pChosen].chosen.tagis[component.BaseMagicI] - field[pChosen].chose
 ~ Set the live name
 ~field[pChosen].chosen.field[livename].text = signed(field[pChosen].chosen.field[dmmBonEnh].value) & " " & field[pChosen].chosen.field[name].text
 field[pChosen].chosen.field[livename].text = signed(field[pChosen].chosen.field[BonEnhance].value) & " " & field[pChosen].chosen.field[name].text]]></eval>
+    <eval phase="First" priority="10000"><![CDATA[
+~ If we're not enabled, get out now
+doneif (field[pIsOn].value = 0)
+~ If nothing chosen, get out now
+doneif (field[pChosen].ischosen <> 1)
+
+~ Increase the Enhancement bonus to attack/damage
+#applybonus[BonEnhance,field[pChosen].chosen,field[pAdjust].value]]]></eval>
     </thing>
   <thing id="pS2wFullA1" name="Weapon Attacks: Full Attack - Select" description="Use this adjustment to make your selected ranged attack weapon get its full number of attacks. In example many firearms like Pistols won&apos;t display multiple attacks without this adjustment." compset="InPlay">
     <fieldval field="pUsePicks" value="1"/>
@@ -3885,6 +4016,7 @@ field[pChosen].chosen.field[livename].text = signed(field[pChosen].chosen.field[
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PostLevel" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3899,6 +4031,7 @@ perform field[pChosen].chosen.delete[Helper.SingleRAtt]]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="PostLevel" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3915,6 +4048,16 @@ nexteach]]></eval>
     <tag group="Adjustment" tag="Class"/>
     <tag group="MythAdjAvl" tag="Mythic"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Class"/>
+    <eval phase="Render" priority="6000" index="3"><![CDATA[
+~ Set new array of values
+field[pModeTable].arraytext[0] = "Select"
+field[pModeTable].arraytext[1] = "Slow"
+field[pModeTable].arraytext[2] = "Medium"
+field[pModeTable].arraytext[3] = "Fast"
+
+~ Reset the name to remove Mythic stuff
+field[livename].text = field[thingname].text]]></eval>
     <eval phase="First" priority="10000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3936,6 +4079,14 @@ ElseIf (field[pMode].value = 2) Then
 ElseIf (field[pMode].value = 3) Then
   perform field[pChosen].chosen.assign[cRef.Good]
 Endif]]></eval>
+    </thing>
+  <thing id="pS2ClsSvFo" name="Class, Fort Save" description="Select this adjustment to be able to change the save progression of a classes Fortitude Saves from Slow, Medium, or Fast progression.  After adding the adjustment select the class you which to change and then from the 2nd dropdown select the save progression (Slow, Medium, or Fast)." compset="InPlay">
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="Adjustment" tag="Class"/>
+    <tag group="MythAdjAvl" tag="Mythic"/>
+    <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="Render" priority="6000" index="3"><![CDATA[
 ~ Set new array of values
 field[pModeTable].arraytext[0] = "Select"
@@ -3945,13 +4096,6 @@ field[pModeTable].arraytext[3] = "Fast"
 
 ~ Reset the name to remove Mythic stuff
 field[livename].text = field[thingname].text]]></eval>
-    </thing>
-  <thing id="pS2ClsSvFo" name="Class, Fort Save" description="Select this adjustment to be able to change the save progression of a classes Fortitude Saves from Slow, Medium, or Fast progression.  After adding the adjustment select the class you which to change and then from the 2nd dropdown select the save progression (Slow, Medium, or Fast)." compset="InPlay">
-    <usesource source="srcS2Adjus"/>
-    <tag group="Helper" tag="CoreCampOK"/>
-    <tag group="Adjustment" tag="Class"/>
-    <tag group="MythAdjAvl" tag="Mythic"/>
-    <tag group="Helper" tag="NoIncr"/>
     <eval phase="First" priority="10000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3973,6 +4117,14 @@ ElseIf (field[pMode].value = 2) Then
 ElseIf (field[pMode].value = 3) Then
   perform field[pChosen].chosen.assign[cFort.Good]
 Endif]]></eval>
+    </thing>
+  <thing id="pS2ClsSvWi" name="Class, Will Save" description="Select this adjustment to be able to change the save progression of a classes Will Saves from Slow, Medium, or Fast progression.  After adding the adjustment select the class you which to change and then from the 2nd dropdown select the save progression (Slow, Medium, or Fast)." compset="InPlay">
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="Adjustment" tag="Class"/>
+    <tag group="MythAdjAvl" tag="Mythic"/>
+    <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="Render" priority="6000" index="3"><![CDATA[
 ~ Set new array of values
 field[pModeTable].arraytext[0] = "Select"
@@ -3982,13 +4134,6 @@ field[pModeTable].arraytext[3] = "Fast"
 
 ~ Reset the name to remove Mythic stuff
 field[livename].text = field[thingname].text]]></eval>
-    </thing>
-  <thing id="pS2ClsSvWi" name="Class, Will Save" description="Select this adjustment to be able to change the save progression of a classes Will Saves from Slow, Medium, or Fast progression.  After adding the adjustment select the class you which to change and then from the 2nd dropdown select the save progression (Slow, Medium, or Fast)." compset="InPlay">
-    <usesource source="srcS2Adjus"/>
-    <tag group="Helper" tag="CoreCampOK"/>
-    <tag group="Adjustment" tag="Class"/>
-    <tag group="MythAdjAvl" tag="Mythic"/>
-    <tag group="Helper" tag="NoIncr"/>
     <eval phase="First" priority="10000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -4010,6 +4155,14 @@ ElseIf (field[pMode].value = 2) Then
 ElseIf (field[pMode].value = 3) Then
   perform field[pChosen].chosen.assign[cWill.Good]
 Endif]]></eval>
+    </thing>
+  <thing id="pS2ClsBAB" name="Class, Base Attack Bonus" description="Select this adjustment to be able to change the base attack bonus (BAB) progression of a selected class Slow, Medium, or Fast progression.  After adding the adjustment select the class you which to change and then from the 2nd dropdown select the base attack bonus progression (Slow, Medium, or Fast)." compset="InPlay">
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="Adjustment" tag="Class"/>
+    <tag group="MythAdjAvl" tag="Mythic"/>
+    <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="Render" priority="6000" index="3"><![CDATA[
 ~ Set new array of values
 field[pModeTable].arraytext[0] = "Select"
@@ -4019,13 +4172,6 @@ field[pModeTable].arraytext[3] = "Fast"
 
 ~ Reset the name to remove Mythic stuff
 field[livename].text = field[thingname].text]]></eval>
-    </thing>
-  <thing id="pS2ClsBAB" name="Class, Base Attack Bonus" description="Select this adjustment to be able to change the base attack bonus (BAB) progression of a selected class Slow, Medium, or Fast progression.  After adding the adjustment select the class you which to change and then from the 2nd dropdown select the base attack bonus progression (Slow, Medium, or Fast)." compset="InPlay">
-    <usesource source="srcS2Adjus"/>
-    <tag group="Helper" tag="CoreCampOK"/>
-    <tag group="Adjustment" tag="Class"/>
-    <tag group="MythAdjAvl" tag="Mythic"/>
-    <tag group="Helper" tag="NoIncr"/>
     <eval phase="First" priority="10000" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -4047,21 +4193,13 @@ ElseIf (field[pMode].value = 2) Then
 ElseIf (field[pMode].value = 3) Then
   perform field[pChosen].chosen.assign[cAttack.Good]
 Endif]]></eval>
-    <eval phase="Render" priority="6000" index="3"><![CDATA[
-~ Set new array of values
-field[pModeTable].arraytext[0] = "Select"
-field[pModeTable].arraytext[1] = "Slow"
-field[pModeTable].arraytext[2] = "Medium"
-field[pModeTable].arraytext[3] = "Fast"
-
-~ Reset the name to remove Mythic stuff
-field[livename].text = field[thingname].text]]></eval>
     </thing>
   <thing id="pS2RaceHD" name="Race, Hit Dice Remove" description="Select this adjustment to be able to remove hit dice from a race.\n\n{b}Note:{/b} At this time you have to adjust the skill points manually and you can&apos;t remove any extra feats individually.  What you can do is check mark the &quot;Customize&quot; option next to the Race on the &quot;Background&quot; tab.  To be able to see &quot;Customize&quot; option you must change the character to be a NPC through the &quot;Configure Hero Window&quot; (ie press CTRL-K)." compset="InPlay">
     <fieldval field="pMinimum" value="-99"/>
     <fieldval field="pMaximum" value="0"/>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="First" index="2"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -4083,13 +4221,7 @@ focus.field[rHitDice].value = maximum(focus.field[rHitDice].value,0)]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr" name="NoIncr" abbrev="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom" name="Custom Menu" abbrev="Custom Menu"/>
-    <eval phase="First" priority="10000"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~ If nothing chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
-
-perform field[pChosen].chosen.delete[Helper.NoPathSoc]]]></eval>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing chosen, get out now
@@ -4108,6 +4240,13 @@ If (compare(field[pSource].text,"(source)") <> 0) Then
       Endif
    Endif
 Endif]]></eval>
+    <eval phase="First" priority="10000"><![CDATA[
+~ If we're not enabled, get out now
+doneif (field[pIsOn].value = 0)
+~ If nothing chosen, get out now
+doneif (field[pChosen].ischosen <> 1)
+
+perform field[pChosen].chosen.delete[Helper.NoPathSoc]]]></eval>
     </thing>
   <thing id="pS2EqConWt" name="Equipment, Container Weight" description="Use this adjustment to increase/decrease the maximum weight that a container (ie bag of holding) can carry.  You can also use this adjustment to set the max weight for Backpacks that normally do not have a max weight." compset="InPlay">
     <fieldval field="pUsePicks" value="1"/>
@@ -4115,6 +4254,7 @@ Endif]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="First" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -4130,6 +4270,7 @@ field[pChosen].chosen.field[gHeldMaxWt].value += field[pAdjust].value]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr" name="NoIncr" abbrev="NoIncr"/>
+    <tag group="OthAdjCat" tag="SkillProf"/>
     <eval phase="First" priority="1000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -4146,13 +4287,7 @@ perform field[pChosen].chosen.assign[Helper.ExoticProf]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr" name="NoIncr" abbrev="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom" name="Custom Menu" abbrev="Custom Menu"/>
-    <eval phase="First" priority="10000"><![CDATA[
-~ If we're not enabled, get out now
-doneif (field[pIsOn].value = 0)
-~ If nothing chosen, get out now
-doneif (field[pChosen].ischosen <> 1)
-
-perform field[pChosen].chosen.delete[Helper.NoPathSoc]]]></eval>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing chosen, get out now
@@ -4171,6 +4306,13 @@ If (compare(field[pSource].text,"(source)") <> 0) Then
       Endif
    Endif
 Endif]]></eval>
+    <eval phase="First" priority="10000"><![CDATA[
+~ If we're not enabled, get out now
+doneif (field[pIsOn].value = 0)
+~ If nothing chosen, get out now
+doneif (field[pChosen].ischosen <> 1)
+
+perform field[pChosen].chosen.delete[Helper.NoPathSoc]]]></eval>
     </thing>
   <thing id="pS2RaChang" name="Custom Name: Race" description="Overwrite the name of your race using the (Source) or (Duration) field. Use this to force your race to have a new name or custom name that will display on a printed character sheet or iPad." compset="InPlay">
     <fieldval field="pCandExpr" value="component.BaseRace"/>
@@ -4179,6 +4321,7 @@ Endif]]></eval>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="AdjShadow" tag="Name"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -4197,6 +4340,7 @@ call S2SetName]]></eval>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="AdjShadow" tag="Text"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4217,6 +4361,7 @@ call S2SetName]]></eval>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Adjust2nd" tag="S2Custom"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="First" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4240,6 +4385,7 @@ call S2SetName]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="YourWep" name="Current Weapons" abbrev="Current Weapons"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="50000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4253,6 +4399,7 @@ call S2SetName]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="AttDam"/>
     <eval phase="Final" priority="25000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4269,6 +4416,7 @@ call S2SetName]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Spell"/>
     <eval phase="Final" priority="90000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4281,6 +4429,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Attribute" name="Attributes" abbrev="Attributes"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Attributes"/>
     <eval phase="First" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4359,6 +4508,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Adjust2nd" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="FeatTrait"/>
     <eval phase="First" priority="500"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4368,6 +4518,7 @@ call S2SetName]]></eval>
   <thing id="pS2RaceHan" name="Race, Number of Hands" description="Select this adjustment to be able to adjust the number of hands/arms that a creature has.  By default a race has two hands." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="First" priority="99"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -4386,6 +4537,7 @@ focus.field[rNumHands].value += field[pAdjust].value]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Adjust2nd" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="First" priority="500"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4399,6 +4551,7 @@ focus.field[rNumHands].value += field[pAdjust].value]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Adjust2nd" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="First" priority="20000" index="2"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4412,6 +4565,7 @@ focus.field[rNumHands].value += field[pAdjust].value]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="Final"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -4432,6 +4586,7 @@ field[pChosen].chosen.field[trkMax].value += field[pAdjust].value]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <eval phase="Final"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -4450,6 +4605,7 @@ perform field[pChosen].chosen.delete[User.Tracker]]]></eval>
     <tag group="Helper" tag="AdjInfo" name="AdjInfo" abbrev="AdjInfo"/>
     <tag group="AdjShadow" tag="Name"/>
     <tag group="Helper" tag="AdjNoPlus" name="AdjNoPlus" abbrev="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="SpecAbil"/>
     <eval phase="Render" priority="99999999"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~if nothing's been chosen, get out now
@@ -4469,6 +4625,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="AdjInfo" name="AdjInfo" abbrev="AdjInfo"/>
     <tag group="AdjShadow" tag="Text"/>
     <tag group="Helper" tag="NoIncr" name="NoIncr" abbrev="NoIncr"/>
+    <tag group="OthAdjCat" tag="SpecAbil"/>
     <eval phase="Render" priority="99999999"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4487,14 +4644,7 @@ call S2SetName]]></eval>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Helper" tag="AdjInfo"/>
-    <eval phase="First" priority="10000"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
-      ~if nothing's been chosen, get out now
-      doneif (field[pChosen].ischosen = 0)
-
-      ~ Apply the Single Attack tag to the weapon
-      perform field[pChosen].chosen.assign[Helper.SingleAtt]]]></eval>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" index="2"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4503,6 +4653,14 @@ call S2SetName]]></eval>
 
       ~ Delete any "extra high" tags
       perform field[pChosen].chosen.delete[Helper.ExtraHigh]]]></eval>
+    <eval phase="First" priority="10000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~if nothing's been chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
+
+      ~ Apply the Single Attack tag to the weapon
+      perform field[pChosen].chosen.assign[Helper.SingleAtt]]]></eval>
     </thing>
   <thing id="pS2wExtAtt" name="Weapon Attacks: Force Extra High" description="Select this adjustment to force the selected weapon to display two attacks at its highest base attack value. This is similiar to when a creature is effected by Haste or Speed weapon property. The counter can be used to increase the number of extra attacks the weapon gets." compset="InPlay">
     <fieldval field="pMinimum" value="1"/>
@@ -4511,6 +4669,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="AdjInfo"/>
     <tag group="Adjustment" tag="YourWep"/>
     <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="First" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4529,6 +4688,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Attribute"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="SkillProf"/>
     <eval phase="Final" priority="50000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4546,6 +4706,7 @@ call S2SetName]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="50000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4559,6 +4720,7 @@ call S2SetName]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="First" priority="600"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4570,6 +4732,7 @@ call S2SetName]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <eval phase="First" priority="600"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4583,6 +4746,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="Skill"/>
     <tag group="Adjust2nd" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="SkillProf"/>
     <eval phase="PostAttr" priority="50000"><![CDATA[
       ~ If nothing chosen, get out now
       doneif (field[pChosen].ischosen <> 1)
@@ -4623,6 +4787,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="Final"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4639,6 +4804,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="UserTop2nd"/>
     <eval phase="Final"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4676,6 +4842,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="AdjConfer"/>
     <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="OthAdjCat" tag="CMDCMB"/>
     <eval phase="First" priority="20000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4692,6 +4859,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="1000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value <> 1)
@@ -4706,6 +4874,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
     <eval phase="Final" priority="1000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value <> 1)
