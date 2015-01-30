@@ -14,6 +14,8 @@
 <ul>
 <li>Misc script changes/fixes to the Way of the Wicked player items.</li>
 <li>Lots of misc changes to support the merge in of the old "Community Player Pack".</li>
+<li>Added logic to allow specific stuff in for PFS Core Games that match to the Pathfinder Core. In example the "Concentration: Cleric" skill is allowed as Cleric is a core class.</li>
+<li>Changed Adjustments to sort correctly in the new sections on the Adjust tab.</li>
 </ul>
 
 <strong>New Features</strong>
