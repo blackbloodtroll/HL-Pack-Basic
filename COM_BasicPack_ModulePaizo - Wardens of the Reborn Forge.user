@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
   <loadonce key="COM_BasicPack_ModulePaizo - Wardens of the Reborn Forge"/>
   <thing id="skCBCrftCk" name="Craft (clockwork)" description="You are skilled in the creation of a specific group of items, such as armor or weapons. Like Knowledge, Perform, and Profession, Craft is actually a number of separate skills. You could have several Craft skills, each with its own ranks. The most common Craft skills are alchemy, armor, baskets, books, bows, calligraphy, carpentry, cloth, clothing, glass, jewelry, leather, locks, paintings, pottery, sculptures, ships, shoes, stonemasonry, traps, and weapons.\n\nA Craft skill is specifically focused on creating something. If nothing is created by the endeavor, it probably falls under the heading of a Profession skill.\n\n{b}Check{/b}: You can practice your trade and make a decent living, earning half your check result in gold pieces per week of dedicated work. You know how to use the tools of your trade, how to perform the craft&apos;s daily tasks, how to supervise untrained helpers, and how to handle common problems. (Untrained laborers and assistants earn an average of 1 silver piece per day.)\n\nContinued - Core Rulebook, pg. 91." compset="Skill" summary="You are skilled in the creation of a specific group of items, such as armor or weapons." uniqueness="unique">
@@ -8,7 +8,7 @@
     <tag group="ProductId" tag="HLCommunit"/>
     <link linkage="skillattr" thing="aINT"/>
     </thing>
-  <thing id="gWRFCrush" name="Drug, crush" description="{b}Type{/b}: i injury\n{b}Addiction{/b}: major Fortitude DC 20\n{b}Effect{/b}: 1 hour; +1d4 alchemical bonus to Dex, &#150;2 penalty on saves against fear effects\n{b}Damage{/b}: 1d4 Wis damage\n\nA creature on crush is jittery and hyperactive, as well as easily frightened and slightly paranoid." compset="Gear" stacking="merge">
+  <thing id="gWRFCrush" name="Drug, crush" description="{b}Type{/b}: i injury\n{b}Addiction{/b}: major Fortitude DC 20\n{b}Effect{/b}: 1 hour; +1d4 alchemical bonus to Dex, –2 penalty on saves against fear effects\n{b}Damage{/b}: 1d4 Wis damage\n\nA creature on crush is jittery and hyperactive, as well as easily frightened and slightly paranoid." compset="Gear" stacking="merge">
     <fieldval field="gCost" value="75"/>
     <fieldval field="gCraftDC" value="20"/>
     <fieldval field="actName" value="Dex Bonus"/>
@@ -58,18 +58,19 @@ doneif (field[abilActive].value = 0)
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="EquipAvail"/>
     </thing>
-  <thing id="pCBWFHagen" name="Golden Curse of Haagenti" description="A creature affected by this curse has its body warped into one of both flesh and gold. The creature gains light fortification (as the ability of Metruni&apos;s consorts; see this page), as well as fire resistance 10. The creature also takes a &#150;6 penalty to Dexterity and a &#150;2 penalty to Wisdom (minimum 1). This curse does not alter the creature&apos;s CR, and can be removed by a {i}remove curse{/i spell or similar magic. The gold plates on the victim&apos;s body revert to flesh if removed from the body or if the victim dies." compset="InPlay" summary="Body warped into flesh and gold." uniqueness="useronce">
+  <thing id="pCBWFHagen" name="Golden Curse of Haagenti" description="A creature affected by this curse has its body warped into one of both flesh and gold. The creature gains light fortification (as the ability of Metruni&apos;s consorts; see this page), as well as fire resistance 10. The creature also takes a –6 penalty to Dexterity and a –2 penalty to Wisdom (minimum 1). This curse does not alter the creature&apos;s CR, and can be removed by a {i}remove curse{/i spell or similar magic. The gold plates on the victim&apos;s body revert to flesh if removed from the body or if the victim dies." compset="InPlay" summary="Body warped into flesh and gold." uniqueness="useronce">
     <usesource source="srcWardFrg"/>
     <tag group="Helper" tag="AdjNoPlus"/>
     <tag group="Helper" tag="NoPathSoc"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Custom" tag="xCBCurseHa" name="Golden Curse of Haagenti"/>
-    <bootstrap thing="xDamRsFire">
-      <autotag group="Value" tag="10"/>
+    <tag group="OthAdjCat" tag="Campaign"/>
+    <bootstrap thing="rauMCLtFor">
       <autotag group="Custom" tag="xCBCurseHa"/>
       </bootstrap>
-    <bootstrap thing="rauMCLtFor">
+    <bootstrap thing="xDamRsFire">
+      <autotag group="Value" tag="10"/>
       <autotag group="Custom" tag="xCBCurseHa"/>
       </bootstrap>
     <eval phase="First"><![CDATA[

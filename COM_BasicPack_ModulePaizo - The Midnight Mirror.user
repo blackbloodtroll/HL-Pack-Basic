@@ -5,7 +5,8 @@
     <usesource source="srcMidMirr"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="ProductId" tag="HLCommunit"/>
-    <tag group="Helper" tag="AdjConfer"/>
+    
+    <tag group="OthAdjCat" tag="Campaign"/>
     <bootstrap thing="xBonusSave">
       <assignval field="abValue" value="-4"/>
       <assignval field="livename" value="to resist mind-affecting effects in areas of bright illumination"/>

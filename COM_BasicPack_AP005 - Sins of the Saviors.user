@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
   <loadonce key="COM_BasicPack_AP005 - Sins of the Saviors"/>
   <fileinfo>
-    <info_history>
-March 4, 2013 - Tim Shadow
+    <info_history>March 4, 2013 - Tim Shadow
 -Split a Player version of the file.
 
 Sep 9, 2013 - James Risner
 Removed PFS Legal tag from things not legal in PFS:
   Arrows of Wrath</info_history>
     </fileinfo>
-  <thing id="puRunePen" name="Runeforge Penalty" description="In addition to being able to ignore some effects and being more susceptible to others, sinners in Runeforge feel more welcome and inspired in an associated wing of the dungeon. Unfortunately, that also means that in two other wings, they feel unwanted and oppressed. Consult Appendix Seven to determine each PC&apos;s sins and opposition sins.\n\nIn an allied wing (such as the Vault of Greed for a greedy character), characters gain a +1 bonus on all skill checks, attack rolls, and saving throws. These bonuses are included in all appropriate NPCs encountered in that area, save for mindless creatures (like golems), who do not gain these bonuses at all (nor do they take penalties in opposition wings, if they move to a different area of the complex).\n\nIn an opposition wing (such as the Iron Cages of Lust or the Shimmering Veil for a greedy character), characters gain a &#150;2 penalty on all skill checks, attack rolls, and saving throws. As written, no NPCs are encountered in opposition wings in this adventure, but in the case one moves (such as Delvahine pursuing foes from the Iron Cages of Lust into the Ravenous Crypts), don&apos;t forget to remove the bonus and apply the penalties to that NPC as well." compset="InPlay">
+  <thing id="puRunePen" name="Runeforge Penalty" description="In addition to being able to ignore some effects and being more susceptible to others, sinners in Runeforge feel more welcome and inspired in an associated wing of the dungeon. Unfortunately, that also means that in two other wings, they feel unwanted and oppressed. Consult Appendix Seven to determine each PC&apos;s sins and opposition sins.\n\nIn an allied wing (such as the Vault of Greed for a greedy character), characters gain a +1 bonus on all skill checks, attack rolls, and saving throws. These bonuses are included in all appropriate NPCs encountered in that area, save for mindless creatures (like golems), who do not gain these bonuses at all (nor do they take penalties in opposition wings, if they move to a different area of the complex).\n\nIn an opposition wing (such as the Iron Cages of Lust or the Shimmering Veil for a greedy character), characters gain a –2 penalty on all skill checks, attack rolls, and saving throws. As written, no NPCs are encountered in opposition wings in this adventure, but in the case one moves (such as Delvahine pursuing foes from the Iron Cages of Lust into the Ravenous Crypts), don&apos;t forget to remove the bonus and apply the penalties to that NPC as well." compset="InPlay">
     <usesource source="PathRise"/>
     <tag group="Helper" tag="AdjNoPlus"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="OthAdjCat" tag="Campaign"/>
     <eval phase="PreLevel" priority="10000"><![CDATA[      ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
 
@@ -52,12 +52,13 @@ hero.child[svFort].field[Penalty].value -= 1]]></eval>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="NoPathSoc"/>
     </thing>
-  <thing id="puRuneBon" name="Runeforge Bonus" description="In addition to being able to ignore some effects and being more susceptible to others, sinners in Runeforge feel more welcome and inspired in an associated wing of the dungeon. Unfortunately, that also means that in two other wings, they feel unwanted and oppressed. Consult Appendix Seven to determine each PC&apos;s sins and opposition sins.\n\nIn an allied wing (such as the Vault of Greed for a greedy character), characters gain a +1 bonus on all skill checks, attack rolls, and saving throws. These bonuses are included in all appropriate NPCs encountered in that area, save for mindless creatures (like golems), who do not gain these bonuses at all (nor do they take penalties in opposition wings, if they move to a different area of the complex).\n\nIn an opposition wing (such as the Iron Cages of Lust or the Shimmering Veil for a greedy character), characters gain a &#150;2 penalty on all skill checks, attack rolls, and saving throws. As written, no NPCs are encountered in opposition wings in this adventure, but in the case one moves (such as Delvahine pursuing foes from the Iron Cages of Lust into the Ravenous Crypts), don&apos;t forget to remove the bonus and apply the penalties to that NPC as well." compset="InPlay">
+  <thing id="puRuneBon" name="Runeforge Bonus" description="In addition to being able to ignore some effects and being more susceptible to others, sinners in Runeforge feel more welcome and inspired in an associated wing of the dungeon. Unfortunately, that also means that in two other wings, they feel unwanted and oppressed. Consult Appendix Seven to determine each PC&apos;s sins and opposition sins.\n\nIn an allied wing (such as the Vault of Greed for a greedy character), characters gain a +1 bonus on all skill checks, attack rolls, and saving throws. These bonuses are included in all appropriate NPCs encountered in that area, save for mindless creatures (like golems), who do not gain these bonuses at all (nor do they take penalties in opposition wings, if they move to a different area of the complex).\n\nIn an opposition wing (such as the Iron Cages of Lust or the Shimmering Veil for a greedy character), characters gain a –2 penalty on all skill checks, attack rolls, and saving throws. As written, no NPCs are encountered in opposition wings in this adventure, but in the case one moves (such as Delvahine pursuing foes from the Iron Cages of Lust into the Ravenous Crypts), don&apos;t forget to remove the bonus and apply the penalties to that NPC as well." compset="InPlay">
     <usesource source="PathRise"/>
     <tag group="Helper" tag="AdjNoPlus"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="OthAdjCat" tag="Campaign"/>
     <eval phase="PreLevel" priority="10000"><![CDATA[      ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
 

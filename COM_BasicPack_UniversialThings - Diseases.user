@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
   <loadonce key="COM_BasicPack_UniversialThings - Diseases"/>
   <fileinfo>
@@ -61,14 +61,8 @@ disExtra: any extra text]]></info_history>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="Race"/>
     <bootstrap thing="xxCBDisHel"></bootstrap>
-    <eval phase="PreLevel" priority="11000"><![CDATA[
-      ~ All things
-      field[pUsePicks].value = 0
-
-      field[pCandExpr].text = "component.RaceAbil & Ailment.Disease & !Helper.Helper"
-
-      ~ field[pCandExpr].text = "Ailment.Disease"]]></eval>
     <eval phase="PreLevel" priority="5000" index="2"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value <> 1)
@@ -88,6 +82,13 @@ disExtra: any extra text]]></info_history>
          perform eachpick.delete[Hide.Special]
          perform eachpick.delete[Helper.SpcDisable]
       nexteach]]></eval>
+    <eval phase="PreLevel" priority="11000"><![CDATA[
+      ~ All things
+      field[pUsePicks].value = 0
+
+      field[pCandExpr].text = "component.RaceAbil & Ailment.Disease & !Helper.Helper"
+
+      ~ field[pCandExpr].text = "Ailment.Disease"]]></eval>
     </thing>
   <thing id="xxCBDisHel" name="Disease Helper" description="This item bootstraps all the disesases so we can add them via an adjustment." compset="Simple" uniqueness="useronce">
     <bootstrap thing="xDisAnthra">
@@ -626,7 +627,7 @@ call DiseaseTxt]]></eval>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Ailment" tag="Disease"/>
     <tag group="DiseaseSve" tag="Fort"/>
-    <eval phase="Final" priority="9000" index="3">~ set up disease text
+    <eval phase="Final" priority="9000" index="3"><![CDATA[~ set up disease text
 
 ~disName: name of the disease
 ~disWeap: name of non standard weapon
@@ -644,16 +645,16 @@ var disEffect as string
 var disSaves as string
 var disExtra as string
 
-disName = &quot;Bonecrusher Fever&quot;
-disWeap = &quot;&quot;
-disOnset = &quot;&quot;
-disFreq = &quot;&quot;
-disEffect = &quot;1d4 Dex damage&quot;
-disSaves = &quot;&quot;
-disExtra = &quot;{br}{br}Spread by mosquitoes and other infected insects in tropical climes, the moniker for bonecrusher fever-also called dengue fever-comes from the sensation sufferers experience, described as a great force squeezing their bones from within. Those suffering from bonecrusher fever endure severe headaches, high fevers, and a distinctive rash characterized by bright red dots caused by capillaries under their skin hemorrhaging. The rash appears first on the lower limbs and the chest, spreading to cover the entire body in severe cases.&quot;
+disName = "Bonecrusher Fever"
+disWeap = ""
+disOnset = ""
+disFreq = ""
+disEffect = "1d4 Dex damage"
+disSaves = ""
+disExtra = "{br}{br}Spread by mosquitoes and other infected insects in tropical climes, the moniker for bonecrusher fever-also called dengue fever-comes from the sensation sufferers experience, described as a great force squeezing their bones from within. Those suffering from bonecrusher fever endure severe headaches, high fevers, and a distinctive rash characterized by bright red dots caused by capillaries under their skin hemorrhaging. The rash appears first on the lower limbs and the chest, spreading to cover the entire body in severe cases."
 
 ~ call procedure
-call DiseaseTxt</eval>
+call DiseaseTxt]]></eval>
     <eval phase="First" priority="10000" index="2"><![CDATA[
       ~if we're an ability on a custom monster, we'll need to allow the user to
       ~select the particular attack we're tied to
@@ -661,7 +662,7 @@ call DiseaseTxt</eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisBootSo" name="Boot Soup" description="Type disease (fungus), contact; Save Fortitude DC 16\nOnset 1 day; Frequency 1/day\nEffect speed reduced by 5 feet and 1d3 Dex damage, creatures reduced to speed 0 feet are permanently paralyzed; Cure 2 consecutive saves, or completely skinning or burning the affected area (inflicting 1d8 points of damage)\n\nThis infection is named for its ultimate result, should it go untreated for long periods of time. A fuzzy reddish-brown fungus grows painlessly between the toes and spreads from there to the top of the foot over the course of a day. If not removed within 24 hours, the character's movement speed is reduced by 5 feet for every day the infection is left to spread. It is only at this point that the character begins to feel pain as the fungus starts consuming living tissue and nerves, eventually leading to paralysis." compset="RaceSpec">
+  <thing id="xDisBootSo" name="Boot Soup" description="Type disease (fungus), contact; Save Fortitude DC 16\nOnset 1 day; Frequency 1/day\nEffect speed reduced by 5 feet and 1d3 Dex damage, creatures reduced to speed 0 feet are permanently paralyzed; Cure 2 consecutive saves, or completely skinning or burning the affected area (inflicting 1d8 points of damage)\n\nThis infection is named for its ultimate result, should it go untreated for long periods of time. A fuzzy reddish-brown fungus grows painlessly between the toes and spreads from there to the top of the foot over the course of a day. If not removed within 24 hours, the character&apos;s movement speed is reduced by 5 feet for every day the infection is left to spread. It is only at this point that the character begins to feel pain as the fungus starts consuming living tissue and nerves, eventually leading to paralysis." compset="RaceSpec">
     <fieldval field="abValue4" value="16"/>
     <fieldval field="abValue2" value="1"/>
     <fieldval field="abDuration" value="1"/>
@@ -710,7 +711,7 @@ call DiseaseTxt]]></eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisBrainw" name="Brainworms" description="Type disease (parasite), contact or injury; Save Fortitude DC 14\nOnset 1 day; Frequency 1/day\nEffect 1d3 Wis damage and 1d3 Int damage, if damaged in combat, target must make a second Fort save or gain the confused condition for the duration of the encounter; Cure 2 consecutive saves\n\nIndividually, these tiny parasites are almost invisible to the naked eye, yet en masse they're capable of taking down even the strongest animals. Entering the body through contact with an infected host or corpse (especially through open wounds), these thin worms quickly migrate to the brain and begin reproducing. The infestation is typically evidenced by a dulling of the senses and intellect and by erratic bouts of irrational rage toward other creatures during which the worms attempt to spread to other hosts through combat and injury. Examining the brain of a late-stage victim reveals a living carpet of thousands of tiny parasites." compset="RaceSpec">
+  <thing id="xDisBrainw" name="Brainworms" description="Type disease (parasite), contact or injury; Save Fortitude DC 14\nOnset 1 day; Frequency 1/day\nEffect 1d3 Wis damage and 1d3 Int damage, if damaged in combat, target must make a second Fort save or gain the confused condition for the duration of the encounter; Cure 2 consecutive saves\n\nIndividually, these tiny parasites are almost invisible to the naked eye, yet en masse they&apos;re capable of taking down even the strongest animals. Entering the body through contact with an infected host or corpse (especially through open wounds), these thin worms quickly migrate to the brain and begin reproducing. The infestation is typically evidenced by a dulling of the senses and intellect and by erratic bouts of irrational rage toward other creatures during which the worms attempt to spread to other hosts through combat and injury. Examining the brain of a late-stage victim reveals a living carpet of thousands of tiny parasites." compset="RaceSpec">
     <fieldval field="abValue4" value="14"/>
     <fieldval field="abValue2" value="1"/>
     <fieldval field="abValue3" value="2"/>
@@ -760,7 +761,7 @@ call DiseaseTxt]]></eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisBuboni" name="Bubonic Plague" description="Type disease, injury or inhaled; Save Fortitude DC 17\nOnset 1 day; Frequency 1/day\nEffect 1d4 Con damage and 1 Cha damage and target is fatigued; Cure 2 consecutive saves\n\nInfected vermin and parasites spread this disease, also known as Daemon's Touch or the Black Death, through their bites. Once contracted, the disease spreads quickly, polluting the victim's body with toxins. As the disease reaches the lymph nodes, the victim suffers extreme inflammation of glands, and his skin might take on a black pallor. Symptoms include fever, headaches, nausea, fatigue, and swelling of the lymph nodes (called buboes) on the neck, underarms, and inner thigh areas, and eventually bleeding beneath the skin." compset="RaceSpec">
+  <thing id="xDisBuboni" name="Bubonic Plague" description="Type disease, injury or inhaled; Save Fortitude DC 17\nOnset 1 day; Frequency 1/day\nEffect 1d4 Con damage and 1 Cha damage and target is fatigued; Cure 2 consecutive saves\n\nInfected vermin and parasites spread this disease, also known as Daemon&apos;s Touch or the Black Death, through their bites. Once contracted, the disease spreads quickly, polluting the victim&apos;s body with toxins. As the disease reaches the lymph nodes, the victim suffers extreme inflammation of glands, and his skin might take on a black pallor. Symptoms include fever, headaches, nausea, fatigue, and swelling of the lymph nodes (called buboes) on the neck, underarms, and inner thigh areas, and eventually bleeding beneath the skin." compset="RaceSpec">
     <fieldval field="abValue4" value="17"/>
     <fieldval field="abValue2" value="1"/>
     <fieldval field="abValue3" value="2"/>
@@ -856,7 +857,7 @@ call DiseaseTxt]]></eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisChillb" name="Chillbane Fever" description="Type disease, inhaled, injury; Save Fortitude DC 17\nOnset 1 day; Frequency 1/day\nEffect 1d4 Con damage and target is sickened and fatigued; Cure 2 consecutive saves\n\nNot to be confused with the far more potent earlier strain that swept across Bleakmarch during the reign of Queen Velikas, this infectious disease is characterized by the sufferer's constant shaking, as though he were unable to get warm. The khala dragon is one known carrier of the illness, though many other forms of exposure are possible." compset="RaceSpec">
+  <thing id="xDisChillb" name="Chillbane Fever" description="Type disease, inhaled, injury; Save Fortitude DC 17\nOnset 1 day; Frequency 1/day\nEffect 1d4 Con damage and target is sickened and fatigued; Cure 2 consecutive saves\n\nNot to be confused with the far more potent earlier strain that swept across Bleakmarch during the reign of Queen Velikas, this infectious disease is characterized by the sufferer&apos;s constant shaking, as though he were unable to get warm. The khala dragon is one known carrier of the illness, though many other forms of exposure are possible." compset="RaceSpec">
     <fieldval field="abValue4" value="17"/>
     <fieldval field="abValue2" value="1"/>
     <fieldval field="abValue3" value="2"/>
@@ -1246,7 +1247,7 @@ call DiseaseTxt]]></eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisGlacPl" name="Glacier Plague" description="Type disease, contact, or injury; Save Fortitude DC 15\nOnset 1 day; Frequency 1/day\nEffect 1d6 points of Dex damage and target is exhausted, its speed is reduced by half, and it is unable to speak; Cure 2 consecutive saves\n\nKnown to take root in places long buried by supernatural cold, this affliction infects ruins and deep forests throughout Irrisen. It slowly freezes creatures from the inside out without dealing cold damage, so sufferers simply feel the weariness and fatigue of exerting themselves in a cold environment. The affliction reduces an affected creature's range of movement and acts in many ways like very gradual petrification. A sufferer is unable to speak, is severely slowed, and takes Dexterity damage; if the victim's Dexterity score drops below 5, it is unable to move at all. Creatures suffering from this plague don't die from it, but it often strands them out in the cold where they die from exposure." compset="RaceSpec">
+  <thing id="xDisGlacPl" name="Glacier Plague" description="Type disease, contact, or injury; Save Fortitude DC 15\nOnset 1 day; Frequency 1/day\nEffect 1d6 points of Dex damage and target is exhausted, its speed is reduced by half, and it is unable to speak; Cure 2 consecutive saves\n\nKnown to take root in places long buried by supernatural cold, this affliction infects ruins and deep forests throughout Irrisen. It slowly freezes creatures from the inside out without dealing cold damage, so sufferers simply feel the weariness and fatigue of exerting themselves in a cold environment. The affliction reduces an affected creature&apos;s range of movement and acts in many ways like very gradual petrification. A sufferer is unable to speak, is severely slowed, and takes Dexterity damage; if the victim&apos;s Dexterity score drops below 5, it is unable to move at all. Creatures suffering from this plague don&apos;t die from it, but it often strands them out in the cold where they die from exposure." compset="RaceSpec">
     <fieldval field="abValue4" value="15"/>
     <fieldval field="abValue2" value="1"/>
     <fieldval field="abValue3" value="2"/>
@@ -1393,7 +1394,7 @@ call DiseaseTxt]]></eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisLeproc" name="Leprosy" description="Type disease, contact, inhaled, or injury; Save Fortitude DC 12 negates, Fortitude DC 20 to avoid effects\nOnset 2d4 weeks; Frequency 1/week\nEffect 1d2 Cha damage; Cure 2 consecutive saves\n\nTerrifyingly common throughout Qadira, leprosy is spread by victims of the disease through direct-even casual-contact. Leprosy results in skin lesions, extreme nasal congestion, and wounds that do not heal. A highly visible malady, leprosy can permanently disfigure those who don't receive magical aid. If left untreated, the victim develops sores and becomes easily fatigued. While leprosy can prove difficult to contract, few overcome the disease once infected. Suffering from a slow deterioration, particularly hardy lepers can remain quite active for years after first exhibiting signs of the disease." compset="RaceSpec">
+  <thing id="xDisLeproc" name="Leprosy" description="Type disease, contact, inhaled, or injury; Save Fortitude DC 12 negates, Fortitude DC 20 to avoid effects\nOnset 2d4 weeks; Frequency 1/week\nEffect 1d2 Cha damage; Cure 2 consecutive saves\n\nTerrifyingly common throughout Qadira, leprosy is spread by victims of the disease through direct-even casual-contact. Leprosy results in skin lesions, extreme nasal congestion, and wounds that do not heal. A highly visible malady, leprosy can permanently disfigure those who don&apos;t receive magical aid. If left untreated, the victim develops sores and becomes easily fatigued. While leprosy can prove difficult to contract, few overcome the disease once infected. Suffering from a slow deterioration, particularly hardy lepers can remain quite active for years after first exhibiting signs of the disease." compset="RaceSpec">
     <fieldval field="abValue4" value="12"/>
     <fieldval field="abValue" value="2"/>
     <fieldval field="abValue2" value="4"/>
@@ -1444,7 +1445,7 @@ disExtra = "{br}{br}Terrifyingly common throughout Qadira, leprosy is spread by 
 ~ call procedure
 call DiseaseTxt]]></eval>
     </thing>
-  <thing id="xDisMalari" name="Malaria" description="Type disease, injury; Save Fortitude DC 18\nOnset 1d3 days; Frequency 1/day\nEffect 1d3 Str damage and 1d3 Con damage and target is fatigued; Cure 2 consecutive saves\n\nA classic traveler's nightmare, malaria is transmitted by the bites of mosquitoes and leads to fever, vomiting, shivering, and convulsions, and sometimes even severe brain damage, particularly in children." compset="RaceSpec">
+  <thing id="xDisMalari" name="Malaria" description="Type disease, injury; Save Fortitude DC 18\nOnset 1d3 days; Frequency 1/day\nEffect 1d3 Str damage and 1d3 Con damage and target is fatigued; Cure 2 consecutive saves\n\nA classic traveler&apos;s nightmare, malaria is transmitted by the bites of mosquitoes and leads to fever, vomiting, shivering, and convulsions, and sometimes even severe brain damage, particularly in children." compset="RaceSpec">
     <fieldval field="abValue4" value="18"/>
     <fieldval field="abValue" value="1"/>
     <fieldval field="abValue2" value="3"/>
@@ -1540,7 +1541,7 @@ call DiseaseTxt]]></eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisPulsPu" name="Pulsing Puffs" description="Type disease (fungus), injury; Save Fortitude DC 16\nOnset 1 day; Frequency 1/day\nEffect 1d4 Dex damage; Cure 2 consecutive saves\n\nA character who has taken a wound (or even a small scratch) that remains unhealed for any length of time may soon find small blue-white spores sprouting within it. These spores quickly grow into phosphorescent, domed mounds that pulse along with the bearer's heartbeat. At first, the only effect of the growths is to prevent natural healing of the wound. However, if left untreated for more than a day, the spores take deeper root and begin to damage the character's Dexterity. Due to the fungus's beauty, some jungle tribes are known to cultivate it on the bound bodies of their prisoners." compset="RaceSpec">
+  <thing id="xDisPulsPu" name="Pulsing Puffs" description="Type disease (fungus), injury; Save Fortitude DC 16\nOnset 1 day; Frequency 1/day\nEffect 1d4 Dex damage; Cure 2 consecutive saves\n\nA character who has taken a wound (or even a small scratch) that remains unhealed for any length of time may soon find small blue-white spores sprouting within it. These spores quickly grow into phosphorescent, domed mounds that pulse along with the bearer&apos;s heartbeat. At first, the only effect of the growths is to prevent natural healing of the wound. However, if left untreated for more than a day, the spores take deeper root and begin to damage the character&apos;s Dexterity. Due to the fungus&apos;s beauty, some jungle tribes are known to cultivate it on the bound bodies of their prisoners." compset="RaceSpec">
     <fieldval field="abValue4" value="12"/>
     <fieldval field="abValue2" value="1"/>
     <fieldval field="abValue3" value="2"/>
@@ -1733,7 +1734,7 @@ disExtra = ""
 ~ call procedure
 call DiseaseTxt]]></eval>
     </thing>
-  <thing id="xDisSleepS" name="Sleeping Sickness" description="Type disease (parasite), injury; Save Fortitude DC 14\nOnset 1d2 days; Frequency 1/day\nEffect 1d4 Wis damage and target is fatigued; Cure 2 consecutive saves or arsenic (see text)\n\nEndemic throughout the Sodden Lands and the Mwangi Expanse, this parasitic affliction is spread by flying insects injecting tiny parasites into the victim's bloodstream and inducing fever, headache, joint pain, swelling of glands in the back and neck, and most notably fatigue. The disease gradually infects the brain, causing confusion, reduced coordination, difficulty keeping track of time, and insomnia.\n\nThe best cure for this disease is dosing the patient with the poison arsenic-if the patient survives, there's a cumulative 30% chance that the disease is immediately cured." compset="RaceSpec">
+  <thing id="xDisSleepS" name="Sleeping Sickness" description="Type disease (parasite), injury; Save Fortitude DC 14\nOnset 1d2 days; Frequency 1/day\nEffect 1d4 Wis damage and target is fatigued; Cure 2 consecutive saves or arsenic (see text)\n\nEndemic throughout the Sodden Lands and the Mwangi Expanse, this parasitic affliction is spread by flying insects injecting tiny parasites into the victim&apos;s bloodstream and inducing fever, headache, joint pain, swelling of glands in the back and neck, and most notably fatigue. The disease gradually infects the brain, causing confusion, reduced coordination, difficulty keeping track of time, and insomnia.\n\nThe best cure for this disease is dosing the patient with the poison arsenic-if the patient survives, there&apos;s a cumulative 30% chance that the disease is immediately cured." compset="RaceSpec">
     <fieldval field="abValue4" value="14"/>
     <fieldval field="abValue" value="1"/>
     <fieldval field="abValue2" value="2"/>
@@ -1749,7 +1750,7 @@ call DiseaseTxt]]></eval>
     <tag group="Ailment" tag="Disease"/>
     <tag group="DiseaseSve" tag="Fort"/>
     <tag group="Ailment" tag="Parasite"/>
-    <eval phase="Final" priority="9000" index="3">~ set up disease text
+    <eval phase="Final" priority="9000" index="3"><![CDATA[~ set up disease text
 
 ~disName: name of the disease
 ~disWeap: name of non standard weapon
@@ -1767,16 +1768,16 @@ var disEffect as string
 var disSaves as string
 var disExtra as string
 
-disName = &quot;Sleeping Sickness&quot;
-disWeap = &quot;&quot;
-disOnset = &quot;&quot;
-disFreq = &quot;&quot;
-disEffect = &quot;1d4 Wis damage and target is fatigued&quot;
-disSaves = &quot;2 consecutive saves or arsenic (see text)&quot;
-disExtra = &quot;{br}{br}Endemic throughout the Sodden Lands and the Mwangi Expanse, this parasitic affliction is spread by flying insects injecting tiny parasites into the victim&apos;s bloodstream and inducing fever, headache, joint pain, swelling of glands in the back and neck, and most notably fatigue. The disease gradually infects the brain, causing confusion, reduced coordination, difficulty keeping track of time, and insomnia.{br}{br}The best cure for this disease is dosing the patient with the poison arsenic-if the patient survives, there&apos;s a cumulative 30% chance that the disease is immediately cured.&quot;
+disName = "Sleeping Sickness"
+disWeap = ""
+disOnset = ""
+disFreq = ""
+disEffect = "1d4 Wis damage and target is fatigued"
+disSaves = "2 consecutive saves or arsenic (see text)"
+disExtra = "{br}{br}Endemic throughout the Sodden Lands and the Mwangi Expanse, this parasitic affliction is spread by flying insects injecting tiny parasites into the victim's bloodstream and inducing fever, headache, joint pain, swelling of glands in the back and neck, and most notably fatigue. The disease gradually infects the brain, causing confusion, reduced coordination, difficulty keeping track of time, and insomnia.{br}{br}The best cure for this disease is dosing the patient with the poison arsenic-if the patient survives, there's a cumulative 30% chance that the disease is immediately cured."
 
 ~ call procedure
-call DiseaseTxt</eval>
+call DiseaseTxt]]></eval>
     <eval phase="First" priority="10000" index="2"><![CDATA[
       ~if we're an ability on a custom monster, we'll need to allow the user to
       ~select the particular attack we're tied to
@@ -1831,7 +1832,7 @@ call DiseaseTxt]]></eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisTallow" name="Tallowthroat" description="Type disease, ingested or contact; Save Fortitude DC 14\nOnset 1d3 days; Frequency 1/day\nEffect 1d3 Cha damage and -4 penalty on saving throws to resist mind-affecting effects in areas of bright illumination (does not stack). A creature dies if this Charisma damage equals or exceeds its actual Charisma score, releasing 1d3 shadows as its swollen neck explodes; Cure 2 consecutive saves\n\nShortly after Stepan reneged on his agreement with Nicasor, the shae's rage infused the shadow essence that leaked from the midnight mirror and manifested in the Material Plane as a strange new disease that locals of Karpad have named tallowthroat. Victims sweat constantly, giving their skin a waxy appearance, and their throats swell as though suffering from goiter as the shadow essence infusing them takes form into hostile creatures. An infected creature becomes increasingly irritable, to the point of possessing an attitude of unfriendly with even its closest friends and relatives. Intimidate check DCs are treated as Diplomacy checks to change an infected creature's starting attitude (regardless of the actual skill used).\n\nBecause of their ties to the Plane of Shadow, fetchlings are immune to the effects of tallowthroat, though they often act as carriers; only the town's existing system of fetchling segregation has prevented the spread of the disease to the entire town. In fact, it was the fetchling Sergyev, a groundskeeper at Baroi Manor, who first came into contact with the disease, which leaked into the Material Plane through the water in the manor's courtyard fountain. Sergyev spread the disease to several other members of the household staff, and later around Karpad when Stepan fired all but one of the fetchlings working in the manor." compset="RaceSpec">
+  <thing id="xDisTallow" name="Tallowthroat" description="Type disease, ingested or contact; Save Fortitude DC 14\nOnset 1d3 days; Frequency 1/day\nEffect 1d3 Cha damage and -4 penalty on saving throws to resist mind-affecting effects in areas of bright illumination (does not stack). A creature dies if this Charisma damage equals or exceeds its actual Charisma score, releasing 1d3 shadows as its swollen neck explodes; Cure 2 consecutive saves\n\nShortly after Stepan reneged on his agreement with Nicasor, the shae&apos;s rage infused the shadow essence that leaked from the midnight mirror and manifested in the Material Plane as a strange new disease that locals of Karpad have named tallowthroat. Victims sweat constantly, giving their skin a waxy appearance, and their throats swell as though suffering from goiter as the shadow essence infusing them takes form into hostile creatures. An infected creature becomes increasingly irritable, to the point of possessing an attitude of unfriendly with even its closest friends and relatives. Intimidate check DCs are treated as Diplomacy checks to change an infected creature&apos;s starting attitude (regardless of the actual skill used).\n\nBecause of their ties to the Plane of Shadow, fetchlings are immune to the effects of tallowthroat, though they often act as carriers; only the town&apos;s existing system of fetchling segregation has prevented the spread of the disease to the entire town. In fact, it was the fetchling Sergyev, a groundskeeper at Baroi Manor, who first came into contact with the disease, which leaked into the Material Plane through the water in the manor&apos;s courtyard fountain. Sergyev spread the disease to several other members of the household staff, and later around Karpad when Stepan fired all but one of the fetchlings working in the manor." compset="RaceSpec">
     <fieldval field="abValue4" value="14"/>
     <fieldval field="abValue" value="1"/>
     <fieldval field="abValue2" value="3"/>
@@ -1880,7 +1881,7 @@ disExtra = "{br}{br}Shortly after Stepan reneged on his agreement with Nicasor, 
 ~ call procedure
 call DiseaseTxt]]></eval>
     </thing>
-  <thing id="xDisTetanu" name="Tetanus" description="Type disease, ingested; Save Fortitude DC 14\nOnset 1d6 days; Frequency 1/day\nEffect 1d4 Dex and lockjaw; Cure 2 consecutive saves\n\nThis disease, also called &#147;lockjaw&#148; or &#147;ironmaw,&#148; is typically introduced via deep wounds from contaminated objects like rusty metal. Tetanus victims become more and more prone to violent muscle spasms, splitting headaches, fever, and difficulty swallowing. Stiffness of the jaw is a common result of tetanus infection. Each time a victim takes Dexterity damage from tetanus, there is a 50% chance his jaw muscles stiffen-preventing speech, the casting of spells with verbal components, or even eating-for the next 24 hours." compset="RaceSpec">
+  <thing id="xDisTetanu" name="Tetanus" description="Type disease, ingested; Save Fortitude DC 14\nOnset 1d6 days; Frequency 1/day\nEffect 1d4 Dex and lockjaw; Cure 2 consecutive saves\n\nThis disease, also called “lockjaw” or “ironmaw,” is typically introduced via deep wounds from contaminated objects like rusty metal. Tetanus victims become more and more prone to violent muscle spasms, splitting headaches, fever, and difficulty swallowing. Stiffness of the jaw is a common result of tetanus infection. Each time a victim takes Dexterity damage from tetanus, there is a 50% chance his jaw muscles stiffen-preventing speech, the casting of spells with verbal components, or even eating-for the next 24 hours." compset="RaceSpec">
     <fieldval field="abValue4" value="14"/>
     <fieldval field="abValue" value="1"/>
     <fieldval field="abValue2" value="6"/>
@@ -1924,7 +1925,7 @@ disOnset = &quot;&quot;
 disFreq = &quot;&quot;
 disEffect = &quot;1d4 Dex and lockjaw&quot;
 disSaves = &quot;&quot;
-disExtra = &quot;{br}{br}This disease, also called &#147;lockjaw&#148; or &#147;ironmaw,&#148; is typically introduced via deep wounds from contaminated objects like rusty metal. Tetanus victims become more and more prone to violent muscle spasms, splitting headaches, fever, and difficulty swallowing. Stiffness of the jaw is a common result of tetanus infection. Each time a victim takes Dexterity damage from tetanus, there is a 50% chance his jaw muscles stiffen-preventing speech, the casting of spells with verbal components, or even eating-for the next 24 hours.&quot;
+disExtra = &quot;{br}{br}This disease, also called “lockjaw” or “ironmaw,” is typically introduced via deep wounds from contaminated objects like rusty metal. Tetanus victims become more and more prone to violent muscle spasms, splitting headaches, fever, and difficulty swallowing. Stiffness of the jaw is a common result of tetanus infection. Each time a victim takes Dexterity damage from tetanus, there is a 50% chance his jaw muscles stiffen-preventing speech, the casting of spells with verbal components, or even eating-for the next 24 hours.&quot;
 
 ~ call procedure
 call DiseaseTxt</eval>
@@ -1978,7 +1979,7 @@ call DiseaseTxt]]></eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisUrgaBr" name="Urgathoa&apos;s Breath" description="Type disease, inhaled; Save Fortitude DC 18\nOnset 1d4 days; Frequency 1/day\nEffect 1d4 Str, 1d4 Con; Cure 2 consecutive saves\n\nThis disease, also known as tuberculosis in some regions, flourishes in unsanitary conditions, places of stale air, and many humanoid cities. Symptoms include chest pain and a productive, prolonged, bloody cough. If left untreated, the disease quickly progresses, leading to high fever, chills, night sweats, appetite loss, pallor, and fatigue. While the disease can take years, even decades, to manifest, Urgathoa's cult has long possessed a faster, more virulent version that they often use to inspire fear of their festering goddess." compset="RaceSpec">
+  <thing id="xDisUrgaBr" name="Urgathoa&apos;s Breath" description="Type disease, inhaled; Save Fortitude DC 18\nOnset 1d4 days; Frequency 1/day\nEffect 1d4 Str, 1d4 Con; Cure 2 consecutive saves\n\nThis disease, also known as tuberculosis in some regions, flourishes in unsanitary conditions, places of stale air, and many humanoid cities. Symptoms include chest pain and a productive, prolonged, bloody cough. If left untreated, the disease quickly progresses, leading to high fever, chills, night sweats, appetite loss, pallor, and fatigue. While the disease can take years, even decades, to manifest, Urgathoa&apos;s cult has long possessed a faster, more virulent version that they often use to inspire fear of their festering goddess." compset="RaceSpec">
     <fieldval field="abValue4" value="14"/>
     <fieldval field="abValue" value="1"/>
     <fieldval field="abValue2" value="4"/>
@@ -2076,7 +2077,7 @@ call DiseaseTxt]]></eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisBykoFv" name="Bykolakas Fever" description="Type disease, injury;  Save Fortitude negates\nOnset 1 minute; Frequency 1/day \nEffect 1d4 Con and 1d4 Dex damage; Cure 1 save.\n\nA brykolakas's claw attacks deliver a virulent disease that breaks down the victim's internal organs (causing internal bleeding and a darkening of the skin). This supernatural disease is called brykolakas fever. The save DC is Charisma-based." compset="RaceSpec">
+  <thing id="xDisBykoFv" name="Bykolakas Fever" description="Type disease, injury;  Save Fortitude negates\nOnset 1 minute; Frequency 1/day \nEffect 1d4 Con and 1d4 Dex damage; Cure 1 save.\n\nA brykolakas&apos;s claw attacks deliver a virulent disease that breaks down the victim&apos;s internal organs (causing internal bleeding and a darkening of the skin). This supernatural disease is called brykolakas fever. The save DC is Charisma-based." compset="RaceSpec">
     <fieldval field="abValue4" value="14"/>
     <fieldval field="abValue2" value="1"/>
     <fieldval field="abValue3" value="1"/>
@@ -2458,7 +2459,7 @@ call DiseaseTxt]]></eval>
         perform assign[fShowWhat.WeaponsNat]
         endif]]></eval>
     </thing>
-  <thing id="xDisEidite" name="Eidite Sickness" description="{b}Type{/b} disease, ingested, injury, or touch; {b}Save{/b} Fortitude DC 20\n{b}Onset{/b} 1d3 days; {b}Frequency{/b} 1/day\n{b}Effect{/b} 1d3 Wis damage and &#150;4 penalty on saving throws against poisons and diseases.; {b}Cure{/b} 2 consecutive saves\n\nUnlike other diseases, constructs are not immune to eidite sickness. After 3 days of being affected by the disease, a construct gains the advanced simple template and loses any programming or instructions given to it, effectively going berserk, and attacks all living creatures in sight until it is destroyed or the disease is removed" compset="RaceSpec">
+  <thing id="xDisEidite" name="Eidite Sickness" description="{b}Type{/b} disease, ingested, injury, or touch; {b}Save{/b} Fortitude DC 20\n{b}Onset{/b} 1d3 days; {b}Frequency{/b} 1/day\n{b}Effect{/b} 1d3 Wis damage and –4 penalty on saving throws against poisons and diseases.; {b}Cure{/b} 2 consecutive saves\n\nUnlike other diseases, constructs are not immune to eidite sickness. After 3 days of being affected by the disease, a construct gains the advanced simple template and loses any programming or instructions given to it, effectively going berserk, and attacks all living creatures in sight until it is destroyed or the disease is removed" compset="RaceSpec">
     <fieldval field="abValue" value="1"/>
     <fieldval field="abValue2" value="3"/>
     <fieldval field="abValue3" value="2"/>
