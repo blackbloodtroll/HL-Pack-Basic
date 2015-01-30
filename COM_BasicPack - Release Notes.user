@@ -19,6 +19,8 @@
 <strong>New Features</strong>
 <ul>
 <li>The "Community Player Pack" has been full deprecated and its features have been merged into the Basic Pack.</li>
+<li>All player friendly Things (Feats, Magic Items, Weapons, Gear, feats, archetypes, and Wondrous Items have been merged over from the deprecated "Community Player Pack".</li>
+<li>Universial Things merged into the Basic Pack. This includes such things as Frumple's Disease Helpers, Frumples Breath Weapon Helper, Damage Reductions, and many Racial Specials that can be reused by all Packs.</li>
 <li>New ShadowChemosh Equipment:</li>
 <li>Goodberry magic item for tracking of casting of the spell.</li>
 <li>Touch Attack weapon you can add to help you track attack bonus easier.</li>
@@ -34,8 +36,20 @@
 <strong>Data File Authoring</strong>
 <ul>
 <li>New loadonce XML element added to all files. This requires at least HL 6.1e or the latest iPad app to load now. This also means the files in the community packs SHOULD not be copied to start a new file. If you do you will have issues with loading.</li>
+<li>NEW PROCEDURES</li>
+<li>GiveEthnic - When called at Pre-Levels/10000 will give the current race the ability to select a single Ethnic ability.</li>
+<li>IncSwarm - this increases the number of dice damage in a swarm attack by one. A proceedure is needed since swarm attack now takes damage tag as well as abValue for its damage</li>
+<li>multTarget - This add "plus xxx" to multiple targeting things. This is added from the thing's thingname if the user wants to add the amount of damage the user needs to specify the variable v_damage before calling procedure as well as adding the multTarg.IncDam tag to the thing use the field abText if we want text between v_damage and the name.</li>
+<li>abilLabel - Adds the correct ability type (ie Ex, Su, Sp).</li>
+<li>RemLowLght - Removes Low Light Vision.</li>
+<li>RemDarkvis - Removed Darkvision.</li>
+<li>ResLowLght - Adds Low Light Vision back.</li>
+<li>ResDarkvis - Adds Darkvision back.</li>
+<li>overrideDC - This manually overrides the auto DC calculation allowing user to specify level independent of the actual monster HD/level to use set the variable v_level before procedure to specify level/HD procedure needs to be called after Final/10000 (when normal DC  calculation is called).</li>
+<li>DiseaseTxt - Used by the new Disease Helper Things.</li>
+<li>HaveSpell - This procedure tests if a character has a specific spell and sets the valid field.</li>
+<li>CntMartWea - This procedure counts the number of martial weapons a hero has.</li>
 </ul>
-
 
 <strong>v3.3  January 11, 2015</strong>
 
