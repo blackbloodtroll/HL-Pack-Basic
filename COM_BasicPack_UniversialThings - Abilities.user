@@ -256,4 +256,16 @@ This is mainly for constructs and golems.</comment>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="AbilType" tag="SpellLike"/>
     </thing>
+  <thing id="xxDamRdGO" name="Damage Reduction, Glass or Obsidian" description="You have Damage Reduction against all except weapons made from gold." compset="Ability" uniqueness="unique">
+    <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="SpecType" tag="DR" name="Damage Reduction" abbrev="Damage Reduction"/>
+    <tag group="Helper" tag="BaseAbil" name="Base Ability" abbrev="Base Ability"/>
+    <eval phase="Final" priority="10000"><![CDATA[
+      call CalcValue
+
+      ~ Use our value field as the amount of damage we can resist
+      field[livename].text = "Damage Reduction (" & field[abValue].value & "/glass or obsidian)"
+      field[shortname].text = field[abValue].value & "/glass or obsidian"]]></eval>
+    </thing>
   </document>
