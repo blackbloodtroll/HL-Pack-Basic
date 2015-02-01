@@ -73,11 +73,29 @@
     <tag group="iSchool" tag="Conjur"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="User" tag="Activation"/>
-    <eval phase="First"><![CDATA[if (field[abilActive].value <> 0) then
-   field[BonEnhance].value = 2
-endif]]></eval>
+    <eval phase="First"><![CDATA[
+      if (field[abilActive].value <> 0) then
+         field[BonEnhance].value = 2
+      endif]]></eval>
     <child entity="wSpecMagic">
       <bootstrap thing="wDagger"></bootstrap>
       </child>
     </thing>
+  <thing id="wCBFlyTalo" name="Flying Talon" description="This light exotic piercing weapon consists of a three-pronged barbed hook attached to a length of chain. The talon gives its wielder a reach of 10 feet and deals 1d4 piercing damage (or 1d3 for Small creatures), threatening a critical on a natural 20. In addition, the wielder may initiate disarm or trip attacks with the talon, gaining a +2 bonus on either check. If the opponent resists the trip attempt and tries to trip him in turn, the wielder may drop the talon to avoid falling prone." compset="Weapon">
+    <fieldval field="gSizeCost" value="15"/>
+    <fieldval field="gWeight" value="5"/>
+    <usesource source="srcCrKobK"/>
+    <tag group="wMain" tag="1d4_4"/>
+    <tag group="wProfReq" tag="Exotic"/>
+    <tag group="wFtrGroup" tag="Flails"/>
+    <tag group="wClass" tag="Light"/>
+    <tag group="wCategory" tag="Melee"/>
+    <tag group="wCategory" tag="Reach"/>
+    <tag group="wSpecial" tag="Disarm"/>
+    <tag group="wSpecial" tag="Trip"/>
+    <tag group="wCritMin" tag="20"/>
+    <tag group="EquipType" tag="Metal"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    </thing>
+
   </document>

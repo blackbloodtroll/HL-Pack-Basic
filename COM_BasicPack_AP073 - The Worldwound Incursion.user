@@ -33,23 +33,23 @@ May 21, 2014 - Tim Shadow
       <autotag group="Helper" tag="ItemSpell"/>
       </bootstrap>
     <eval phase="PostLevel" priority="10000"><![CDATA[
-~ If we're not a paladin, get out now
-doneif (#levelcount[Paladin] = 0)
+      ~ If we're not a paladin, get out now
+      doneif (#levelcount[Paladin] = 0)
 
-If (field[actUser].value = 0) Then
-   field[BonEnhance].value = 1
-ElseIf (field[actUser].value = 1) Then
-   field[BonEnhance].value = 2
-ElseIf (field[actUser].value = 2) Then
-   field[BonEnhance].value = 3
-ElseIf (field[actUser].value = 3) Then
-   field[BonEnhance].value = 3
-ElseIf (field[actUser].value = 4) Then
-   field[BonEnhance].value = 5
-   field[abValue2].value += #levelcount[Paladin]
-   #applysr[field[abValue2].value]
-   hero.childfound[spDispMag5].field[sCL].value = #levelcount[Paladin]
-Endif]]></eval>
+      If (field[actUser].value = 0) Then
+         field[BonEnhance].value = 1
+      ElseIf (field[actUser].value = 1) Then
+         field[BonEnhance].value = 2
+      ElseIf (field[actUser].value = 2) Then
+         field[BonEnhance].value = 3
+      ElseIf (field[actUser].value = 3) Then
+         field[BonEnhance].value = 3
+      ElseIf (field[actUser].value = 4) Then
+         field[BonEnhance].value = 5
+         field[abValue2].value += #levelcount[Paladin]
+         #applysr[field[abValue2].value]
+         hero.childfound[spDispMag5].field[sCL].value = #levelcount[Paladin]
+      Endif]]></eval>
     <child entity="wSpecMagic">
       <bootstrap thing="eColdIron"></bootstrap>
       <bootstrap thing="LegItemHlp"></bootstrap>
@@ -68,5 +68,36 @@ Endif]]></eval>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="gType" tag="AdventGear" name="Adventuring Gear" abbrev="Adventuring"/>
     <tag group="Helper" tag="NoPathSoc"/>
+    </thing>
+  <thing id="pAP73Wards" name="Wardstone Surge" description="For use during the final battle in The Worldwound incursion. Grants: \n\n• Damage reduction 10/good\n• Regeneration 5 (unholy damage or evil spells)\n• Resist acid 10 and fire 10\n• Each PC glows with bright light that automatically dispels any 3rd-level or lower darkness effect they enter.\n• Each PC&apos;s attacks are treated as good for the purposes of overcoming damage reduction, and deals +2d6 points of damage against creatures with the evil subtype.\n• Once per round as an immediate action, a PC can roll 1d12 and add the result to any d20 roll he just made." compset="InPlay">
+    <usesource source="PathWraRig"/>
+    <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="NoIncr"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="OthAdjCat" tag="Campaign"/>
+    <bootstrap thing="xDamRsAcid">
+      <containerreq phase="First" priority="500"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
+      <autotag group="Value" tag="10"/>
+      </bootstrap>
+    <bootstrap thing="xDamRsFire">
+      <containerreq phase="First" priority="500"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
+      <autotag group="Value" tag="10"/>
+      </bootstrap>
+    <bootstrap thing="xDamRdGood">
+      <containerreq phase="First" priority="500"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
+      <autotag group="Value" tag="10"/>
+      </bootstrap>
+    <bootstrap thing="xRegen">
+      <containerreq phase="First" priority="500"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
+      <autotag group="Value" tag="5"/>
+      <assignval field="livename" value="unholy damage or evil spells"/>
+      </bootstrap>
+    <eval phase="Final" priority="1000"><![CDATA[
+      doneif (field[pIsOn].value = 0)
+
+      foreach pick in hero from BaseWep
+        #extradamage[eachpick,"+2d6 vs. evil",field[name].text]
+      nexteach]]></eval>
     </thing>
   </document>
