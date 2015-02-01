@@ -8,7 +8,7 @@
       ]]>
       </info_author>
     <info_history><![CDATA[
-<strong>v3.4  January 30, 2015</strong>
+<strong>v3.4  Febuary 1, 2015</strong>
 
 <strong>Bug Fixes</strong>
 <ul>
@@ -21,6 +21,7 @@
 <strong>New Features</strong>
 <ul>
 <li>The "Community Player Pack" has been full deprecated and its features have been merged into the Basic Pack.</li>
+<li>After much thought I am not going to make a PFS Pack. Instead the PFS Boons will exist within the Pathfinder Basic Pack. I think this will make everyone's lives easier actually.</li>
 <li>All player friendly Things (Feats, Magic Items, Weapons, Gear, feats, archetypes, and Wondrous Items have been merged over from the deprecated "Community Player Pack".</li>
 <li>Universial Things merged into the Basic Pack. This includes such things as Frumple's Disease Helpers, Frumples Breath Weapon Helper, Damage Reductions, and many Racial Specials that can be reused by all Packs.</li>
 <li>New ShadowChemosh Equipment:</li>
