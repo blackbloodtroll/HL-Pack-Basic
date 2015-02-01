@@ -1010,7 +1010,7 @@ field[pChosen].chosen.field[Bonus].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="Misc"/>
     <eval phase="Final" priority="50000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -2539,7 +2539,7 @@ hero.child[AllSkills].field[Bonus].value += field[pAdjust].value]]></eval>
   <thing id="pS2Hero000" name="Hero, Ability Score Increase" description="Use this adjustment to give a add or remove the number of Ability Score Increases your character has. In example lets say you want to get two ability score increases at level 4 instead of one. In such a case at level 4 you would select +1 then you will be able to add two &quot;Ability Score Increases&quot; instead of just one." compset="InPlay" isprivate="yes">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="Misc"/>
     <eval phase="Level"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3053,7 +3053,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="Misc"/>
     <eval phase="PostAttr" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3666,7 +3666,7 @@ field[pChosen].chosen.field[cSBonFtMax].value += field[pAdjust].value]]></eval>
   <thing id="pS2MyPoint" name="Mythic Power Points" description="Use this adjustment to increase/decrease the number of mythic points you have." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="Mythic"/>
     <eval phase="PreLevel" priority="10000"><![CDATA[
 ~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
@@ -3704,7 +3704,7 @@ doneif (field[pIsOn].value = 0)
     <fieldval field="pMaximum" value="3"/>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="Mythic"/>
     <eval phase="Final" priority="10000" index="2"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -3729,7 +3729,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <usesource source="OptAction"/>
     <tag group="Helper" tag="CoreCampOK"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="Misc"/>
     <eval phase="Final" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -3741,7 +3741,7 @@ doneif (field[pIsOn].value = 0)
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="Mythic"/>
     <eval phase="PostLevel" priority="10000" index="2"><![CDATA[~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
       ~ If nothing chosen, get out now
@@ -3847,7 +3847,7 @@ focus.field[rHDSides].value += field[pAdjust].value]]></eval>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="PFS"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing chosen, get out now
@@ -3892,7 +3892,7 @@ Endif]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="NoIncr"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="PFS"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing chosen, get out now
@@ -4221,7 +4221,7 @@ focus.field[rHitDice].value = maximum(focus.field[rHitDice].value,0)]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr" name="NoIncr" abbrev="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom" name="Custom Menu" abbrev="Custom Menu"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="PFS"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing chosen, get out now
@@ -4287,7 +4287,7 @@ perform field[pChosen].chosen.assign[Helper.ExoticProf]]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr" name="NoIncr" abbrev="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom" name="Custom Menu" abbrev="Custom Menu"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="PFS"/>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[~ If we're not enabled, get out now
 doneif (field[pIsOn].value = 0)
 ~ If nothing chosen, get out now
@@ -4787,7 +4787,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Adjustment" tag="S2Custom"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="Mythic"/>
     <eval phase="Final"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -4804,7 +4804,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="Helper" tag="AdjNoPlus"/>
-    <tag group="OthAdjCat" tag="UserTop2nd"/>
+    <tag group="OthAdjCat" tag="Mythic"/>
     <eval phase="Final"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
