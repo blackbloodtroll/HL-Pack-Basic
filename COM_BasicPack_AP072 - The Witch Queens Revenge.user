@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <document signature="Hero Lab Data">
-  <loadonce key="COM_BasicPack_AP069 - Mother Maiden Crone"/>
+  <loadonce key="COM_BasicPack_AP072 - The Witch Queens Revenge"/>
   <thing id="lAP72Cimer" name="Cimmerian" description="Language spoke by the ancient Indo-European people north of the Caucasus." compset="Language" uniqueness="useronce">
     <usesource source="PathRgnWin"/>
     <tag group="ProductId" tag="HLCommunit"/>

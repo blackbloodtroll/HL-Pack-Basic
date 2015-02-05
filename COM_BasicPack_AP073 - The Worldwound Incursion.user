@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
-  <loadonce key="COM_BasicPack_AP069 - Mother Maiden Crone"/>
+  <loadonce key="COM_BasicPack_AP073 - The Worldwound Incursion"/>
   <fileinfo>
     <info_history>
 May 21, 2014 - Tim Shadow
@@ -69,7 +69,7 @@ May 21, 2014 - Tim Shadow
     <tag group="gType" tag="AdventGear" name="Adventuring Gear" abbrev="Adventuring"/>
     <tag group="Helper" tag="NoPathSoc"/>
     </thing>
-  <thing id="pAP73Wards" name="Wardstone Surge" description="For use during the final battle in The Worldwound incursion. Grants: \n\n• Damage reduction 10/good\n• Regeneration 5 (unholy damage or evil spells)\n• Resist acid 10 and fire 10\n• Each PC glows with bright light that automatically dispels any 3rd-level or lower darkness effect they enter.\n• Each PC&apos;s attacks are treated as good for the purposes of overcoming damage reduction, and deals +2d6 points of damage against creatures with the evil subtype.\n• Once per round as an immediate action, a PC can roll 1d12 and add the result to any d20 roll he just made." compset="InPlay">
+  <thing id="pAP73Wards" name="Wardstone Surge" description="For use during the final battle in The Worldwound incursion. Grants: \n\nâ€¢ Damage reduction 10/good\nâ€¢ Regeneration 5 (unholy damage or evil spells)\nâ€¢ Resist acid 10 and fire 10\nâ€¢ Each PC glows with bright light that automatically dispels any 3rd-level or lower darkness effect they enter.\nâ€¢ Each PC&apos;s attacks are treated as good for the purposes of overcoming damage reduction, and deals +2d6 points of damage against creatures with the evil subtype.\nâ€¢ Once per round as an immediate action, a PC can roll 1d12 and add the result to any d20 roll he just made." compset="InPlay">
     <usesource source="PathWraRig"/>
     <tag group="Helper" tag="AdjNoPlus"/>
     <tag group="ProductId" tag="HLCommunit"/>
