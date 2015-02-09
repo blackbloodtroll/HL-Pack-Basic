@@ -8,6 +8,21 @@
       ]]>
       </info_author>
     <info_history><![CDATA[
+<strong>v3.6 February 8, 2015</strong>
+
+<strong>Bug Fixes</strong>
+<ul>
+<li>Fix iPad being unable to load more than one Community Pack. Multiple Packs will now work correctly on the iPads.</li>
+</ul>
+<strong>New Features</strong>
+<ul>
+<li>None</li>
+</ul>
+<strong>Data File Authoring</strong>
+<ul>
+<li>None</li>
+</ul>
+
 <strong>v3.5 February 4, 2015</strong>
 
 <strong>Bug Fixes</strong>
