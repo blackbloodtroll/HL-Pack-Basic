@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
+  <loadonce key="COM_BasicPack_AP085 - Fires of Creation"/>
   <fileinfo>
     <info_history>2014-10-30 - added glaucite</info_history>
     </fileinfo>
