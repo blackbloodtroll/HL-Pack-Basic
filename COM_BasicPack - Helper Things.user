@@ -34,10 +34,27 @@
     </thing>
 
   <!-- ============================================================================================ -->
-  <!-- New Base Class Headers                                                                       -->
+  <!-- New Base Class Archetype Headers                                                             -->
   <!-- ============================================================================================ -->
 
 
+
+
+  <!-- ============================================================================================ -->
+  <!-- Trait Headers                                                                                -->
+  <!-- ============================================================================================ -->
+  <thing id="trBPPsioni" name="Psionic" compset="Trait" isshowonly="yes">
+    <tag group="trCategory" tag="Psionic"/>
+    </thing>
+  <thing id="trBPCrimes" name="Crimes" compset="Trait" isshowonly="yes">
+    <tag group="trCategory" tag="Crimes"/>
+    </thing>
+  <thing id="trBPDream" name="Dream" compset="Trait" isshowonly="yes">
+    <tag group="trCategory" tag="Dream"/>
+    </thing>
+  <thing id="trBPTrain" name="Training" compset="Trait" isshowonly="yes">
+    <tag group="trCategory" tag="Training"/>
+    </thing>
 
   <!-- ============================================================================================ -->
   <!-- Helper Objects                                                                               -->
