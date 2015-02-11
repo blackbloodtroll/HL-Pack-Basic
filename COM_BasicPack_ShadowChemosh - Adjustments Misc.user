@@ -4883,8 +4883,45 @@ call S2SetName]]></eval>
 
       field[pChosen].chosen.field[wFixDamage].text = field[pSource].text]]></eval>
     </thing>
-  <hidden id="pS2svAlMor"/>
-  <hidden id="pS2svAlPro"/>
+  <thing id="pS2SecSpel" name="Spells Per Day, Secondary" description="Select this adjustment to add to the number of secondary spells (ie Domain spells) of a certain spell level a class can cast per day." compset="InPlay">
+    <fieldval field="pCandExpr" value="component.Class | (component.BaseRace &amp; SplLookup.?)"/>
+    <usesource source="srcS2Adjus"/>
+    <tag group="Adjustment" tag="SpellLevel" name="Also Spell Levels" abbrev="Also Spell Levels"/>
+    <tag group="OthAdjCat" tag="Class" name="Class" abbrev="Class"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <eval phase="Final" priority="10000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~ If nothing chosen, get out now
+      doneif (field[pChosen].ischosen = 0)
+
+      ~ Add extra spell levels appropriately
+      var spelllevel as number
+      spelllevel = field[pSpellLvl].value
+      field[pChosen].chosen.field[cSecMax].arrayvalue[spelllevel] += field[pAdjust].value]]></eval>
+    </thing>
+  <thing id="pS2MyRanks" name="Mythic Ranks" description="You can use this adjustment to set the total mythic ranks of your monsters. This means if your monster is MR2 and you want it to be MR1 you set the counter to &quot;1&quot;.  If you want the monster to be MR5 you set the counter to &quot;5&quot;.  This sets the ranks it does not adjust the value up/down." compset="InPlay">
+    <fieldval field="pMinimum" value="0"/>
+    <fieldval field="pMaximum" value="10"/>
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="AdjNoPlus"/>
+    <tag group="OthAdjCat" tag="Mythic"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <eval phase="First" priority="10000" index="2"><![CDATA[      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+
+      ~ Delete all existing mythic ranks
+      perform hero.delete[MythicTier.MythicRank]
+
+      var iX as number
+      var nTotal as number
+      iX = 0
+      ~ Add any addtional Mythic Ranks as we know we have at least one
+      while (iX < field[pAdjust].value)
+        iX += 1
+        perform hero.assign[MythicTier.MythicRank]
+      loop]]></eval>
+    </thing>
   <hidden id="pS2svAlRes"/>
   <hidden id="pS2svAlSac"/>
   <hidden id="pS2svAlTra"/>
@@ -4937,4 +4974,6 @@ call S2SetName]]></eval>
   <hidden id="pS2svAlEnh"/>
   <hidden id="pS2svAlIns"/>
   <hidden id="pS2svAlLuc"/>
+  <hidden id="pS2svAlMor"/>
+  <hidden id="pS2svAlPro"/>
   </document>
