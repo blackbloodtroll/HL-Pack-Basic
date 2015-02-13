@@ -6,7 +6,11 @@
       Author:  Tim Shadow
       Email: shadowchemosh@yahoo.com
       File Name changed from PFRPG_ARG_CatClaws.user => COM_BasicPack_ShadowChemosh - Equipment.user]]></info_author>
-    <info_history>December 29, 2014 - Tim Shadow
+    <info_history><![CDATA[
+      January 13, 2015 - Tim Shadow
+      -Added in "- Custom Magic Item -".
+    
+      December 29, 2014 - Tim Shadow
       -Merged together with the Spellbook and Armor Razors user files.
 
       November 25, 2014 - Tim Shadow
@@ -20,7 +24,7 @@
       -Enhanced to change the Claw Blades damage dice as the natural attack Claw damage increases. The scripts are not feat specific so will work with future or 3PP feats that increase damage dice of Natural Claws.
 
       September 21, 2013 - Tim Shadow
-      -Pulled out of my houserules files.</info_history>
+      -Pulled out of my houserules files.]]></info_history>
     </fileinfo>
   <thing id="wS2ClaBlad" name="Claw Blades" description="These subtle blades can only be used by catfolk with the cat’s claws racial trait. Bought in a set of five, they fit over the wearer’s claws on one hand. The blades grant the wearer a +1 enhancement bonus on claw attack rolls with that hand and change the weapon type from a natural weapon to a light slashing weapon. Catfolk with the cat’s claws racial trait are proficient with this weapon. The claw blades can be enhanced like a masterwork weapon for the normal costs. The listed cost of the item is for one set of five claws for one hand." compset="Weapon">
     <usesource source="ARG"/>
@@ -39,10 +43,12 @@
     <tag group="wCritMin" tag="20"/>
     <tag group="wCritMult" tag="2"/>
     <tag group="EquipType" tag="Metal"/>
-    <eval phase="First" priority="5000">~ Force this weapon to be Masterwork
-If (container.ishero = 0) then
-  container.child[gCustMagic].field[gMasterFor].value = 1
-Endif</eval>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <eval phase="First" priority="5000"><![CDATA[
+      ~ Force this weapon to be Masterwork
+      If (container.ishero = 0) then
+        container.child[gCustMagic].field[gMasterFor].value = 1
+      Endif]]></eval>
     </thing>
   <thing id="iS2ClaBlad" name="Claw Blades" description="These subtle blades can only be used by catfolk with the cat’s claws racial trait. Bought in a set of five, they fit over the wearer’s claws on one hand. The blades grant the wearer a +1 enhancement bonus on claw attack rolls with that hand and change the weapon type from a natural weapon to a light slashing weapon. Catfolk with the cat’s claws racial trait are proficient with this weapon. The claw blades can be enhanced like a masterwork weapon for the normal costs. The listed cost of the item is for one set of five claws for one hand." compset="MagicWep" buytemplate="BuyMoney" xactspecial="2">
     <comment>Copying this item to make anything other than the weapon stats for a Claw Blade is not recommended. There are settings that cannot be changed in the editor, which will be carried along with your copy.</comment>
@@ -53,18 +59,21 @@ Endif</eval>
     <tag group="Helper" tag="CustomItem" name="CustomItem" abbrev="CustomItem"/>
     <tag group="Helper" tag="MatForceMs"/>
     <tag group="Helper" tag="Helper" name="Helper" abbrev="Helper"/>
-    <eval phase="PostAttr" priority="10000" index="3">var bonus as number
-bonus += hero.childfound[wClaw].tagcount[Helper.DamageUp]
-~ Increase Claw Blade damage based on Claw Damage increases
-field[wDamage].value += bonus
-field[wRanDamage].value += bonus</eval>
-    <eval phase="PreLevel" priority="5000">call iMagWeapon
+    <tag group="ProductId" tag="HLCommunit"/>
+    <eval phase="PreLevel" priority="5000"><![CDATA[
+      call iMagWeapon
 
-field[gCost].value += -300</eval>
+      field[gCost].value += -300]]></eval>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[
-~ This fixes an issue with the name getting messed up because of the
-~ bootstrap and magical powers.
-field[livename].text &= " Claw Blades"]]></eval>
+      ~ This fixes an issue with the name getting messed up because of the
+      ~ bootstrap and magical powers.
+      field[livename].text &= " Claw Blades"]]></eval>
+    <eval phase="PostAttr" priority="10000" index="3"><![CDATA[
+      var bonus as number
+      bonus += hero.childfound[wClaw].tagcount[Helper.DamageUp]
+      ~ Increase Claw Blade damage based on Claw Damage increases
+      field[wDamage].value += bonus
+      field[wRanDamage].value += bonus]]></eval>
     <child entity="gMagWeapon">
       <tag group="Helper" tag="NoSelChild" name="NoSelChild" abbrev="NoSelChild"/>
       <bootstrap thing="wS2ClaBlad">
@@ -80,21 +89,23 @@ field[livename].text &= " Claw Blades"]]></eval>
     <tag group="Hero" tag="EqpHand"/>
     <tag group="RaceEquip" tag="rCatfolk"/>
     <tag group="gType" tag="Clothing"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     <bootstrap thing="iS2ClaBlad">
       <autotag group="Helper" tag="NoRootName"/>
       </bootstrap>
     <exprreq message="Cat claws required."><![CDATA[hero.childlives[wClaw] <> 0]]></exprreq>
     </thing>
   <thing id="iS2ArmRazo" name="Armor Razors" description="Armor razors deal extra slashing damage (see &quot;spiked armor&quot; on Table: Weapons) on a successful grapple attack. The razors count as a martial weapon. If you are not proficient with them, you take a -4 penalty on grapple checks when you try to use them. You can also make a regular melee attack (or off-hand attack) with the razors, and they count as a light weapon in this case. (You can&apos;t also make an attack with armor razors if you have already made an attack with another off-hand weapon, and vice versa.) An enhancement bonus to a suit of armor does not improve the razors&apos; effectiveness, but the razors can be made into magic weapons in their own right." compset="MagicWep" buytemplate="BuyMoney" xactspecial="2">
-    <comment>Copying this item to make anything other than the weapon stats for a shield is not recommended. There are settings that cannot be changed in the editor, which will be carried along with your copy.</comment>
-    <tag group="Helper" tag="CustomItem" name="CustomItem" abbrev="CustomItem"/>
-    <tag group="Helper" tag="Helper" name="Helper" abbrev="Helper"/>
-    <tag group="Helper" tag="NoSelect" name="NoSelect" abbrev="NoSelect"/>
-    <tag group="Helper" tag="Shadow" name="Shadow" abbrev="Shadow"/>
+    <comment>Copying this item to make anything other than the weapon stats for a magic weapon is not recommended. There are settings that cannot be changed in the editor, which will be carried along with your copy.</comment>
+    <tag group="Helper" tag="CustomItem"/>
+    <tag group="Helper" tag="Helper"/>
+    <tag group="Helper" tag="NoSelect"/>
+    <tag group="Helper" tag="Shadow"/>
     <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="PreLevel" priority="5000">call iMagWeapon</eval>
     <child entity="gMagWeapon">
-      <tag group="Helper" tag="NoSelChild" name="NoSelChild" abbrev="NoSelChild"/>
+      <tag group="Helper" tag="NoSelChild"/>
       <bootstrap thing="wS2ArmRazo">
         <autotag group="Helper" tag="Forward"/>
         </bootstrap>
@@ -102,18 +113,19 @@ field[livename].text &= " Claw Blades"]]></eval>
     </thing>
   <thing id="wS2ArmRazo" name="Armor Razors" description="Armor razors deal extra slashing damage (see &quot;spiked armor&quot; on Table: Weapons) on a successful grapple attack. The razors count as a martial weapon. If you are not proficient with them, you take a -4 penalty on grapple checks when you try to use them. You can also make a regular melee attack (or off-hand attack) with the razors, and they count as a light weapon in this case. (You can&apos;t also make an attack with armor razors if you have already made an attack with another off-hand weapon, and vice versa.) An enhancement bonus to a suit of armor does not improve the razors&apos; effectiveness, but the razors can be made into magic weapons in their own right." compset="Weapon">
     <comment>This item is not actually selected by the user anywhere. It is a helper object, that the weapon stats for the shields attach as a gizmo, so they can retrieve its stats</comment>
-    <tag group="EquipType" tag="Metal" name="Metal" abbrev="Metal"/>
-    <tag group="Helper" tag="Helper" name="Helper" abbrev="Helper"/>
-    <tag group="wCategory" tag="Melee" name="Melee Weapon" abbrev="Melee"/>
-    <tag group="wClass" tag="Light" name="Light" abbrev="Light"/>
-    <tag group="wCritMin" tag="20" name="20" abbrev="20"/>
-    <tag group="wCritMult" tag="2" name="2" abbrev="2"/>
-    <tag group="wFtrGroup" tag="Close" name="Close" abbrev="Close"/>
+    <tag group="EquipType" tag="Metal"/>
+    <tag group="Helper" tag="Helper"/>
+    <tag group="wCategory" tag="Melee"/>
+    <tag group="wClass" tag="Light"/>
+    <tag group="wCritMin" tag="20"/>
+    <tag group="wCritMult" tag="2"/>
+    <tag group="wFtrGroup" tag="Close"/>
     <tag group="wMain" tag="1d6_5"/>
-    <tag group="wProfReq" tag="Martial" name="Martial" abbrev="Martial"/>
+    <tag group="wProfReq" tag="Martial"/>
     <tag group="wType" tag="S"/>
     <tag group="Helper" tag="NoHandWeap"/>
     <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     </thing>
   <thing id="ipS2ArmRaz" name="Armor Razors" description="Armor razors deal extra slashing damage (see &quot;spiked armor&quot; on Table: Weapons) on a successful grapple attack. The razors count as a martial weapon. If you are not proficient with them, you take a -4 penalty on grapple checks when you try to use them. You can also make a regular melee attack (or off-hand attack) with the razors, and they count as a light weapon in this case. (You can&apos;t also make an attack with armor razors if you have already made an attack with another off-hand weapon, and vice versa.) An enhancement bonus to a suit of armor does not improve the razors&apos; effectiveness, but the razors can be made into magic weapons in their own right.\n\n{B}Note:{/b} To customize your armor razors equip your armor and then go to the &quot;Weapon&quot; tab and edit your armor razors." compset="ItemPower" summary="Goto &quot;Weapon&quot; tab to customize after equipping your armor.">
     <fieldval field="iPriceCash" value="50"/>
@@ -122,6 +134,7 @@ field[livename].text &= " Claw Blades"]]></eval>
     <tag group="PowerType" tag="Armor"/>
     <tag group="Helper" tag="NoPathSoc"/>
     <tag group="PowerReq" tag="Armor"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     <bootstrap thing="iS2ArmRazo">
       <autotag group="Helper" tag="Shadow"/>
       </bootstrap>
@@ -132,6 +145,7 @@ field[livename].text &= " Claw Blades"]]></eval>
     <tag group="Helper" tag="GearNoSize"/>
     <tag group="gType" tag="Tools"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="Final" priority="10000"><![CDATA[
       var Cost   as number
       var Pages  as number
@@ -152,6 +166,7 @@ field[livename].text &= " Claw Blades"]]></eval>
     <tag group="gType" tag="Tools"/>
     <tag group="Value" tag="100"/>
     <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="PreLevel" priority="10500"><![CDATA[
       var Cost   as number
       var Pages  as number
@@ -175,6 +190,7 @@ field[livename].text &= " Claw Blades"]]></eval>
     <tag group="Value" tag="50"/>
     <tag group="gType" tag="Tools"/>
     <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="PreLevel" priority="10500"><![CDATA[
       var Cost   as number
       var Pages  as number
@@ -199,6 +215,7 @@ field[livename].text &= " Claw Blades"]]></eval>
     <tag group="Value" tag="70"/>
     <tag group="gType" tag="Tools"/>
     <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="PreLevel" priority="10500"><![CDATA[
       var Cost   as number
       var Pages  as number
