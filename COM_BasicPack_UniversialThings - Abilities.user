@@ -140,20 +140,20 @@ January 26th 2012</comment>
     <tag group="AbilType" tag="Super" name="Supernatural Ability" abbrev=" (Su)"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="PostAttr" priority="9000"><![CDATA[
-call CalcValue
-if (field[abValue].value > 1) then
-  field[abText].text = "s)"
-else
-  field[abText].text = ")"
-endif
+      call CalcValue
+      if (field[abValue].value > 1) then
+        field[abText].text = "s)"
+      else
+        field[abText].text = ")"
+      endif
 
-~range <1 means touch
-if (field[abValue].value < 1) then
-   field[livename].text = field[name].text & " (Touch)"
-else
-   ~ Use our value field as the range of our telepathy
-   field[livename].text = field[name].text & " (" & field[abValue].value & " mile" & field[abText].text
-endif]]></eval>
+      ~range <1 means touch
+      if (field[abValue].value < 1) then
+         field[livename].text = field[name].text & " (Touch)"
+      else
+         ~ Use our value field as the range of our telepathy
+         field[livename].text = field[name].text & " (" & field[abValue].value & " mile" & field[abText].text
+      endif]]></eval>
     </thing>
   <thing id="xxDRLawrMg" name="Damage Reduction, Lawful or Magic" description="You have Damage Reduction against all except Lawful or Magic attacks." compset="Ability" uniqueness="unique">
     <tag group="Helper" tag="BaseAbil" name="Base Ability" abbrev="Base Ability"/>
@@ -161,11 +161,11 @@ endif]]></eval>
     <tag group="SpecType" tag="DR" name="Damage Reduction" abbrev="Damage Reduction"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="Final" priority="10000"><![CDATA[
-call CalcValue
+      call CalcValue
 
-~ Use our value field as the amount of damage we can resist
-field[livename].text = "Damage Reduction (" & field[abValue].value & "/lawful or magic)"
-field[shortname].text = field[abValue].value & "/lawful or magic"]]></eval>
+      ~ Use our value field as the amount of damage we can resist
+      field[livename].text = "Damage Reduction (" & field[abValue].value & "/lawful or magic)"
+      field[shortname].text = field[abValue].value & "/lawful or magic"]]></eval>
     </thing>
   <thing id="xxImmMagMi" name="Immune to Magic Missle" description="Creature is immune to magic missles." compset="Ability" uniqueness="useronce">
     <fieldval field="shortname" value="magic missle"/>
@@ -217,9 +217,7 @@ field[shortname].text = field[abValue].value & "/lawful or magic"]]></eval>
     <bootstrap thing="xImmCrit"></bootstrap>
     </thing>
   <thing id="xxImmMagic" name="Immunity to Magic" compset="Ability" summary="Immune to magic effects that allow spell resistance with a few exceptions.">
-    <comment>Use amendthing[description routine to set description.
-
-This is mainly for constructs and golems.</comment>
+    <comment>Use amendthing[description] routine to set description. This is mainly for constructs and golems.</comment>
     <tag group="Helper" tag="ShowSpec"/>
     <tag group="AbilType" tag="Extra"/>
     <tag group="SpecType" tag="Immune"/>
@@ -267,5 +265,19 @@ This is mainly for constructs and golems.</comment>
       ~ Use our value field as the amount of damage we can resist
       field[livename].text = "Damage Reduction (" & field[abValue].value & "/glass or obsidian)"
       field[shortname].text = field[abValue].value & "/glass or obsidian"]]></eval>
+    </thing>
+  <thing id="xxCBSprGoo" name="Spell Resistance vs Good" description="You have Spell Resistance." compset="Ability" uniqueness="unique">
+    <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
+    <tag group="SpecType" tag="SR" name="Spell Resistance" abbrev="Spell Resistance"/>
+    <tag group="Universal" tag="Universal" name="Universal Monster Ability or Core Rulebook ability" abbrev="Universal Monster Ability or Core Rulebook ability"/>
+    <bootstrap thing="aaSpellRes"></bootstrap>
+    <eval phase="Final" priority="20000" name="Calc xSplRs Value"><![CDATA[
+      call CalcValue
+
+      ~ Use our value field as the quality of spell resistance
+      field[livename].text = "Spell Resistance (" & field[abValue].value & " vs. good)"
+
+      ~ specify a shortname for consistency with other resistances
+      field[shortname].text = "spells " & field[abValue].value & "(vs. good)"]]></eval>
     </thing>
   </document>
