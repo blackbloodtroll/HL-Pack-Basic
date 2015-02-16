@@ -294,4 +294,14 @@ January 26th 2012</comment>
     <tag group="SpecType" tag="DR"/>
     <tag group="ProductId" tag="HLCommunit"/>
     </thing>
+  <thing id="xuSIdHlfEn" name="Half Damage from Energy Attacks" description="Take half damage from energy attacks." compset="Ability" summary="Take half damage from energy attacks." uniqueness="useronce">
+    <tag group="SpecType" tag="Defense"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    </thing>
+  <thing id="xuSIdHlfRg" name="Half Damage from Ranged Attacks" description="Take half damage from ranged attacks." compset="Ability" summary="Take half damage from ranged attacks." uniqueness="useronce">
+    <tag group="SpecType" tag="Defense"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    </thing>
   </document>
