@@ -280,4 +280,12 @@ January 26th 2012</comment>
       ~ specify a shortname for consistency with other resistances
       field[shortname].text = "spells " & field[abValue].value & "(vs. good)"]]></eval>
     </thing>
+  <thing id="abAbilHeal" name="Ability Healing" description="You heal ability damage per round in each damaged ability score." compset="Ability" summary="You heal ability damage per round in each damaged ability score" uniqueness="unique">
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="SpecType" tag="FastHeal"/>
+    <tag group="AbilType" tag="Extra"/> 
+    <tag group="ProductId" tag="HLCommunit"/> 
+    <eval phase="Final" priority="15000"><![CDATA[
+      field[livename].text &= " " & field[abValue].value & "/round"]]></eval>
+    </thing>
   </document>
