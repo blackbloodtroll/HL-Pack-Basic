@@ -390,5 +390,13 @@
     sortorder="10"
     description="We Be Goblins Too!, PFS Only">
     </source>
+  <source
+    id="srcBdDrgsc"
+    name="Blood of Dragonscar"
+    selectable="yes"
+    parent="pModuSRD"
+    sortorder="10"
+    description="E2: Blood of Dragonscar, Paizo Publishing, LLC., 03/2009">
+    </source>
 
 </document>
