@@ -288,4 +288,10 @@ January 26th 2012</comment>
     <eval phase="Final" priority="15000"><![CDATA[
       field[livename].text &= " " & field[abValue].value & "/round"]]></eval>
     </thing>
+  <thing id="abResBlows" name="Resistant to Blows" description="Take only half damage from melee and ranged weapons, natural weapons, and falls. Apply this reduction before applying damage reduction." compset="Ability" summary="Take half damage from weapons and falls.">
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="AbilType" tag="Extra"/>
+    <tag group="SpecType" tag="DR"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    </thing>
   </document>
