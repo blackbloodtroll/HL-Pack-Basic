@@ -18,8 +18,7 @@
       -Created new to hold just the duplicated Things to cause less issues with the Player Pack.]]></info_history>
     </fileinfo>
   <thing id="fS2ChrRigh" name="Charge of the Righteous" description="You charge toward undead and fiends with confidence in your righteous cause.{br}{br}{b}Prerequisites{/b}: Base attack bonus +1, any good alignment.{br}{br}{b}Benefit{/b}: You do not take a penalty to AC while charging undead creatures and evil outsiders.{br}{br}{b}Normal{/b}: When you charge, you take a -2 penalty to AC until the start of your next turn." compset="Feat" uniqueness="useronce">
-    <comment>Golarion Companion #6</comment>
-    <usesource source="CSISGods"/>
+    <comment>Golarion Companion #6 - Inner Sea Gods</comment>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="NoPathSoc"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
@@ -30,8 +29,7 @@
     <exprreq message="Good alignment required." iserror="no"><![CDATA[tagcount[Alignment.Good] <> 0]]></exprreq>
     </thing>
   <thing id="fCBCraTech" name="Craft Technological Item" description="You can craft technological gear and items.\n\n{b}Prerequisites{/b}: Technologist, Craft (mechanical) 5 ranks, Knowledge (engineering) 5 ranks \n\n{b}Benefit{/b}: You can create technological gear. Creating a piece of technological gear takes 1 day for every 1,000 gp in the item&apos;s price. To create the object, you must use up raw materials costing half of this total price. See Crafting High- Tech Items on page 16 for more information.\n\nYou can also repair a broken technological item if it is one that you could make. Doing so costs half the raw materials and half the time it would take to craft that item from scratch." compset="Feat" uniqueness="useronce">
-    <comment>Helper.Helper added so that this can not be selected only used in a bootstrap.</comment>
-    <usesource source="PathIronGo"/>
+    <comment>Technology Guide</comment>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="ShowSpec"/>
     <tag group="Helper" tag="Helper"/>
@@ -43,7 +41,6 @@
     </thing>
   <thing id="fS2PiraStr" name="Piranha Strike" description="You make a combination of quick strikes, sacrificing accuracy for multiple, minor wounds that prove exceptionally deadly.\n\n{b}Prerequisites:{/b} Weapon Finesse, base attack bonus +1.\n\n{b}Benefit:{/b} When wielding a light weapon, you can choose to take a –1 penalty on all melee attack rolls and combat maneuver checks to gain a +2 bonus on all melee damage rolls. This bonus to damage is halved (–50%) if you are making an attack with an off-hand weapon or secondary natural weapon. When your base attack bonus reaches +4, and for every 4 points thereafter, the penalty increases by –1 and the bonus on damage rolls increases by +2. You must choose to use this feat before the attack roll, and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage. This feat cannot be used in conjunction with the Power Attack feat." compset="Feat" uniqueness="useronce">
     <comment>Sargava, Lost Colony</comment>
-    <usesource source="PCSargava"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="NoPathSoc"/>
     <tag group="HasFeat" tag="fPiranStr"/>
