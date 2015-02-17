@@ -276,7 +276,7 @@
   <thing id="wuTorch" name="Torch" description="A torch can be used as imporvised weapon that does additional fire damage." compset="Weapon">
     <fieldval field="gSizeCost" value=".01"/>
     <fieldval field="gWeight" value="1"/>
-    <usesource source="pHLComm"/>
+    <usesource source="srcS2Gear"/>
     <tag group="wCritMin" tag="20"/>
     <tag group="wCritMult" tag="2"/>
     <tag group="wSpecial" tag="Improvised"/>
