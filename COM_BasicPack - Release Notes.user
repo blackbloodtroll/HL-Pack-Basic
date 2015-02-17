@@ -8,6 +8,32 @@
       ]]>
       </info_author>
     <info_history><![CDATA[
+<strong>v3.7 February 15, 2015</strong>
+
+<strong>Bug Fixes</strong>
+<ul>
+<li>File name changes to accomdate loading the GM Pack and GM Mythic Pack onto the iPad.</li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<strong>New Features</strong>
+<ul>
+<li>ShadowChemosh Equipment - Moved over some of Frumple's helpful universal items to the Basic Pack: Goodberry, Improvised Weapon, Unholy Water Flask, Torch, and Rock.</li>
+<li>Paizo Module (Blood of Dragonscar) player items added to the Basic Pack.</li>
+<li>ShadowChemosh Adjustments - "PFS, Non-Core Spell" allows you to make a non-core spell valid in a PFS Core Campaign. This should be useful with the current news that wizards will have the ability to gain non-core spells.</li>
+<li></li>
+</ul>
+<strong>Data File Authoring</strong>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+
 <strong>v3.6 February 8, 2015</strong>
 
 <strong>Bug Fixes</strong>
