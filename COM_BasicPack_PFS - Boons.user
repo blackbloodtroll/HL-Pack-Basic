@@ -3851,7 +3851,7 @@ bodrinbarlow@gmail.com
 
 22nd November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
     <tag group="gType" tag="SpecSubs" name="Alchemical Remedies" abbrev="Remedies"/>
@@ -3867,7 +3867,7 @@ bodrinbarlow@gmail.com
 
 22nd November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="gType" tag="SpecSubs" name="Alchemical Remedies" abbrev="Remedies"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -3881,7 +3881,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="gType" tag="SpecSubs" name="Alchemical Remedies" abbrev="Remedies"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -3895,7 +3895,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="gType" tag="SpecSubs" name="Alchemical Remedies" abbrev="Remedies"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -3909,7 +3909,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="gType" tag="SpecSubs" name="Alchemical Remedies" abbrev="Remedies"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -3926,7 +3926,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="gType" tag="SpecSubs" name="Alchemical Remedies" abbrev="Remedies"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -3944,7 +3944,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="gType" tag="SpecSubs" name="Alchemical Remedies" abbrev="Remedies"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -3961,7 +3961,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="gType" tag="SpecSubs" name="Alchemical Remedies" abbrev="Remedies"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -3975,7 +3975,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="gType" tag="SpecSubs" name="Alchemical Remedies" abbrev="Remedies"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -3992,7 +3992,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="gType" tag="SpecSubs" name="Alchemical Remedies" abbrev="Remedies"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -4018,7 +4018,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -4034,7 +4034,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -4048,7 +4048,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -4064,7 +4064,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -4078,7 +4078,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -4093,7 +4093,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -4109,7 +4109,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -4125,7 +4125,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -4141,7 +4141,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
@@ -4156,7 +4156,7 @@ bodrinbarlow@gmail.com
 
 30th November 2014</comment>
     <fieldval field="shortname" value="Emerald Elixir"/>
-    <usesource source="PFS_Boons" parent="pHLComm" name="PFS Boons (as Vanities)"/>
+    <usesource source="PFS_Boons"/>
     <usesource source="SocChar" parent="Society" name="Pathfinder Society Organized Play Character"/>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="ProductId" tag="HLCommunit" name="Hero Lab Community" abbrev="Hero Lab Community"/>
