@@ -30,9 +30,8 @@
     focus.field[rGiveSpec].value = 1
     perform focus.assign[Helper.OptCustom]
     focus.field[rSpecName].text = "Ethnicities"  
-  ]]>
+    ]]>
   </procedure>
-
 
   <procedure id="IncSwarm" context="pick"><![CDATA[
     ~ this increases the number of dice damage in a swarm attack by one.

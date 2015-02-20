@@ -30,6 +30,8 @@
     <bootstrap thing="xPwrRes"></bootstrap>
     <!-- Simple Hide Community Deity Helper -->
     <bootstrap thing="CBHideDeit"></bootstrap>
+    <!-- Simple Append source value to class name -->
+    <bootstrap thing="S2ClsSourc"></bootstrap>
 
     </thing>
 
@@ -84,5 +86,19 @@
       ]]></eval>
     </thing>
 
+  <thing id="S2ClsSourc" name="Give Source Abbrevation to Classes" description="This helper object is designed to append the abbrev information to a class name if the specific tag PackHelper.ClsSrcAbr is found." compset="Simple">
+    <eval phase="Final" priority="10000"><![CDATA[    
+      ~ Check to see if specific sources are turned on
+      doneif (hero.tagcountstr["source.TomeOfSecr"] = 0)
+
+      var sName as string
+      
+      ~ Loop through all class Things
+      foreach thing in Class where "PackHelper.ClsSrcAbr"
+        sName = eachthing.field[name].text & eachthing.field[srcBookInf].text
+        perform eachthing.amendthing[name,sName]
+      nexteach
+      ]]></eval>
+    </thing>
 
   </document>

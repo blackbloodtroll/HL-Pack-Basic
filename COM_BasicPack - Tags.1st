@@ -7,6 +7,14 @@
 
   -->
 
+  <!-- ========================= -->
+  <!-- Global Helper Custom tags -->
+  <!-- ========================= -->
+  <group id="PackHelper" name="Community Helper">
+    <value id="ClsSrcAbr"   name="Class Source Abbrevation"/>
+  </group>
+
+
   <!-- ==================== -->
   <!-- Diseases Custom tags -->
   <!-- ==================== -->
