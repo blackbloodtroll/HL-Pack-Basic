@@ -2,9 +2,14 @@
 <document signature="Hero Lab Data">
   <loadonce key="COM_BasicPack_UniversialThings - Equipment"/>
   <fileinfo>
-    <info_author><![CDATA[Tim Shadow
-January 24, 2015
-This file is designed to hold all those "Global" Equipment things like suits of armor, weapons, or gear that are needed for any gamer running in any game. I think for now these things will NOT be source linked to any source.]]></info_author>
+    <info_author><![CDATA[
+      Feburary 22, 2015 - Tim Shadow
+      -For now this is holding old deprecated Things instead. I have moved the equipment that is useful over to the "ShadowChemosh - Equipment" as that is what everything is source marked to.
+      -Yes this contradicts the below comment but things changed. =)
+
+      Tim Shadow
+      January 24, 2015
+      This file is designed to hold all those "Global" Equipment things like suits of armor, weapons, or gear that are needed for any gamer running in any game. I think for now these things will NOT be source linked to any source.]]></info_author>
     </fileinfo>
   <thing id="aruElvenCh" name="DEPRECATED" description="{b}Note{/b} If you see this on your character please remove it and re-add &quot;Elven Chain&quot; to your character." compset="Armor">
     <comment>HIDDEN!</comment>
@@ -134,46 +139,7 @@ This file is designed to hold all those "Global" Equipment things like suits of 
         validif (tagcount[Ability.e?] - tagcount[Ability.eNormal] = 1)]]></validate>
       </prereq>
     </thing>
-  <thing id="ioCBGoodbe" name="Goodberry" description="Thus transmuted berry provides nourishment as if it were a normal meal for a Medium creature. The berry also cures 1 point of damage when eaten, subject to a maximum of 8 points of such curing in any 24-hour period." compset="Wondrous">
-    <usesource source="srcS2Gear"/>
-    <tag group="Helper" tag="AlwaysAvl"/>
-    <tag group="Helper" tag="UsesQty"/>
-    <tag group="Helper" tag="ShowSpec"/>
-    <tag group="ProductId" tag="HLCommunit"/>
-    <tag group="gType" tag="Wonder"/>
-    </thing>
-  <thing id="wTouchAtta" name="Touch Attack" description="Add this weapon if you have any touch attack spells or abilities." compset="Weapon">
-    <fieldval field="wFixDamage" value="As Spell"/>
-    <usesource source="srcS2Gear"/>
-    <tag group="Helper" tag="NoDblStr" name="NoDblStr" abbrev="NoDblStr"/>
-    <tag group="Helper" tag="Proficient" name="Proficient" abbrev="Proficient"/>
-    <tag group="wCategory" tag="Melee" name="Melee Weapon" abbrev="Melee"/>
-    <tag group="wClass" tag="Light" name="Light" abbrev="Light"/>
-    <tag group="wCritMin" tag="20" name="20" abbrev="20"/>
-    <tag group="wCritMult" tag="2" name="2" abbrev="2"/>
-    <tag group="wMain" tag="1_1" name="1" abbrev="1"/>
-    <tag group="wProfReq" tag="Simple" name="Simple" abbrev="Simple"/>
-    <tag group="Helper" tag="Always2H" name="Always2H" abbrev="Always2H"/>
-    <tag group="Helper" tag="Finesse" name="Finesse" abbrev="Finesse"/>
-    <tag group="ProductId" tag="HLCommunit"/>
-    <tag group="IsWeapon" tag="wTouch"/>
-    </thing>
-  <thing id="wRangedTou" name="Ranged Touch Attack" description="Add this weapon if you have any ranged touch attack spells or abilities." compset="Weapon">
-    <fieldval field="wFixDamage" value="As Spell"/>
-    <fieldval field="wFixRanDam" value="As Spell"/>
-    <usesource source="srcS2Gear"/>
-    <tag group="wClass" tag="Light" name="Light" abbrev="Light"/>
-    <tag group="wCritMin" tag="20" name="20" abbrev="20"/>
-    <tag group="wCritMult" tag="2" name="2" abbrev="2"/>
-    <tag group="wMain" tag="1_1" name="1" abbrev="1"/>
-    <tag group="wProfReq" tag="Simple" name="Simple" abbrev="Simple"/>
-    <tag group="Helper" tag="NoDblStr" name="NoDblStr" abbrev="NoDblStr"/>
-    <tag group="Helper" tag="Proficient" name="Proficient" abbrev="Proficient"/>
-    <tag group="ProductId" tag="HLCommunit"/>
-    <tag group="wCategory" tag="RangeProj" name="Projectile Weapon" abbrev="Projectile"/>
-    <tag group="IsWeapon" tag="wRay"/>
-    </thing>
-  <thing id="mS2ElvChai" name="DEPRECATED" description="{b}Note{/b} If you see this on your character please remove it and re-add &quot;Elven Chain&quot; to your character." compset="Armor">
+  <thing id="mS2ElvChai" name="DEPRECATED - Elven Chain" description="{b}Note{/b} If you see this on your character please remove it and re-add &quot;Elven Chain&quot; to your character." compset="Armor">
     <comment>HIDDEN!</comment>
     <fieldval field="gSizeCost" value="5150"/>
     <fieldval field="gWeight" value="20"/>
@@ -199,7 +165,7 @@ This file is designed to hold all those "Global" Equipment things like suits of 
         validif (tagcount[Ability.e?] - tagcount[Ability.eNormal] = 1)]]></validate>
       </prereq>
     </thing>
-  <thing id="mS2DwPlate" name="DEPRECATED" description="{b}Note{/b} If you see this on your character please remove it and re-add &quot;Dwarven Plate&quot; to your character." compset="Armor">
+  <thing id="mS2DwPlate" name="DEPRECATED - Dwarven Plate" description="{b}Note{/b} If you see this on your character please remove it and re-add &quot;Dwarven Plate&quot; to your character." compset="Armor">
     <comment>HIDDEN!</comment>
     <fieldval field="gWeight" value="50"/>
     <fieldval field="gSizeCost" value="16500"/>
@@ -231,7 +197,7 @@ This file is designed to hold all those "Global" Equipment things like suits of 
         validif (tagcount[Ability.e?] - tagcount[Ability.eNormal] = 1)]]></validate>
       </prereq>
     </thing>
-  <thing id="mS2DrPlate" name="DEPRECATED" description="{b}Note{/b} If you see this on your character please remove it and re-add &quot;Dragonhide Plate&quot; to your character." compset="Armor">
+  <thing id="mS2DrPlate" name="DEPRECATED - Dragonhide Plate" description="{b}Note{/b} If you see this on your character please remove it and re-add &quot;Dragonhide Plate&quot; to your character." compset="Armor">
     <comment>HIDDEN!</comment>
     <fieldval field="gWeight" value="50"/>
     <fieldval field="gSizeCost" value="3300"/>
@@ -256,7 +222,7 @@ This file is designed to hold all those "Global" Equipment things like suits of 
         validif (tagcount[Ability.e?] - tagcount[Ability.eNormal] = 1)]]></validate>
       </prereq>
     </thing>
-  <thing id="mS2MithShi" name="DEPRECATED" description="{b}Note{/b} If you see this on your character please remove it and re-add &quot;Mithral Shirt&quot; to your character." compset="Armor">
+  <thing id="mS2MithShi" name="DEPRECATED - Mithral Shirt" description="{b}Note{/b} If you see this on your character please remove it and re-add &quot;Mithral Shirt&quot; to your character." compset="Armor">
     <comment>HIDDEN!</comment>
     <fieldval field="gWeight" value="10"/>
     <fieldval field="gSizeCost" value="1100"/>
@@ -280,9 +246,18 @@ This file is designed to hold all those "Global" Equipment things like suits of 
         validif (tagcount[Ability.e?] - tagcount[Ability.eNormal] = 1)]]></validate>
       </prereq>
     </thing>
+  <thing id="ioCBGoodbe" name="DEPRECATED - Goodberry" description="{b}Note{/b} If you see this on your character please remove it and re-add &quot;Goodberry&quot; to your character." compset="Wondrous">
+    <usesource source="srcS2Gear"/>
+    <tag group="Helper" tag="AlwaysAvl"/>
+    <tag group="Helper" tag="UsesQty"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="gType" tag="Wonder"/>
+    </thing>
   <hidden id="aruElvenCh"/>
   <hidden id="mS2MithShi"/>
   <hidden id="mS2DrPlate"/>
   <hidden id="mS2DwPlate"/>
   <hidden id="mS2ElvChai"/>
+  <hidden id="ioCBGoodbe"/>
   </document>

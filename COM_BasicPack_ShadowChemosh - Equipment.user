@@ -234,13 +234,44 @@
     <tag group="Helper" tag="EquipMag"/>
     <tag group="ProductId" tag="HLCommunit"/>
     </thing>
-  <thing id="ioGoodberr" name="Goodberry" description="Thus transmuted berry provides nourishment as if it were a normal meal for a Medium creature. The berry also cures 1 point of damage when eaten, subject to a maximum of 8 points of such curing in any 24-hour period.\n\n{b}Appears in{/b}: CB - Frumple Adjustments; Not source marked." compset="Wondrous">
+  <thing id="ioGoodberr" name="Goodberry" description="Thus transmuted berry provides nourishment as if it were a normal meal for a Medium creature. The berry also cures 1 point of damage when eaten, subject to a maximum of 8 points of such curing in any 24-hour period." compset="Wondrous">
     <usesource source="srcS2Gear"/>
     <tag group="gType" tag="Wonder"/>
     <tag group="Helper" tag="AlwaysAvl"/>
     <tag group="Helper" tag="UsesQty"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="ShowSpec"/>
+    </thing>
+  <thing id="wTouchAtta" name="Touch Attack" description="Add this weapon if you have any touch attack spells or abilities." compset="Weapon">
+    <fieldval field="wFixDamage" value="As Spell"/>
+    <usesource source="srcS2Gear"/>
+    <tag group="Helper" tag="NoDblStr" name="NoDblStr" abbrev="NoDblStr"/>
+    <tag group="Helper" tag="Proficient" name="Proficient" abbrev="Proficient"/>
+    <tag group="wCategory" tag="Melee" name="Melee Weapon" abbrev="Melee"/>
+    <tag group="wClass" tag="Light" name="Light" abbrev="Light"/>
+    <tag group="wCritMin" tag="20" name="20" abbrev="20"/>
+    <tag group="wCritMult" tag="2" name="2" abbrev="2"/>
+    <tag group="wMain" tag="1_1" name="1" abbrev="1"/>
+    <tag group="wProfReq" tag="Simple" name="Simple" abbrev="Simple"/>
+    <tag group="Helper" tag="Always2H" name="Always2H" abbrev="Always2H"/>
+    <tag group="Helper" tag="Finesse" name="Finesse" abbrev="Finesse"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="IsWeapon" tag="wTouch"/>
+    </thing>
+  <thing id="wRangedTou" name="Ranged Touch Attack" description="Add this weapon if you have any ranged touch attack spells or abilities." compset="Weapon">
+    <fieldval field="wFixDamage" value="As Spell"/>
+    <fieldval field="wFixRanDam" value="As Spell"/>
+    <usesource source="srcS2Gear"/>
+    <tag group="wClass" tag="Light" name="Light" abbrev="Light"/>
+    <tag group="wCritMin" tag="20" name="20" abbrev="20"/>
+    <tag group="wCritMult" tag="2" name="2" abbrev="2"/>
+    <tag group="wMain" tag="1_1" name="1" abbrev="1"/>
+    <tag group="wProfReq" tag="Simple" name="Simple" abbrev="Simple"/>
+    <tag group="Helper" tag="NoDblStr" name="NoDblStr" abbrev="NoDblStr"/>
+    <tag group="Helper" tag="Proficient" name="Proficient" abbrev="Proficient"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="wCategory" tag="RangeProj" name="Projectile Weapon" abbrev="Projectile"/>
+    <tag group="IsWeapon" tag="wRay"/>
     </thing>
   <thing id="wImp1d4" name="Improvised Weapon" description="This is a generic &quot;improvised Weapon&quot; that can be used to represent anything from a broken bottle to a chair leg." compset="Weapon">
     <usesource source="srcS2Gear"/>
