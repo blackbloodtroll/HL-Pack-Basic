@@ -8,31 +8,40 @@
       ]]>
       </info_author>
     <info_history><![CDATA[
-<strong>v3.7 February 15, 2015</strong>
+<strong>v3.7 February 22, 2015</strong>
 
 <strong>Bug Fixes</strong>
 <ul>
-<li>File name changes to accomdate loading the GM Pack and GM Mythic Pack onto the iPad.</li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>File name changes to accomdate loading the GM Pack and GM Mythic Pack onto the iPad. This has gotten further but is still an outstanding issue!</li>
+<li>ShadowChemosh Equipment - Fixed the weight bug on spellbooks from 15lbs to 3lbs. Stupid bug keeps coming back! Issue #17.</li>
+<li>ShadowChemosh Adjustments -"Skill Bonus, All of Type" - Fixed issue where the adjustment was not able to be turned off.</li>
+<li>ShadowChemosh - Fixed incorrect PFS sources.</li>
 </ul>
 <strong>New Features</strong>
 <ul>
 <li>ShadowChemosh Equipment - Moved over some of Frumple's helpful universal items to the Basic Pack: Goodberry, Improvised Weapon, Unholy Water Flask, Torch, and Rock.</li>
+<li>ShadowChemosh Equipment - Added "- Custom Magic Item -" item for easily adding any custom magic item.</li>
 <li>Paizo Module (Blood of Dragonscar) player items added to the Basic Pack.</li>
 <li>ShadowChemosh Adjustments - "PFS, Non-Core Spell" allows you to make a non-core spell valid in a PFS Core Campaign. This should be useful with the current news that wizards will have the ability to gain non-core spells.</li>
-<li></li>
+<li>ShadowChemosh Adjustments - Spells Per Day, Secondary - allows for adjusting the seconday spell counts (ie Domain spells).</li>
+<li>ShadowChemosh Adjustments - Mythic Ranks - Easily adjust the number of mythic ranks any mythic monster has.</li>
+<li>We Be Goblins (ShadowChemosh) - Added in the player stuff.</li>
+<li>LoF: The End of Eternity (ShadowChemosh) - Added player items.</li>
+<li>Kingmaker: War of the River Kings (ShadowChemosh) - Added player items.</li>
+<li>Blood of Dragonscare (ShadowChemosh) - Added player items.</li>
 </ul>
 <strong>Data File Authoring</strong>
 <ul>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
+<li>Added trait headers for Psionic, Crimes, Dream, and Training.</li>
+<li>Added universal ability "SR vs Good".</li>
+<li>Added Ability Healing universal ability.</li>
+<li>Added "Resistant to Blows" universal ability.</li>
+<li>Added universal abilities: Half Dmg from Ranged Attacks and Energy Attacks.</li>
+<li>I moved over the "duplicated" Things from the GM Pack to the Basic Pack so all Packs have access to them.</li>
+<li>Moved over the new DR Things from Path of War to Basic Pack: Damage Reduction, Evil or Chaotic; Damage Reduction, Good or Chaotic</li>
+<li>Added new logic to add a "Source ID Abbreviation" to class names. This helps identify them in the list. You can activate this by adding the new PackHelper.ClsSrcAbr tag and setting the "Source" info into the srcBookInf field.</li>
+<li>Deprecated the double 'Goodberry' items so that only one is selectable.</li>
 </ul>
-
 
 <strong>v3.6 February 8, 2015</strong>
 
