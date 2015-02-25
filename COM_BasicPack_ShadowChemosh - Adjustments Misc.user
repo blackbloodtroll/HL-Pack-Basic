@@ -4957,8 +4957,23 @@ doneif (field[pChosen].ischosen <> 1)
       foreach pick in hero from BaseSpell where field[pChosen].chosen.tagids[ClsAllowSp.?]
         ~ Set Core Campaign OK tag
         perform eachpick.assign[Helper.CoreCampOK]       
-      nexteach      
-      ]]></eval>
+      nexteach]]></eval>
+    </thing>
+  <thing id="pS2EqUses" name="Equipment, Uses/Period" description="Select thsi adjustment to be able to adjus the numbe of uses/period of a specific piece of equipment." compset="InPlay">
+    <usesource source="srcS2Adjus"/>
+    <tag group="Adjustment" tag="YourGear"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <eval phase="Final" priority="1000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~ If nothing chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      field[abValue].value += field[pAdjust].value
+
+      field[pChosen].chosen.field[trkMax].value += field[abValue].value]]></eval>
     </thing>
   <hidden id="pS2svAlSac"/>
   <hidden id="pS2svAlTra"/>
