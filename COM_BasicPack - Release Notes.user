@@ -8,11 +8,11 @@
       ]]>
       </info_author>
     <info_history><![CDATA[
-<strong>v3.7 February 22, 2015</strong>
+<strong>v3.7 February 25, 2015</strong>
 
 <strong>Bug Fixes</strong>
 <ul>
-<li>File name changes to accomdate loading the GM Pack and GM Mythic Pack onto the iPad. This has gotten further but is still an outstanding issue!</li>
+<li>File name changes to accommodate loading the GM Pack and GM Mythic Pack onto the iPad. This has gotten further but is still an outstanding issue!</li>
 <li>ShadowChemosh Equipment - Fixed the weight bug on spellbooks from 15lbs to 3lbs. Stupid bug keeps coming back! Issue #17.</li>
 <li>ShadowChemosh Adjustments -"Skill Bonus, All of Type" - Fixed issue where the adjustment was not able to be turned off.</li>
 <li>ShadowChemosh - Fixed incorrect PFS sources.</li>
@@ -25,6 +25,7 @@
 <li>ShadowChemosh Adjustments - "PFS, Non-Core Spell" allows you to make a non-core spell valid in a PFS Core Campaign. This should be useful with the current news that wizards will have the ability to gain non-core spells.</li>
 <li>ShadowChemosh Adjustments - Spells Per Day, Secondary - allows for adjusting the seconday spell counts (ie Domain spells).</li>
 <li>ShadowChemosh Adjustments - Mythic Ranks - Easily adjust the number of mythic ranks any mythic monster has.</li>
+<li>ShadowChemosh Adjustments (Frumple) - Added "Equipment, Uses/Period" Easily adjust the number of uses a piece of equipment has.</li>
 <li>We Be Goblins (ShadowChemosh) - Added in the player stuff.</li>
 <li>LoF: The End of Eternity (ShadowChemosh) - Added player items.</li>
 <li>Kingmaker: War of the River Kings (ShadowChemosh) - Added player items.</li>
