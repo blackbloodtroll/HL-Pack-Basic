@@ -177,7 +177,6 @@ January 26th 2012</comment>
     <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
     <tag group="SpecType" tag="Weakness" name="Weakness" abbrev="Weakness"/>
     <tag group="ProductId" tag="HLCommunit"/>
-    <tag group="Helper" tag="Shadow" name="Shadow" abbrev="Shadow"/>
     </thing>
   <thing id="xxImmScent" name="Immune to Scent-Based Attacks" description="Creature is immune to scent-based attacks." compset="Ability" uniqueness="useronce">
     <fieldval field="shortname" value="scent-based attacks"/>
