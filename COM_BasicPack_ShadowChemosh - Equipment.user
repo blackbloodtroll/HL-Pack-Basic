@@ -44,8 +44,7 @@
     <tag group="wCritMult" tag="2"/>
     <tag group="EquipType" tag="Metal"/>
     <tag group="ProductId" tag="HLCommunit"/>
-    <eval phase="First" priority="5000">
-      ~ Force this weapon to be Masterwork
+    <eval phase="First" priority="5000">~ Force this weapon to be Masterwork
       If (container.ishero = 0) then
         container.child[gCustMagic].field[gMasterFor].value = 1
       Endif</eval>
@@ -60,16 +59,14 @@
     <tag group="Helper" tag="MatForceMs"/>
     <tag group="Helper" tag="Helper" name="Helper" abbrev="Helper"/>
     <tag group="ProductId" tag="HLCommunit"/>
-    <eval phase="PreLevel" priority="5000">
-      call iMagWeapon
+    <eval phase="PreLevel" priority="5000">call iMagWeapon
 
       field[gCost].value += -300</eval>
     <eval phase="Render" priority="99999999" index="2"><![CDATA[
       ~ This fixes an issue with the name getting messed up because of the
       ~ bootstrap and magical powers.
       field[livename].text &= " Claw Blades"]]></eval>
-    <eval phase="PostAttr" priority="10000" index="3">
-      var bonus as number
+    <eval phase="PostAttr" priority="10000" index="3">var bonus as number
       bonus += hero.childfound[wClaw].tagcount[Helper.DamageUp]
       ~ Increase Claw Blade damage based on Claw Damage increases
       field[wDamage].value += bonus
@@ -257,6 +254,7 @@
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="IsWeapon" tag="wTouch"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="PackHelper" tag="Touch"/>
     </thing>
   <thing id="wRangedTou" name="Ranged Touch Attack" description="Add this weapon if you have any ranged touch attack spells or abilities." compset="Weapon">
     <fieldval field="wFixDamage" value="As Spell"/>
@@ -273,6 +271,7 @@
     <tag group="wCategory" tag="RangeProj" name="Projectile Weapon" abbrev="Projectile"/>
     <tag group="IsWeapon" tag="wRay"/>
     <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="PackHelper" tag="Touch"/>
     </thing>
   <thing id="wImp1d4" name="Improvised Weapon" description="This is a generic &quot;improvised Weapon&quot; that can be used to represent anything from a broken bottle to a chair leg." compset="Weapon">
     <usesource source="srcS2Gear"/>
