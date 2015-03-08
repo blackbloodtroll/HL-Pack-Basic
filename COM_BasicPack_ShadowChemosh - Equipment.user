@@ -337,4 +337,25 @@
     <tag group="wMain" tag="1d4_4"/>
     <tag group="wCritMin" tag="20"/>
     </thing>
+  <thing id="wS2AoE" name="AoE" description="This is helper object for the - Custom Spell Weapon - adjustment. It is hidden and can not be selected." compset="Weapon">
+    <fieldval field="wFixDamage" value="As Spell"/>
+    <usesource source="srcS2Gear"/>
+    <tag group="Helper" tag="Proficient" name="Proficient" abbrev="Proficient"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="PackHelper" tag="Touch"/>
+    <tag group="Helper" tag="Helper"/>
+    <tag group="Helper" tag="NoSelect"/>
+    </thing>
+  <thing id="wS2SpelWep" name="Spell Weapon" description="Spell weapon helper to allow rolling of spell damage on the iPad." compset="Weapon">
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="Helper" tag="Helper"/>
+    <tag group="Helper" tag="NoSelect"/>
+    <tag group="Helper" tag="NoOutGear"/>
+    <tag group="AdjShadow" tag="SpWeapon" name="Spell Weapon"/>
+    <tag group="Helper" tag="Proficient"/>
+    <tag group="Helper" tag="GearNoSize"/>
+    <tag group="wClass" tag="OneHanded"/>
+    </thing>
   </document>
