@@ -3743,7 +3743,7 @@ call S2SetName]]></eval>
       ~ Set search expression for CORE spell school
       field[pCandExpr].text = "component.SplSchool & sDescript.? & !sWordCat.? & sSubschool.?"]]></eval>
     </thing>
-  <thing id="pS2SpelWep" name="- Custom Spell Weapon -" description="This adjustment allows you to add a customizable Spell Weapon to your character. This allows you to set the spell name and spell dice to roll so that if you are using the iPad you can have it roll the damage for you.\n\n{B}Note:{/b} Add this spell adjustment and then select the &quot;Spell Weapon&quot; from the drop down box that you want to change the values for.  Set the spells damage dice, defualts to 1d4+1, and then change &quot;Spell Weapon&quot; to be the name of the spell (ie Fireball)." compset="InPlay">
+  <thing id="pS2SpelWep" name="- Custom Spell Weapon -" description="This adjustment allows you to add a customizable Spell Weapon to your character. This allows you to set the spell name and spell dice to roll so that if you are using the iPad you can have it roll the damage for you.\n\n{B}Note:{/b} Add this spell adjustment and then select the &quot;Spell Weapon&quot; from the drop down box that you want to change the values for. The second drop down lets you set the type of spell as a Area of Effect (AoE), Ranged Touch Attack, or Touch Attack.  Finally set the spells damage dice, defualts to 1d4+1, and then change &quot;Spell Weapon&quot; to be the name of the spell (ie Fireball or Scorching Ray)." compset="InPlay">
     <fieldval field="pSource" value="1d4+1"/>
     <fieldval field="pDuration" value="Spell Weapon"/>
     <fieldval field="pUsePicks" value="1"/>
@@ -3759,7 +3759,6 @@ call S2SetName]]></eval>
     <bootstrap thing="wS2SpelWep">
       <containerreq phase="First" priority="457"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
-
     <eval phase="First" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -3785,9 +3784,7 @@ call S2SetName]]></eval>
       perform field[pChosen].chosen.pushtags[wMain.?]
       perform field[pChosen].chosen.pushtags[wProfReq.?]
       perform field[pChosen].chosen.pushtags[wCategory.?]
-      perform field[pChosen].chosen.pushtags[IsWeapon.?]
-      ]]></eval>
-
+      perform field[pChosen].chosen.pushtags[IsWeapon.?]]]></eval>
     <eval phase="Final" priority="5000" index="2"><![CDATA[     
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -3799,9 +3796,7 @@ call S2SetName]]></eval>
       field[pChosen].chosen.field[wFixRanDam].text = field[pSource].text
       
       ~ Set the custom Spell name
-      field[pChosen].chosen.field[livename].text = field[pDuration].text
-      ]]></eval>
-
+      field[pChosen].chosen.field[livename].text = field[pDuration].text]]></eval>
     </thing>
   <thing id="pS2RceHDSz" name="Race, Die Size" description="Select this adjustment to be able to adjust the die size of the race up or down.  In example you change a Bear&apos;s default d8 to be d10 or d6 instead." compset="InPlay">
     <usesource source="srcS2Adjus"/>
