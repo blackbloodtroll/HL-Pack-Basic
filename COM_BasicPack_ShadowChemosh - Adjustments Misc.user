@@ -3688,7 +3688,7 @@ doneif (field[pIsOn].value = 0)
 #trkmax[trkMythic] += field[pAdjust].value]]></eval>
     </thing>
   <thing id="pS2EqInPl2" name="Equipment, Add Trackable" description="Select this adjustment to have one of your pieces of equipment display on the &quot;In-Play&quot; tab with a number of uses. This can be useful for making scrolls be trackable on the In-Play tab." compset="InPlay">
-    <fieldval field="pMinimum" value="1"/>
+    <fieldval field="pMinimum" value="0"/>
     <fieldval field="pCandExpr" value="component.MyGear &amp; !(Helper.Static|thingid.mNatural)"/>
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
