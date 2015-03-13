@@ -398,5 +398,13 @@
     sortorder="10"
     description="E2: Blood of Dragonscar, Paizo Publishing, LLC., 03/2009">
     </source>
+  <source
+    id="srcTearMan"
+    name="Tears at Bitter Manor"
+    selectable="yes"
+    parent="pModules"
+    sortorder="10"
+    description="Tears at Bitter Manor, Paizo Publishing, LLC., 2014">
+    </source>
 
 </document>

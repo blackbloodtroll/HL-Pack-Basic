@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <loadonce key="COM_BasicPack_ModulePaizo - Tears at a Bitter Manor"/>
+  <thing id="ioX1AmGrSo" name="Amulet of Grasping Souls" description="This amulet can be worn by both corporeal and incorporeal creatures. If worn by a corporeal creature, it confers the ghost touch special ability on her natural attacks and weapons she wields (even thrown weapons and projectiles). Once per day as a swift action, the wearer can make the next spell she casts affect incorporeal creatures as though she were using the Ectoplasmic Spell metamagic feat but without increasing the spell level.\n\nWhen an incorporeal creature wears the amulet, it can interact with it surroundings. Any item in its possession becomes incorporeal, allowing the incorporeal creature to take items and phase through objects with them. An incorporeal creature without a Strength score uses its Charisma score to determine how much it can carry.\n\n{b}CONSTRUCTION REQUIREMENTS{/b}\nCOST 10,500 GP Craft Wondrous Item, Ectoplasmic Spell, plane shift" compset="Wondrous" summary="Confers the ghost touch special ability on all attacks.">
+    <fieldval field="gCost" value="21000"/>
+    <fieldval field="gCraftCost" value="10500"/>
+    <fieldval field="trkMax" value="1"/>
+    <fieldval field="iCL" value="13"/>
+    <usesource source="srcTearMan"/>
+    <tag group="Helper" tag="EquipMag"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="Hero" tag="EqpNeck"/>
+    <tag group="gType" tag="Wonder"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="User" tag="Tracker"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    <tag group="iSchool" tag="Transmutat"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Ability" tag="iGhostTch"/>
+    <eval phase="Render" priority="9999999" index="2"><![CDATA[
+      ~ If not equipped get out now!
+      doneif (field[gIsEquip].value = 0)
+      ~ Only process if we are corporeal
+      doneif (#hassubtype[stIncorpor] = 1)
+
+      ~ Find all weapons and give the Ghost Touch ability
+      foreach pick in hero from BaseWep
+        perform eachpick.assign[Ability.iGhostTch]
+        perform eachpick.assign[HasAbility.iGhostTch]
+
+        ~ If custom/magic weapon then build full name including other
+        ~ abilities.
+        if (eachpick.isgizmo = 1) then
+          eachpick.field[livename].text = signed(eachpick.field[BonEnhance].value) & " " & lowercase(eachpick.tagnames[Ability.?," "]) & " " & lowercase(eachpick.tagnames[IsWeapon.?])
+        ~.. not a custom/magic weapon so just add ghost touch
+        else
+          eachpick.field[livename].text = lowercase(eachpick.tagnames[Ability.?," "]) & " " & lowercase(eachpick.field[name].text)
+        endif
+
+      nexteach]]></eval>
+    <eval phase="PreAttr" priority="10000">      
+      ~ If not equipped get out now!
+      doneif (field[gIsEquip].value = 0)
+      ~ Only process if we are incorporeal
+      doneif (#hassubtype[stIncorpor] = 0)
+
+      ~ Set our Encubrance Strength to be our Charisma
+      herofield[tEncumSTR].value += 10 + hero.child[aCHA].field[aStartMod].value
+
+      ~ Find all gear items and give the Ghost Touch ability
+      ~ so that these items can be worn without errors.
+      foreach pick in hero from MyGear
+        perform eachpick.assign[Ability.iGhostTch]
+      nexteach</eval>
+    </thing>
+  <thing id="ioX1ChCoDw" name="Chalice of Communal Dweomer" description="Once per day, a creature can pour a potion with a duration longer than instantaneous into the chalice, then drink it as a standard action that provokes attacks of opportunity. The bearer and up to two willing allies within 30 feet gain the benefits as though they had consumed the potion; however, the duration is divided evenly between all recipients (including the bearer), rounded down to the nearest round.\n\n{B}CONSTRUCTION REQUIREMENTS{/b}\nCOST 1,875 GP Craft Wondrous Item, achemical alocation, amplify eixir" compset="Wondrous" summary="The bearer and two willing allies w/30ft gain the benefits of a single potion.">
+    <fieldval field="trkMax" value="1"/>
+    <fieldval field="gCost" value="3750"/>
+    <fieldval field="gCraftCost" value="1875"/>
+    <fieldval field="gWeight" value="1"/>
+    <fieldval field="iCL" value="7"/>
+    <usesource source="srcTearMan"/>
+    <tag group="User" tag="Tracker"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="gType" tag="Wonder"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="AlwaysAvl"/>
+    <tag group="thing" tag="holder"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="iSchool" tag="Transmutat"/>
+    </thing>
+  <thing id="ioX1ExLaWi" name="Elixir of Last Will" description="If a character drinks this gray liquid, the next time (within 24 hours) he falls below O hit points, he exhales a sliver of his consciousness-whether he is alive or dead. If a character drinks multiple elixirs in a 24-hour period, only one is effective.\n\nAs an immediate action, the sliver can guide the action of one ally within 30 feet of the drinker&apos;s body. This guidance gives a +2 luck bonus on that ally&apos;s next attack roll, to the ally&apos;s AC against the next attack made against her, or on the ally&apos;s next skill check. The drinker decides the type of bonus and the ally. The bonus must be used within 1 round.\n\n{b}CONSTRUCTION REQUI REMENTS{/b}\nCOST 75 GP Craft Wondrous Item, guidance" compset="Wondrous">
+    <fieldval field="gCost" value="150"/>
+    <fieldval field="gCraftCost" value="75"/>
+    <fieldval field="iCL" value="1"/>
+    <usesource source="srcTearMan"/>
+    <tag group="Helper" tag="EquipMag"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="gType" tag="Wonder"/>
+    <tag group="iSchool" tag="Necromancy"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    </thing>
+  <thing id="ioX1GorgLW" name="Gorget of Living Whispers" description="Once per day as a standard action, the wearer of this collar can speak a suggested course of action. Her words coalesce into a living whisper-a sinuous creature with blue runes lining its back-that appears in a square adjacent to her. The living whisper uses the statistics of a fiendish venomous snake (Pathfinder RPG Bestiary 255, 294), but has an Intelligence score of 3 and can communicate telepathically with the gorget&apos;s wearer. Instead of being poisoned, any creature bitten by the living whisper must succeed at a DC 14 Will save or be affected by a suggestion spell (CL 9th). This suggestion is determined when the living whisper is summoned and affects all creatures bitten by it. Creatures that can read Aklo can read the runes on the living whisper and know what suggestion is carried by its bite. A living whisper lasts for 1 minute or until slain.\n\n{b}CONSTRUCTION REQUIREMENTS{/b}\nCOST 7,500 GP Craft Wondrous Item, suggestion, summon monster II" compset="Wondrous">
+    <usesource source="srcTearMan"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="gType" tag="Wonder"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="EquipMag"/>
+    </thing>
+  </document>
