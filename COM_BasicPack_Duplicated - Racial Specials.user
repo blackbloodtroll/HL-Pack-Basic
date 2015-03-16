@@ -35,4 +35,15 @@
     <tag group="AbilType" tag="Extra"/>
     <tag group="ProductId" tag="HLCommunit"/>
     </thing>
+  <thing id="raCBExpCli" name="Expert Climber" description="Members of this race can cling to cave walls and even ceilings as long as the surface has hand- and footholds. In effect, members of this race are treated as constantly being under the effect of a nonmagical version of the {i}spider climb{/i} spell, save that members of this race cannot cling to smooth surfaces. This ability doubles the normal +8 racial bonus on Climb checks normally granted creatures with a climb speed (to a total +16 bonus)." compset="RaceSpec" summary="Cling to any non-smooth surface, as {i}spider climb{/i} but non-magical.">
+    <comment>Duplicated from the OA playtest material.</comment>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <eval phase="First" priority="10000"><![CDATA[
+      ~ If we're disabled, do nothing
+      doneif (tagis[Helper.SpcDisable] <> 0)
+
+      ~ We get another +8 climb bonus
+      #racialbonus[skClimb] += 8]]></eval>
+    </thing>
   </document>
