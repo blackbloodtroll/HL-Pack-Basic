@@ -5006,7 +5006,22 @@ call S2SetName]]></eval>
 
       perform hero.assign[CompPower.tmCelest]]]></eval>
     </thing>
-  <hidden id="yACNatural"/>
+  <thing id="pS2Tracker" name="Tracker" description="Select this adjustment to adjust a Tracker value up or down by its trkMax field.  This is useful for example to adjust Panche, Grit, or Luck values." compset="InPlay">
+    <fieldval field="pCandExpr" value="component.Tracker &amp; User.Tracker &amp; !Hide.Activation"/>
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="OthAdjCat" tag="Misc"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <eval phase="Final"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~ If nothing chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      ~ Set tracker amount
+      field[pChosen].chosen.field[trkMax].value += field[pAdjust].value]]></eval>
+    </thing>
   <hidden id="yACShield"/>
   <hidden id="yACtouch"/>
   <hidden id="pS2wViciou"/>
@@ -5060,4 +5075,5 @@ call S2SetName]]></eval>
   <hidden id="yACarmor"/>
   <hidden id="yACdeflect"/>
   <hidden id="yACdodge"/>
+  <hidden id="yACNatural"/>
   </document>
