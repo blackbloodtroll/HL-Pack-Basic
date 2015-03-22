@@ -14,7 +14,7 @@
       ]]></info_history>
     </fileinfo>
   <!-- ============================================================================================ -->
-  <!-- Mechanic                                                                                     -->
+  <!-- Mechanics                                                                                    -->
   <!-- ============================================================================================ -->
   <thing id="mecSCAdjus" name="ShadowChemosh Mechanic" compset="Mechanics">
     <!-- Range Increment helper tags -->
@@ -32,6 +32,14 @@
 
     </thing>
 
+  <!-- This Mechanic allows for setting a new "No XP Required for Advancement". -->
+  <thing id="XPShadow" name="No XP - ShadowChemosh" compset="Mechanics">
+    <usesource source="XPShadow"/>
+    <tag group="Mechanics" tag="XP"/>
+    <eval phase="PostAttr" priority="5000">
+      ~ This tag tells HL to not use XP!
+      perform hero.assign[Hero.NoAdvance]</eval>
+    </thing>
     
   <!-- ============================================================================================ -->
   <!-- Selection Helpers                                                                            -->

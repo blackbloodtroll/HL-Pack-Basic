@@ -79,4 +79,16 @@
     description="ShadowChemosh community addon for Pathfinder. Copy Righted 2011 Tim Shadow. Use is allowed for gaming groups only.">
     </source>
 
+
+    
+  <!-- Advancement Speed - Child Sources -->
+  <source
+    id="XPShadow"
+    name="No XP Required for Advancement"
+    selectable="yes"
+    parent="XPTrack"
+    sortorder="10"
+    description="ShadowChemosh community addon for Pathfinder. This setting prevents the need of tracking XP to level characters.">
+    </source>
+
 </document>
