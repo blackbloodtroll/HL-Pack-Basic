@@ -237,11 +237,17 @@
     ~ If class "thingid" is blank then get out now!
     doneif (empty(S2_Class) = 1)
 
-    ~ append the thingid.? group to the tag id.
-    S2_Class = "thingid." & S2_Class
-
-    ~ Calculate the total concentration value
-    field[skTotal].value = hero.findchild[BaseClHelp,S2_Class].field[cConcCheck].value
+    ~ If we are a racial Concentration skill then get the race field
+    if (compare(S2_Class,"Race") = 0) then
+      field[skTotal].value = hero.findchild[BaseRace].field[rSpConcen].value      
+    
+    ~..Get the passed in "Cass" concentration value
+    else
+      ~ append the thingid.? group to the tag id.
+      S2_Class = "thingid." & S2_Class
+      ~ Calculate the total concentration value
+      field[skTotal].value = hero.findchild[BaseClHelp,S2_Class].field[cConcCheck].value
+    endif
 
     ~ Add in all the different "bonus" and "penalty" fields
     field[skTotal].value += field[Bonus].value + field[Penalty].value + field[BonAlch].value + field[ModCirc].value + field[BonComp].value + field[PenComp].value + field[BonEnhance].value + field[BonInsight].value + field[BonLuck].value + field[PenLuck].value + field[BonMorale].value + field[PenMorale].value + field[BonProfane].value + field[PenProfane].value + field[BonSacred].value + field[PenSacred].value + field[BonTrait].value + field[PenTrait].value    
