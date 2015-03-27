@@ -5006,21 +5006,20 @@ call S2SetName]]></eval>
 
       perform hero.assign[CompPower.tmCelest]]]></eval>
     </thing>
-  <thing id="pS2Tracker" name="Tracker" description="Select this adjustment to adjust a Tracker value up or down by its trkMax field.  This is useful for example to adjust Panche, Grit, or Luck values." compset="InPlay">
-    <fieldval field="pCandExpr" value="component.Tracker &amp; User.Tracker &amp; !Hide.Activation"/>
+  <thing id="pS2ClsRng" name="Class Ability: Range" description="Select this adjustment to adjust class ability range value up or down." compset="InPlay">
     <usesource source="srcS2Adjus"/>
     <tag group="Helper" tag="CoreCampOK"/>
-    <tag group="Adjustment" tag="S2Custom"/>
-    <tag group="OthAdjCat" tag="Misc"/>
+    <tag group="Adjustment" tag="ClassAbil"/>
+    <tag group="OthAdjCat" tag="Class"/>
     <tag group="ProductId" tag="HLCommunit"/>
-    <eval phase="Final"><![CDATA[
+    <eval phase="PreLevel" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
       ~ If nothing chosen, get out now
       doneif (field[pChosen].ischosen <> 1)
 
-      ~ Set tracker amount
-      field[pChosen].chosen.field[trkMax].value += field[pAdjust].value]]></eval>
+      ~ Adjust range value up or down
+      field[pChosen].chosen.field[abRange].value += field[pAdjust].value]]></eval>
     </thing>
   <hidden id="yACShield"/>
   <hidden id="yACtouch"/>
