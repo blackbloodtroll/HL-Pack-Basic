@@ -5012,7 +5012,7 @@ call S2SetName]]></eval>
     <tag group="Adjustment" tag="ClassAbil"/>
     <tag group="OthAdjCat" tag="Class"/>
     <tag group="ProductId" tag="HLCommunit"/>
-    <eval phase="PreLevel" priority="10000"><![CDATA[
+    <eval phase="Final" priority="50000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
       ~ If nothing chosen, get out now
