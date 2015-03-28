@@ -8,6 +8,43 @@
       ]]>
       </info_author>
     <info_history><![CDATA[
+<strong>v3.9 March 29, 2015</strong>
+
+<strong>Bug Fixes</strong>
+<ul>
+<li>Thing 'xxVulLight' - Contains duplicates of tag 'Shadow' in group 'Helper' - Emergency Fix!</li>
+<li>ShadowChemosh Equipment - Touch Attack and Ranged Touch attacked now allowed for CORE PFS games.</li>
+<li>ShadowChemosh Adjustments -"Skill Bonus, All of Type" - Fixed issue where the adjustment was not able to be turned off.</li>
+<li>ShadowChemosh Things - Fixed incorrect PFS sources.</li>
+<li>ShadowChemosh Classes - Fixed Superstition to pick up any bonuses given to the normal Superstition rage power. This fixes issue #1.</li>
+<li>ShadowChemosh Classes - Source marked Superstition to ShadowChemosh Classes.</li>
+<li>Changed "ShadowChemosh - Archetypes" to "ShadowChemosh - Archetypes & Classes".</li>
+<li>ShadowChemosh Adjustments - Made "Equipment, Add Trackable" have a minimum value of zero instead of one. This way it can be used with stacks of Oils and other equipment effectively.</li>
+<li>ShadowChemosh Adjustments - Changed adjustment "Ability: Restore" to "Class Ability, Restore" to cause any class ability to be enabled.</li>
+<li>ShadowChemosh Equipment - Fixed the Improved Weapon to work with special classes like Monk that can flurry improvised weapons.</li>
+</ul>
+<strong>New Features</strong>
+<ul>
+<li>New "XP Advancement" option added called "No XP Required for Advancement". Many home gaming groups do not use XP when running Adventure Paths. This option supports this by allowing a character to advance without any warning/error messages about not enough XP.</li>
+<li>ShadowChemosh Feats - I have deprecated my Vital Strike feat now that the Official version of Vital Strike can be activated on the In-Play tab.</li>
+<li>ShadowChemosh Adjustments - Added new skill "Concentration: Racial" that allows an easy way to display a creatures racial concentration for spells or spell-like abilities.</li>
+<li>ShadowChemosh Adjustments - Added missing skill "Concentration: Hunter".</li>
+<li>ShadowChemosh Adjustments - New adjustment "Equipment, Nights Rest" to force equipment to be reset on a nights rest.</li>
+<li>ShadowChemosh Adjustments - New adjustment "Equipment, No Nights Rest" to force equipment to NOT be reset on a nights rest.</li>
+<li>ShadowChemosh Adjustments - New adjustment "Racial Ability, Restore" to cause a racial ability be enabled.</li>
+<li>ShadowChemosh Adjustments - The "- Custom Spell Weapon -" adjustment can now set itself to be a AoE, Touch, or Ranged Touch attack type spell.</li>
+<li>ShadowChemosh Adjustments - New adjustments that allow for having the Celestial or Fiendish templates to display on an animal companion.</li>
+<li>ShadowChemosh Adjustments - Added new "Class: Range" adjustment that allows for adjusting the range value of class abilities.</li>
+<li>ShadowChemosh Concentration Skill - Now sets many more situational notes about different feats and triats that give a bonus to concentration.</li>
+<li>Paizo Module - "Tears at Bitter Manor" all Player items and equipment added. This is helpful for those playing through this module.</li>
+<li>Unlinked the basic pack from requiring the Occult Adventures Playtest package.</li>
+<li></li>
+</ul>
+<strong>Data File Authoring</strong>
+<ul>
+<li>None</li>
+</ul>
+
 <strong>v3.8 February 27, 2015</strong>
 
 <strong>Bug Fixes</strong>
