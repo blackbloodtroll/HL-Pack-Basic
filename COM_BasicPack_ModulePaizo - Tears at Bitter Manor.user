@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
-  <loadonce key="COM_BasicPack_ModulePaizo - Tears at a Bitter Manor"/>
+  <loadonce key="COM_BasicPack_ModulePaizo - Tears at Bitter Manor"/>
   <thing id="ioX1AmGrSo" name="Amulet of Grasping Souls" description="This amulet can be worn by both corporeal and incorporeal creatures. If worn by a corporeal creature, it confers the ghost touch special ability on her natural attacks and weapons she wields (even thrown weapons and projectiles). Once per day as a swift action, the wearer can make the next spell she casts affect incorporeal creatures as though she were using the Ectoplasmic Spell metamagic feat but without increasing the spell level.\n\nWhen an incorporeal creature wears the amulet, it can interact with it surroundings. Any item in its possession becomes incorporeal, allowing the incorporeal creature to take items and phase through objects with them. An incorporeal creature without a Strength score uses its Charisma score to determine how much it can carry.\n\n{b}CONSTRUCTION REQUIREMENTS{/b}\nCOST 10,500 GP Craft Wondrous Item, Ectoplasmic Spell, plane shift" compset="Wondrous" summary="Confers the ghost touch special ability on all attacks.">
     <fieldval field="gCost" value="21000"/>
     <fieldval field="gCraftCost" value="10500"/>
