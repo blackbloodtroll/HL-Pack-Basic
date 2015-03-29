@@ -42,7 +42,8 @@
 </ul>
 <strong>Data File Authoring</strong>
 <ul>
-<li>None</li>
+<li>Universal Things - Racial Specials (ShadowChemosh) Fixed xCBBleed to format itself correctly in the Extra Damage section. Also added logic stop script logic. Also changed multTarget slightly to format output better.</li>
+<li>Universal Things - Hazards (ShadowChemosh) Added thingid.hzCBPoiInj which is a generic Injury poison. It has almost no settings setup. Instead you set the settings at the time you bootstrap. This should mean we need "ONE" poison not 500. Please see the Deadfall Dweller for an example of it in use.</li>
 </ul>
 
 <strong>v3.8 February 27, 2015</strong>
