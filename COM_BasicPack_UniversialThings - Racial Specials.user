@@ -2479,30 +2479,38 @@ field[shortname].text = lowercase(field[livename].text) & " (" & dam & ")"]]></e
     </thing>
   <thing id="xCBBleed" name="Bleed" description="A creature with this ability causes wounds that continue to bleed, inflicting additional damage each round at the start of the affected creature&apos;s turn. This bleeding can be stopped by a successful DC 15 Heal skill check or through the application of any magical healing. The amount of damage each round is determined in the creature&apos;s entry." compset="RaceSpec" summary="Attack causes additional damage at the beginning of the target&apos;s turn.">
     <fieldval field="shortname" value="bleed"/>
-    <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
-    <tag group="SpecType" tag="Attack" name="Attack" abbrev="Attack"/>
-    <tag group="Universal" tag="Universal" name="Universal Monster Ability or Core Rulebook ability" abbrev="Universal Monster Ability or Core Rulebook ability"/>
-    <tag group="AbilType" tag="Extra" name="Extraordinary Ability" abbrev=" (Ex)"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="SpecType" tag="Attack"/>
+    <tag group="Universal" tag="Universal"/>
+    <tag group="AbilType" tag="Extra"/>
     <tag group="multTarg" tag="IncDam"/>
     <bootstrap thing="aaBleed"></bootstrap>
-    <eval phase="Final" priority="1000" index="2"><![CDATA[field[livename].text = "Bleed (" & field[abText].text & ")"
-field[sbName].text = "bleed (" & field[abText].text & ")"]]></eval>
-    <eval phase="Final" priority="1000"><![CDATA[~ set up damage and store in abText
+    <eval phase="Final" priority="1000"><![CDATA[
+      ~ If we're disabled, do nothing
+      doneif (tagis[Helper.SpcDisable] <> 0)
 
+      call CalcValue
 
-if (field[abValue2].value = 0) then
-  field[abText].text = field[abValue].value
-else
-  field[abText].text = field[abValue].value & "d" & field[abValue2].value
-endif
+      ~ set up damage and store in abText
+      if (field[abValue2].value = 0) then
+        field[abText].text = field[abValue].value
+      else
+        field[abText].text = field[abValue].value & "d" & field[abValue2].value
+      endif
 
-~ set targets if we are not disabled
-doneif (tagis[Helper.SpcDisable] <> 0)
+      ~ set targets if we are not disabled
+      doneif (tagis[Helper.SpcDisable] <> 0)
 
-var v_damage as string
-v_damage = field[abText].text
-
-call multTarget]]></eval>
+      ~ Applly the affect to multipile Target.? picks
+      call multTarget
+      ]]></eval>
+    <eval phase="Final" priority="1000" index="2"><![CDATA[
+      ~ If we're disabled, do nothing
+      doneif (tagis[Helper.SpcDisable] <> 0)
+    
+      field[livename].text = "Bleed (" & field[abText].text & ")"
+      field[sbName].text = "bleed (" & field[abText].text & ")"
+      ]]></eval>
     </thing>
   <thing id="xCBHeat" name="Heat" description="The creature generates intense heat that its mere touch deals additional fire damage. The creature&apos;s metallic melee weapons also conduct this heat. Those attacking creature unarmed or with natural weapon takes this fire damage each time one of their attacks hit." compset="RaceSpec" summary="Do extra fire damage on attacks and to those striking you with natural attacks.">
     <comment>This version of heat allows user to select the amount of fire damage.  

@@ -104,6 +104,12 @@
     var dam as string
     if (this.tagis[multTarg.IncDam] <> 0) then
       dam = v_damage & " " & field[abText].text & " " & this.field[shortname].text
+      ~ Test to see if parm damage is blank and if so do not append two blank spaces
+      if (compare(v_damage,"") <> 0) then
+        dam = v_damage & " " & field[abText].text & " " & this.field[shortname].text
+      else
+        dam = field[abText].text & " " & this.field[shortname].text
+      endif 
     else
       dam = this.field[shortname].text
     endif 
