@@ -5021,7 +5021,22 @@ call S2SetName]]></eval>
       ~ Adjust range value up or down
       field[pChosen].chosen.field[abRange].value += field[pAdjust].value]]></eval>
     </thing>
-  <hidden id="yACShield"/>
+  <thing id="pS2wFlurry" name="Weapon Flurry of Blows" description="Select this adjustment to force the selected weapon to show Flurry of Blow values." compset="InPlay">
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="Adjustment" tag="YourWep"/>
+    <tag group="Helper" tag="NoIncr"/>
+    <tag group="MelAttOver" tag="aCON"/>
+    <tag group="OthAdjCat" tag="Equipment"/>
+    <eval phase="Final" priority="10000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~ If nothing chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+
+      ~ Set Show Flurry of Blows tag
+      perform field[pChosen].chosen.assign[Helper.ShowFlurry]]]></eval>
+    </thing>
   <hidden id="yACtouch"/>
   <hidden id="pS2wViciou"/>
   <hidden id="pS2DRall"/>
@@ -5075,4 +5090,5 @@ call S2SetName]]></eval>
   <hidden id="yACdeflect"/>
   <hidden id="yACdodge"/>
   <hidden id="yACNatural"/>
+  <hidden id="yACShield"/>
   </document>

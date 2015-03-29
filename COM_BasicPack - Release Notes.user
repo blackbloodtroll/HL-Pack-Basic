@@ -32,6 +32,7 @@
 <li>ShadowChemosh Adjustments - New adjustment "Equipment, Nights Rest" to force equipment to be reset on a nights rest.</li>
 <li>ShadowChemosh Adjustments - New adjustment "Equipment, No Nights Rest" to force equipment to NOT be reset on a nights rest.</li>
 <li>ShadowChemosh Adjustments - New adjustment "Racial Ability, Restore" to cause a racial ability be enabled.</li>
+<li>ShadowChemosh Adjustments - New adjustment "Weapon Flurry of Blows" to cause a selected weapon to display its Flurry of Blow attack values.</li>
 <li>ShadowChemosh Adjustments - The "- Custom Spell Weapon -" adjustment can now set itself to be a AoE, Touch, or Ranged Touch attack type spell.</li>
 <li>ShadowChemosh Adjustments - New adjustments that allow for having the Celestial or Fiendish templates to display on an animal companion.</li>
 <li>ShadowChemosh Adjustments - Added new "Class: Range" adjustment that allows for adjusting the range value of class abilities.</li>
