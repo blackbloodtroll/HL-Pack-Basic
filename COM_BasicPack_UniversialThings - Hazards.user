@@ -10,9 +10,7 @@
       This file is designed to hold all those "Universal" hazards like poison.]]></info_author>
     </fileinfo>
   <thing id="hzCBPoiInj" name="Posion" compset="Hazard">
-    <comment>This is a generic injury helper poison.
-
-Bootstrap it to your race and then set all the tags/field on the bootstrap.  This way prevents the need of a new poison Thing for each and every single monster in the world!</comment>
+    <comment>This is a generic injury helper poison. Bootstrap it to your race and then set all the tags/field on the bootstrap. This way prevents the need of a new poison Thing for each and every single monster in the world!</comment>
     <tag group="HazHelper" tag="NameChange"/>
     <tag group="Helper" tag="ShowSpec"/>
     <tag group="ProductId" tag="HLCommunit"/>
