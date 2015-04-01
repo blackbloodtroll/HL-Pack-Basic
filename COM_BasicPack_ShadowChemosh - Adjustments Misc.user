@@ -4956,7 +4956,7 @@ call S2SetName]]></eval>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="OthAdjCat" tag="Equipment"/>
     <tag group="Helper" tag="NoIncr"/>
-    <eval phase="Final"><![CDATA[
+    <eval phase="Render" priority="99999999"><![CDATA[
       ~ If nothing chosen, get out now
       doneif (field[pChosen].ischosen <> 1)
       ~ If we're not enabled, get out now
