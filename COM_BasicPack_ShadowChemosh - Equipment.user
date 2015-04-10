@@ -140,7 +140,7 @@
     <usesource source="srcS2Gear"/>
     <tag group="fShowWhat" tag="Classes"/>
     <tag group="Helper" tag="GearNoSize"/>
-    <tag group="gType" tag="Tools"/>
+    <tag group="gType" tag="Tomes"/>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="Final" priority="10000"><![CDATA[
@@ -160,7 +160,7 @@
     <tag group="fShowWhat" tag="Classes"/>
     <tag group="Helper" tag="GearNoSize"/>
     <tag group="Helper" tag="ShowSpec"/>
-    <tag group="gType" tag="Tools"/>
+    <tag group="gType" tag="Tomes"/>
     <tag group="Value" tag="100"/>
     <tag group="Helper" tag="NoPathSoc"/>
     <tag group="ProductId" tag="HLCommunit"/>
@@ -179,13 +179,14 @@
     <fieldval field="gWeight" value="1"/>
     <usesource source="srcS2Gear"/>
     <usesource source="PCAdvArm"/>
-    <tag group="fShowWhat" tag="Classes"/>
+    <usesource source="UltEquip"/>
     <tag group="Helper" tag="GearNoSize"/>
     <tag group="Helper" tag="ShowSpec"/>
     <tag group="Value" tag="50"/>
-    <tag group="gType" tag="Tools"/>
+    <tag group="gType" tag="Tomes"/>
     <tag group="Helper" tag="NoPathSoc"/>
     <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="fShowWhat" tag="Classes"/>
     <eval phase="PreLevel" priority="10500"><![CDATA[
       var Cost   as number
       var Pages  as number
@@ -359,5 +360,66 @@
     <tag group="Helper" tag="Proficient"/>
     <tag group="Helper" tag="GearNoSize"/>
     <tag group="wClass" tag="OneHanded"/>
+    </thing>
+  <thing id="gS2FormB" name="Formula book" description="A formula book has 100 pages of parchment, and each alchemical extract formula takes up one page per extract level. A newly purchased formula book contains no extract formulas. An alchemist character begins play with a formula book containing the extract formulae he knows. This is the alchemist equivalent of a spellbook for wizards (a spellbook and a formula book are essentially the same item).\n\n{B}Note:{/b} This gear item will calculate its gp value and number of pages based on the selected class. You should still purchase a Formula book to account for weight and cost. This is very useful for GM with a NPC with a Formula book to quickly calculate the pages and book cost." compset="Gear">
+    <usesource source="srcS2Gear"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="gType" tag="Tomes"/>
+    <tag group="Helper" tag="GearNoSize"/>
+    <tag group="fShowWhat" tag="Classes"/>
+    <eval phase="Final" priority="10000"><![CDATA[
+      var Cost   as number
+      var Pages  as number
+      var Weight as number
+      var Books  as number
+
+      Call CalcSpBook
+
+      ~ Set the live name to include the cost and number of pages
+      field[livename].text = field[thingname].text & " " & digitgroup(Cost) & "gp " & Pages & " pages"]]></eval>
+    </thing>
+  <thing id="gS2FormB2" name="Formula books" description="A formula book has 100 pages of parchment, and each alchemical extract formula takes up one page per extract level. A newly purchased formula book contains no extract formulas. An alchemist character begins play with a formula book containing the extract formulae he knows. This is the alchemist equivalent of a spellbook for wizards (a spellbook and a formula book are essentially the same item).\n\n{B}Note:{/b} This gear item calculates the number of pages and books required to store your spells. It then increments the weight based on the number of books you must carry to store your spells." compset="Gear">
+    <fieldval field="gWeight" value="3"/>
+    <usesource source="srcS2Gear"/>
+    <tag group="fShowWhat" tag="Classes"/>
+    <tag group="Helper" tag="GearNoSize"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="gType" tag="Tomes"/>
+    <tag group="Value" tag="100"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <eval phase="PreLevel" priority="10500"><![CDATA[
+      var Cost   as number
+      var Pages  as number
+      var Weight as number
+      var Books  as number
+
+      Call CalcSpBook
+
+      ~ Set the live name to include the Number of Books
+      field[livename].text = field[thingname].text & ", " & Books & " Books"]]></eval>
+    </thing>
+  <thing id="gS2FormTra" name="Traveling formula book" description="A traveling forumla book is lighter and less cumbersome than its full-size counterpart. It has 50 pages. \n\n{B}Note:{/b} This gear item calculates the number of pages and books required to store your spells. It then increments the weight based on the number of books you must carry to store your spells." compset="Gear">
+    <fieldval field="gWeight" value="1"/>
+    <usesource source="srcS2Gear"/>
+    <usesource source="PCAdvArm"/>
+    <usesource source="UltEquip"/>
+    <tag group="Helper" tag="GearNoSize"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="Value" tag="50"/>
+    <tag group="gType" tag="Tomes"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="fShowWhat" tag="Classes"/>
+    <eval phase="PreLevel" priority="10500"><![CDATA[
+      var Cost   as number
+      var Pages  as number
+      var Weight as number
+      var Books  as number
+
+      Call CalcSpBook
+
+      ~ Set the live name to include the Number of Books
+      field[livename].text = field[thingname].text & ", " & Books & " Books"]]></eval>
     </thing>
   </document>
