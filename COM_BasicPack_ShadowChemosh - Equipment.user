@@ -341,6 +341,7 @@
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="wMain" tag="1d4_4"/>
     <tag group="wCritMin" tag="20"/>
+    <tag group="Helper" tag="Improvised"/>
     </thing>
   <thing id="wS2AoE" name="AoE" description="This is helper object for the - Custom Spell Weapon - adjustment. It is hidden and can not be selected." compset="Weapon">
     <fieldval field="wFixDamage" value="As Spell"/>
