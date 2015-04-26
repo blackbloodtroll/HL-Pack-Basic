@@ -5215,7 +5215,27 @@ call S2SetName]]></eval>
       ~ Adjust the Configruable Feat total
       field[pChosen].chosen.field[cfgMax5].value += field[pAdjust].value]]></eval>
     </thing>
-  <hidden id="pS2DRslash"/>
+  <thing id="pS2SheetSp" name="Character Sheet: Item Spells" description="Select this adjustment to cause spells on magic items (ie Magic Staffs) to print to your character sheet." compset="InPlay">
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="Helper" tag="NoIncr"/>
+    <tag group="OthAdjCat" tag="Misc"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <eval phase="Final" priority="50000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+
+      ~ We need to make sure we are caster
+      perform hero.assign[Hero.Caster]
+
+      ~ If we're not in output mode, don't do anything
+      doneif (state.isoutput = 0)
+
+      ~ Make all "item" spells print to character sheet
+      foreach pick in hero from BaseSpell where "Helper.ItemSpell"      
+        perform eachpick.delete[Helper.?]
+      nexteach]]></eval>
+    </thing>
   <hidden id="pS2SaveAlc"/>
   <hidden id="pS2SaveCir"/>
   <hidden id="pS2AttrDra"/>
@@ -5269,4 +5289,5 @@ call S2SetName]]></eval>
   <hidden id="pS2DRmagic"/>
   <hidden id="pS2DRpierc"/>
   <hidden id="pS2DRsilve"/>
+  <hidden id="pS2DRslash"/>
   </document>
