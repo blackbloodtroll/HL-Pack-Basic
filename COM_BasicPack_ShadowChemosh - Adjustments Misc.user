@@ -4683,6 +4683,7 @@ call S2SetName]]></eval>
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Adjustment" tag="S2Custom"/>
     <tag group="OthAdjCat" tag="Equipment"/>
+    <tag group="Helper" tag="NoIncr"/>
     <eval phase="Final" priority="50000"><![CDATA[
       ~ If we're not enabled, get out now
       doneif (field[pIsOn].value = 0)
@@ -5236,8 +5237,36 @@ call S2SetName]]></eval>
         perform eachpick.delete[Helper.?]
       nexteach]]></eval>
     </thing>
-  <hidden id="pS2SaveAlc"/>
-  <hidden id="pS2SaveCir"/>
+  <thing id="pS2GenTrac" name="Generic, Tracker" description="This adjustment allows you to add a generic/customizable Tracker to your character that will display on the In-Play tab. This allows you to set the tracker name and the number of usages it allows.\n\n{B}Note:{/b} Add this adjustment and then select &quot;Tracker 1&quot; from the drop down box and then change the name of the tracker from &quot;Tracker 1&quot; to whatever you wish.  Finally set the counter to the number of &quot;uses&quot; this should allow." compset="InPlay">
+    <fieldval field="pSource" value="Tracker 1"/>
+    <fieldval field="pUsePicks" value="1"/>
+    <fieldval field="pCandExpr" value="component.Tracker &amp; thingid.trkS2?"/>
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="AdjInfo"/>
+    <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="OthAdjCat" tag="Misc"/>
+    <bootstrap thing="trkS2Trck1">
+      <containerreq phase="First" priority="457"><![CDATA[                
+                 fieldval:pIsOn <> 0]]></containerreq>
+      </bootstrap>
+    <eval phase="Final" priority="5000" index="2"><![CDATA[     
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      ~ If nothing chosen, get out now
+      doneif (field[pChosen].ischosen <> 1)
+     
+      ~ Set the custom Tracker name
+      field[pChosen].chosen.field[livename].text = field[pSource].text
+      ~ Set Tracker duration
+      field[pChosen].chosen.field[trkMax].value += field[pAdjust].value]]></eval>
+    </thing>
+  <thing id="trkS2Trck1" name="Tracker 1" description="This is a generic tracker." compset="Tracker">
+    <usesource source="srcS2Adjus"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Usage" tag="UsedUp"/>
+    <tag group="User" tag="Tracker"/>
+    </thing>
   <hidden id="pS2AttrDra"/>
   <hidden id="pS2ClsAbDC"/>
   <hidden id="pS2ClsAbTr"/>
@@ -5290,4 +5319,6 @@ call S2SetName]]></eval>
   <hidden id="pS2DRpierc"/>
   <hidden id="pS2DRsilve"/>
   <hidden id="pS2DRslash"/>
+  <hidden id="pS2SaveAlc"/>
+  <hidden id="pS2SaveCir"/>
   </document>
