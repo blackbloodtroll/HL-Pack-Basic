@@ -8,6 +8,35 @@
       ]]>
       </info_author>
     <info_history><![CDATA[
+<strong>v3.10 May 3, 2015</strong>
+
+<strong>Bug Fixes</strong>
+<ul>
+<li>Module Tears at Bitter Manor (ShadowChemosh) - Fixed some of the magic item costs.</li>
+<li>Module Tears at Bitter Manor (ShadowChemosh) - Fixes to the Gorget of Living Whispers.</li>
+<li>ShadowChemosh Equipment (ShadowChemosh) - Fixed where ShadowChemosh Spellbooks where displaying in the list of gear.</li>
+<li>ShadowChemosh Adjustments (ShadowChemosh) - Changed "Save" adjustments to be in the "Save" section on the Adjust tab.</li>
+<li>ShadowChemosh Equipment (ShadowChemosh) - Fix bug for "- Spell Weapon -" where the 2nd selection was not working if "ShadowChemosh Equipment" source was not turned on.</li>
+<li>ShadowChemosh Equipment (ShadowChemosh) - Added Helper.Improvised to the Torch weapon so that it can be treated by feats and classes as a Improvised weapon.</li>
+<li>ShadowChemosh Adjustments (ShadowChemosh) - Fixed issue #22 "Custom Name: Race" and "Custom Text: Race" adjustments have been fixed to once again change or append your races name including Animal Companions.</li>
+<li>ShadowChemosh Adjustments (ShadowChemosh) - Removed the counter from the "Equipment, Notes" adjustment as it didn't do anything.</li>
+</ul>
+<strong>New Features</strong>
+<ul>
+<li>ShadowChemosh Equipment (ShadowChemosh) - Added a "Formula Book" and "Traveling Formula Book" that will auto-calculate its values for Alchemists.</li>
+<li>ShadowChemosh Adjustments (ShadowChemosh) - Added the new "Wondrous Item: Candle of Invocation" adjustment for easily applying the affects of the "Candle of Invocation".</li>
+<li>ShadowChemosh Adjustments (ShadowChemosh) - Added new adjustment "Drawbacks Allowed" to adjust up/down the number of drawbacks your character can have.</li>
+<li>ShadowChemosh Adjustments (ShadowChemosh) - Added eight new adjustments (under Misc) that allow for a configurable values to be adjusted.</li>
+<li>ShadowChemosh Adjustments (ShadowChemosh) - Added adjustment "Character Sheet: Item Spells" causes all item spells (ie staff spells) to print to the character sheet.</li>
+<li>ShadowChemosh Adjustments (ShadowChemosh) - Added new "CL vs SR" sub-skill. This auto-calculates your caster level vs spell resistance bonus. It will also display many situational notes from feats and traits.</li>
+<li>ShadowChemosh Adjustments (ShadowChemosh) - Added "Generic, Tracker" that allows a gamer to add a customizable tracker to the In-Play tab.</li>
+</ul>
+<strong>Data File Authoring</strong>
+<ul>
+<li>Procedures (ShadowChemosh) - The "GiveEthnic" procedure changed to make sure it never gives more than one Ethnicity. This procedure timing should be adjusted where used to be First/15000 up from First/10000. Eberron campaign setting has been adjusted to this timing value.</li>
+</ul>
+
+
 <strong>v3.9 March 29, 2015</strong>
 
 <strong>Bug Fixes</strong>
