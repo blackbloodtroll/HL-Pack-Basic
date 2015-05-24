@@ -1356,7 +1356,7 @@ doneif (field[pIsOn].value = 0)
     <tag group="Helper" tag="CoreCampOK"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="OthAdjCat" tag="Race"/>
-    <bootstrap thing="wUnarmed">
+    <bootstrap thing="wS2Unarmed">
       <containerreq phase="First" priority="99"><![CDATA[fieldval:pIsOn <> 0]]></containerreq>
       </bootstrap>
     </thing>
