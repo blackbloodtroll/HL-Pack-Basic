@@ -62,6 +62,7 @@
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="AdjConfer"/>
     <tag group="Helper" tag="NoIncr"/>
+    <tag group="Helper" tag="CoreCampOK"/>
     <bootstrap thing="abS2FavEne"></bootstrap>
     </thing>
   <thing id="abS2FavEne" name="Favored Enemy" description="At 1st level, a ranger selects a creature type from the ranger favored enemies table. He gains a +2 bonus on Bluff, Knowledge, Perception, Sense Motive, and Survival checks against creatures of his selected type. Likewise, he gets a +2 bonus on weapon attack and damage rolls against them. A ranger may make Knowledge skill checks untrained when attempting to identify these creatures.\n\nAt 5th level and every five levels thereafter (10th, 15th, and 20th level), the ranger may select an additional favored enemy. In addition, at each such interval, the bonus against any one favored enemy (including the one just selected, if so desired) increases by +2.\n\nIf the ranger chooses humanoids or outsiders as a favored enemy, he must also choose an associated subtype, as indicated on the table below. (Note that there are other types of humanoid to choose from—those called out specifically on the table below are merely the most common.) If a specific creature falls into more than one category of favored enemy, the ranger&apos;s bonuses do not stack; he simply uses whichever bonus is higher." compset="Ability" summary="Bluff, Knowledge, Perception, Sense Motive, Survival checks, Attack and dmg.">
@@ -78,6 +79,7 @@
     <tag group="abAction" tag="None"/>
     <tag group="abRange" tag="Personal"/>
     <tag group="AbilType" tag="Extra"/>
+    <tag group="Hide" tag="Statblock"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="PreLevel" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
@@ -119,6 +121,7 @@
     <tag group="abAction" tag="None"/>
     <tag group="abRange" tag="Personal"/>
     <tag group="AbilType" tag="Extra"/>
+    <tag group="Hide" tag="Statblock"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <eval phase="PreLevel" priority="10000"><![CDATA[
       ~ If we're not enabled, get out now
@@ -144,6 +147,83 @@
     <tag group="Helper" tag="NoIncr"/>
     <tag group="ProductId" tag="HLCommunit"/>
     <tag group="Helper" tag="AdjConfer" name="Conferred Ability Adjustment" abbrev="Conferred Ability Adjustment"/>
+    <tag group="Helper" tag="CoreCampOK"/>
     <bootstrap thing="abS2FavTer"></bootstrap>
+    </thing>
+  <thing id="pS2SneakAt" name="Combat: Sneak Attack" description="This adjustment allows you to have a Sneak Attack option display on the 'In-Play' tab and be activated. This makes it easier to roll damage on the iPad.{br}{br}{b}Note:{/b} After adding this adjustment select your Sneak Attack class ability to have the amount of sneak attack damage be auto-calculated. You can also use the counter to increase/decrease the number of dice if you wish."
+  compset="InPlay">
+    <fieldval field="pCandExpr" value="component.BaseClSpec &amp; Helper.FirstCopy &amp; Helper.ShowSpec"/>
+    <usesource source="srcS2Adjus"/>
+    <tag group="Helper" tag="AdjConfer" name="Conferred Ability Adjustment" abbrev="Conferred Ability Adjustment"/>
+    <tag group="Adjustment" tag="S2Custom"/>
+    <tag group="Helper" tag="CoreCampOK"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <bootstrap thing="abS2SneakA"></bootstrap>
+    <eval phase="PostLevel" priority="15000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+      
+      ~ If something is chosen then use it to set the SA dice
+      If (field[pChosen].ischosen <> 0) then
+        ~ Set the number of sneak attack dice into our helper Thing
+        ~ We do this by using the xCount field and the abValue because
+        ~ the class ability abValue is not fully calcuated until Final/10000
+        ~ which is too late.
+        #value[abS2SneakA] += field[pChosen].chosen.field[abValue].value + field[pChosen].chosen.field[xCount].value
+      Endif
+      
+      ~ Increase/decrease the number of sneak attack dice by the counter
+      #value[abS2SneakA] += field[pAdjust].value
+      ]]></eval>
+    </thing>
+  <thing id="abS2SneakA" name="Sneak Attack" description="If a rogue can catch an opponent when he is unable to defend himself effectively from her attack, she can strike a vital spot for extra damage.\n\nThe rogue&apos;s attack deals extra damage anytime her target would be denied a Dexterity bonus to AC (whether the target actually has a Dexterity bonus or not), or when the rogue flanks her target. This extra damage is 1d6 at 1st level, and increases by 1d6 every two rogue levels thereafter. Should the rogue score a critical hit with a sneak attack, this extra damage is not multiplied. Ranged attacks can count as sneak attacks only if the target is within 30 feet.\n\nWith a weapon that deals nonlethal damage (like a sap, whip, or an unarmed strike), a rogue can make a sneak attack that deals nonlethal damage instead of lethal damage. She cannot use a weapon that deals lethal damage to deal nonlethal damage in a sneak attack, not even with the usual –4 penalty.{br}{br}{b}Note:{/b} The drop down lets you select the size of your damage dice. By default it assumes 1d6 but some archetypes/feats can change this value up to 1d8 or down to 1d4." compset="Ability" summary="Apply sneak attack damage to weapons.">
+    <comment>NOTE: This has features you can NOT see in the editor.</comment>
+    <fieldval field="actName" value="Activate"/>
+    <arrayval field="usrArray" index="0" value="SA Dmg Xd6"/>
+    <arrayval field="usrArray" index="1" value="SA Dmg Xd8"/>
+    <arrayval field="usrArray" index="2" value="SA Dmg Xd4"/>
+    <usesource source="srcS2Adjus"/>
+    <tag group="ChooseSrc1" tag="Thing"/>
+    <tag group="User" tag="NoAutoName"/>
+    <tag group="abAction" tag="None"/>
+    <tag group="abRange" tag="Personal"/>
+    <tag group="ProductId" tag="HLCommunit"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="User" tag="Activation"/>
+    <tag group="Helper" tag="ActivMenu"/>
+    <tag group="LvNameApp" tag="DieSizVal2"/>
+    <tag group="LvNameApp" tag="DieCntVal"/>
+    <tag group="LvNameApp" tag="SignDieCnt"/>
+    <tag group="Hide" tag="Statblock"/>
+    <eval phase="First"><![CDATA[
+      ~ If we're in output mode, don't do anything
+      If (state.isoutput <> 0) Then
+        perform assign[Hide.Special]
+        done
+      endif
+      ]]></eval>
+    <eval phase="PostLevel" priority="25000" index="2"><![CDATA[
+      ~ Setup the sneak attack die size = d6
+      if (field[usrIndex].value = 0) then
+        field[abValue2].value += 6
+      ~ d8
+      elseif (field[usrIndex].value = 1) then
+        field[abValue2].value += 8
+      ~ d4
+      elseif (field[usrIndex].value = 2) then
+        field[abValue2].value += 4
+      endif
+
+      ~ If we are NOT active get out now
+      doneif (field[abilActive].value = 0)
+
+      var sSneak as string
+      sSneak = signed(field[abValue].value) & "d" & field[abValue2].value & " SA"
+
+      ~ Loop through all weapons and apply sneak attack extra damage
+      foreach pick in hero from BaseWep
+         #extradamage[eachpick, sSneak ,field[name].text]
+      nexteach     
+      ]]></eval>
     </thing>
   </document>
